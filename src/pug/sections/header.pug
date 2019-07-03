@@ -1,4 +1,31 @@
 // begin header
-header.header(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 header
+header.header
+  .container
+    a(href="/").header__logo
+      h1.header__logo-title Master Vision
+      span.header__logo-subtitle Обучение эзотерическим практикам
+
+    include ../elements/header-menu
+      
+    //begin social-list
+    ul.social-list.header__social-list
+      li.social-list__item
+        a(href="#").social-list__link.social-list__link--vk
+          +svg('vk')
+      li.social-list__item
+        a(href="#").social-list__link.social-list__link--fb
+          +svg('fb')
+      li.social-list__item
+        a(href="#").social-list__link.social-list__link--inst
+          +svg('inst')
+      li.social-list__item
+        a(href="#").social-list__link.social-list__link--youtube
+          +svg('youtube')
+    //end social-list
+
+    a(href="tel:+84993467946").header__phone
+      span 8 (499) 346 79 46
+      +svg('phone')
+
+    include ../elements/burger
 // end header

@@ -6,6 +6,9 @@ $(function() {
   // begin back2top
   require('./modules/back2top')();
 
+  // begin menu
+  require('./modules/menu')();
+
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
 

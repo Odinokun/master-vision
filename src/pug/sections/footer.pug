@@ -33,19 +33,23 @@ footer.footer
         a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer-top__adress Тюмень, проезд Летний, 9а
         a(href="tel:84993467946").footer-top__phone 8 (499) 346 79 46
         a(href="tel:84993467946").footer-top__phone 8 (499) 346 79 46
-        ul.footer-top__social-list
-          li.footer-top__social-item
-            a(href="#").footer-top__social-link.footer-top__social-link--vk
+
+        //begin social-list
+        ul.social-list.footer-top__social-list
+          li.social-list__item
+            a(href="#").social-list__link.social-list__link--vk
               +svg('vk')
-          li.footer-top__social-item
-            a(href="#").footer-top__social-link.footer-top__social-link--fb
+          li.social-list__item
+            a(href="#").social-list__link.social-list__link--fb
               +svg('fb')
-          li.footer-top__social-item
-            a(href="#").footer-top__social-link.footer-top__social-link--inst
+          li.social-list__item
+            a(href="#").social-list__link.social-list__link--inst
               +svg('inst')
-          li.footer-top__social-item
-            a(href="#").footer-top__social-link.footer-top__social-link--youtube
+          li.social-list__item
+            a(href="#").social-list__link.social-list__link--youtube
               +svg('youtube')
+        //end social-list
+
       //end footer-top__item
 
     .container.footer-bottom
