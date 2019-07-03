@@ -1,4 +1,59 @@
+mixin footer-top__item(title, link1, link2, link3, link4)
+  //begin footer-top__item
+  .footer-top__item
+    h3.footer-top__title #{title}
+    ul.footer-top__list
+      li.footer-top__list-item
+        a(href="#").footer-top__list-link #{link1}
+      li.footer-top__list-item
+        a(href="#").footer-top__list-link #{link2}
+      li.footer-top__list-item
+        a(href="#").footer-top__list-link #{link3}
+      li.footer-top__list-item
+        a(href="#").footer-top__list-link #{link4}
+  //end footer-top__item
+
 //begin footer
-footer.footer(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 footer
+footer.footer
+    .container.footer-top
+      //begin footer-top__item
+      .footer-top__item.footer-top__item--logo
+        a(href="#").footer-top__logo Master Vision
+        span.footer-top__logo-subtitle Обучение эзотерическим практикам
+      //end footer-top__item
+
+      +footer-top__item('Обучение', 'Lorem ipsum dolor', 'Lorem ipsum dolor sit ', 'Lorem ipsum ', 'Lorem ipsum dolor')
+      +footer-top__item('Преподаватели', 'Lorem ipsum dolor', 'Lorem ipsum dolor sit ', 'Lorem ipsum ', 'Lorem ipsum dolor')
+      +footer-top__item('Блоги', 'Lorem ipsum dolor', 'Lorem ipsum dolor sit ', 'Lorem ipsum ', 'Lorem ipsum dolor')
+      +footer-top__item('О компании', 'Lorem ipsum dolor', 'Lorem ipsum dolor sit ', 'Lorem ipsum ', 'Lorem ipsum dolor')
+
+      //begin footer-top__item
+      .footer-top__item.footer-top__item--contacts
+        h3.footer-top__title Контакты
+        a(href="#" target="_blank" rel="nofollow noopener noreferrer").footer-top__adress Тюмень, проезд Летний, 9а
+        a(href="tel:84993467946").footer-top__phone 8 (499) 346 79 46
+        a(href="tel:84993467946").footer-top__phone 8 (499) 346 79 46
+        ul.footer-top__social-list
+          li.footer-top__social-item
+            a(href="#").footer-top__social-link.footer-top__social-link--vk
+              +svg('vk')
+          li.footer-top__social-item
+            a(href="#").footer-top__social-link.footer-top__social-link--fb
+              +svg('fb')
+          li.footer-top__social-item
+            a(href="#").footer-top__social-link.footer-top__social-link--inst
+              +svg('inst')
+          li.footer-top__social-item
+            a(href="#").footer-top__social-link.footer-top__social-link--youtube
+              +svg('youtube')
+      //end footer-top__item
+
+    .container.footer-bottom
+      .footer-bottom__copyright
+        span.footer-bottom__copyright-text Все права защищены. Mastervision © 2019
+      .footer-bottom__offer
+        a(href="#").footer-bottom__offer-link Договор Оферты
+      .footer-bottom__privacy
+        a(href="#").footer-bottom__privacy-link Политика конфиденциальности
+
 //end footer
