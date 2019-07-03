@@ -68,9 +68,11 @@ p {
 }
 
 a {
+  transition: color .5s;
   color: $highlight-r;
   &:hover {
     text-decoration: none;
+    color: $highlight-r;
   }
 }
 
@@ -174,6 +176,7 @@ ol > *:not(li) {
 
 .main {
   flex-grow: 1;
+  min-height: 100vh;
 }
 
 .container {
