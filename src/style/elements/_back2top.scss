@@ -1,0 +1,35 @@
+.back2top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+  cursor: pointer;
+  &:hover {
+    svg {
+      fill: $highlight-r;
+    }
+    .back2top__text {
+      color: $highlight-r;
+    }
+  }
+}
+
+.back2top__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 6px auto;
+
+  svg {
+    fill: #99a1ba;
+    width: 40px;
+    height: 40px;
+    transition: fill .5s;
+  }
+}
+
+.back2top__text {
+  font-size: 12px;
+  transition: color .5s;
+  color: #99a1ba;
+}

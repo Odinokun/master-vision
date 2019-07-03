@@ -3,8 +3,8 @@ $(function() {
   // begin SVG for IE
   require('./modules/svg4everybody')();
 
-  // begin no-JS
-  require('./modules/noJs')();
+  // begin back2top
+  require('./modules/back2top')();
 
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
@@ -14,9 +14,6 @@ $(function() {
 
   // begin Popup
   // require('./modules/popup')();
-
-  // begin Sticky header
-  // require('./modules/stickyHeader')();
 
   // begin Animate.css
   // require('./modules/waypoints')();
