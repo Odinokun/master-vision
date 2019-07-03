@@ -1,22 +1,20 @@
-.burger__menu {
-  font-family: $font, sans-serif;
-  font-size: 22px;
-  position: absolute;
-  top: 4px;
-  left: 50px;
-  letter-spacing: 1px;
-  color: #fafafa;
-}
-
 .burger {
   position: relative;
   z-index: 25;
+  display: none;
   width: 31px;
   height: 31px;
-}
+  margin-left: 30px;
 
-.burger input {
-  display: none;
+  @include max(1110) {
+    display: block;
+  }
+  input {
+    position: absolute;
+    visibility: hidden;
+    transform: scale(0);
+    opacity: 0;
+  }
 }
 
 .burger label {
@@ -35,11 +33,11 @@
   top: 50%;
   width: 30px;
   height: 2px;
-  margin-top: -1px;
+  margin-top: 0;
   content: '';
   transition: background-color .5s;
   border-radius: 2px;
-  background-color: $text;
+  background-color: #1e1e1e;
 }
 
 .burger label:before {
@@ -82,32 +80,37 @@
   top: 50%;
   width: 30px;
   height: 2px;
-  margin-top: -1px;
+  margin-top: 0;
   content: '';
   transition: background-color .5s;
   border-radius: 2px;
-  background-color: $text;
+  background-color: #1e1e1e;
 }
 
 .burger label:after {
   animation: animationTwoReverse 1s ease forwards;
+  opacity: 0;
 }
 
 @keyframes animationTwoReverse {
   0% {
     transform: rotate(405deg);
+    opacity: 1;
   }
   25% {
     transform: rotate(450deg);
+    opacity: 1;
   }
   50%,
   100% {
     transform: rotate(0deg);
+    opacity: 0;
   }
 }
 
 .burger input:checked + label:after {
   animation: animationTwo 1s ease forwards;
+  opacity: 1;
 }
 
 @keyframes animationTwo {
@@ -133,7 +136,7 @@
   transition: background-color .5s;
   animation: animationBurgerTopReverse 1s ease forwards;
   border-radius: 2px;
-  background-color: $text;
+  background-color: #1e1e1e;
 }
 
 @keyframes animationBurgerTopReverse {
@@ -181,7 +184,7 @@
   transition: background-color .5s;
   animation: animationBurgerBottomReverse 1s ease forwards;
   border-radius: 2px;
-  background-color: $text;
+  background-color: #1e1e1e;
 }
 
 @keyframes animationBurgerBottomReverse {
