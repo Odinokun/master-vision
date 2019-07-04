@@ -36,26 +36,50 @@
   @include max(425) {
     display: none;
   }
+
+  .social-list__item {
+    margin-right: 16px;
+  }
   svg {
     &:hover {
       fill: $highlight-v;
     }
+  }
+  .social-list__link--vk svg {
+    width: 19px;
+    height: 11px;
+  }
+
+  .social-list__link--fb svg {
+    width: 9px;
+    height: 15px;
+  }
+
+  .social-list__link--inst svg {
+    width: 16px;
+    height: 15px;
+  }
+
+  .social-list__link--youtube svg {
+    width: 16px;
+    height: 13px;
   }
 }
 
 .header__phone {
   font-size: 18px;
   font-weight: 400;
-  margin-left: 30px;
+  margin-left: 10px;
   text-decoration: none;
   color: #1e1e1e;
 
   @include max(600) {
-    margin-left: 22px;
+    margin-left: 2px;
   }
   @include max(425) {
     margin-left: auto;
   }
+
   &:hover {
     color: $highlight-v;
   }
@@ -67,13 +91,14 @@
   svg {
     display: none;
     fill: #99a1ba;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     transition: fill .5s;
 
     @include max(600) {
       display: block;
     }
+
     &:hover {
       fill: $highlight-v;
     }

@@ -1,0 +1,250 @@
+.profile-header {
+  background-color: $brand;
+  background-image: $gradient;
+  .container {
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @include max(760) {
+      flex-wrap: wrap;
+      max-width: 570px;
+    }
+  }
+}
+
+//begin profile-header__search
+.profile-header__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 570px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, .4);
+  border-radius: 18px;
+  @include max(760) {
+    margin-bottom: 15px;
+  }
+}
+
+.profile-header__search-input {
+  font-size: 14px;
+  width: 100%;
+  padding-left: 25px;
+  margin-left: 15px;
+  color: #fff;
+  border: none;
+  margin-right: 10px;
+  background-color: transparent;
+  box-shadow: none;
+
+  @include placeholder-color(rgba(255, 255, 255, .4));
+}
+
+.profile-header__search-submit {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  width: 14px;
+  height: 13px;
+  margin: auto;
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 13px;
+    cursor: pointer;
+    opacity: 0;
+  }
+  svg {
+    fill: #fff;
+    width: 14px;
+    height: 13px;
+    pointer-events: none;
+  }
+}
+.profile-header__search-selectbox {
+  flex: none;
+  width: 155px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1px;
+    height: 14px;
+    background-color: #fff;
+    opacity: 0.4;
+  }
+  select {
+  border: none;
+    height: 36px;
+    padding-left: 15px;
+    width: 100%;
+    background-color: transparent;
+    appearance: none;
+    color: #fff;
+    cursor: pointer;
+  }
+    option:not(:first-of-type) {
+    color: $text;
+  }
+  option[selected]{
+    display: none !important;
+  }
+  svg {
+    width: 10px;
+    height: 5px;
+    fill:#fff;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    margin: auto;
+  }
+}
+
+//end profile-header__search
+
+// begin profile-header__icons-list
+.profile-header__icons-list {
+  display: flex;
+  align-items: center;
+  margin: 0 20px 0 0;
+  padding: 0;
+}
+
+.profile-header__icons-item {
+  flex: none;
+  padding: 0;
+  list-style: none;
+  &:last-child{
+.profile-header__icons-link {
+  margin-right: 0;
+}
+  }
+}
+
+.profile-header__icons-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  margin-left: 26px;
+  text-decoration: none;
+  color: #fff;
+  @include max(760) {
+    margin-left: 0;
+    margin-right: 25px;
+  }
+  &:hover,
+  &.active {
+    svg {
+      opacity: 1;
+    }
+  }
+  svg {
+    fill: #fff;
+    transition: opacity .5s;
+    opacity: .4;
+  }
+}
+
+.profile-header__icons-link--message svg {
+  width: 27px;
+  height: 25px;
+}
+
+.profile-header__icons-link--hat svg {
+  width: 35px;
+  height: 22px;
+}
+
+.profile-header__icons-link--info svg {
+  width: 24px;
+  height: 24px;
+}
+
+.profile-header__icons-counter {
+  font-size: 10px;
+  font-weight: 700;
+  position: absolute;
+  top: -7px;
+  right: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  background-color: $highlight-r;
+}
+
+// begin profile-header__icons-list
+
+//begin profile-header__user
+.profile-header__user {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  flex: none;
+}
+
+.profile-header__user-ava {
+  overflow: hidden;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  margin-right: 15px;
+  border-radius: 50%;
+  @include max(375) {
+    display: none;
+  }
+}
+
+.profile-header__user-body {
+  position: relative;
+  padding-right: 24px;
+}
+
+.profile-header__user-name {
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0;
+  color: #fff;
+}
+
+.profile-header__user-rait {
+  font-family: $font;
+  font-size: 11px;
+  font-weight: 500;
+  margin: 0;
+  color: #fff;
+  span {
+    font-size: 13px;
+  }
+}
+
+.profile-header__user-arrow {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  cursor: pointer;
+  svg {
+    fill: #fff;
+    width: 10px;
+    height: 5px;
+  }
+}
+
+//end profile-header__user

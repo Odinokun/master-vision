@@ -1,0 +1,48 @@
+//begin profile-header
+.profile-header
+  .container
+    //begin profile-header__search
+    form.profile-header__search
+      .profile-header__search-submit
+        input(type='submit')
+        +svg('magnific')
+      input(type='search' name='search' placeholder='Поиск').profile-header__search-input
+      .profile-header__search-selectbox
+        select(name='search-select')
+          option(value='all' selected) Все категории
+          option(value='1') Категория 1
+          option(value='2') Категория 2
+          option(value='3') Категория 3
+        +svg('arr-down')
+    //end profile-header__search
+
+    //begin profile-header__icons-list
+    ul.profile-header__icons-list
+      li.profile-header__icons-item
+        a(href="#").profile-header__icons-link.profile-header__icons-link--message.active
+          +svg('messages')
+          .profile-header__icons-counter
+            span 22
+      li.profile-header__icons-item
+        a(href="#").profile-header__icons-link.profile-header__icons-link--hat
+          +svg('hat')
+      li.profile-header__icons-item
+        a(href="#").profile-header__icons-link.profile-header__icons-link--info
+          +svg('info')
+    //end profile-header__icons-list
+
+    //begin profile-header__user
+    .profile-header__user
+      .profile-header__user-ava
+        img(src="assets/img/profile-header-ava.jpg" alt="ava")
+      .profile-header__user-body
+        h3.profile-header__user-name Мария Иванова
+        h4.profile-header__user-rait
+          span 10000
+          =' '
+          |баллов
+        .profile-header__user-arrow
+          +svg('arr-down')
+    //end profile-header__user
+
+//end   profile-header
