@@ -1,0 +1,25 @@
+mixin profile-aside__progress-item(pic)
+  li.profile-aside__progress-item
+    a(href="#").profile-aside__progress-link
+      img(src="assets/img/progress/progress-" + pic + ".png" alt="image")
+
+//begin profile-aside__progress
+.profile-aside__progress.aside-item
+  header.aside-item__header
+    h3.aside-item__title
+      |Достижения
+      =" "
+      a(href="#").aside-item__title-count 120
+  ul.profile-aside__progress-list
+    +profile-aside__progress-item('01')
+    +profile-aside__progress-item('02')
+    +profile-aside__progress-item('03')
+    +profile-aside__progress-item('03')
+    +profile-aside__progress-item('01')
+    +profile-aside__progress-item('02')
+    +profile-aside__progress-item('01')
+    +profile-aside__progress-item('02')
+    +profile-aside__progress-item('03')
+  footer.aside-item__footer
+    a(href="#").aside-item__footer-link Посмотреть все
+//end profile-aside__progress

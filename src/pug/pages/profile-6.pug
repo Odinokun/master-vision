@@ -6,14 +6,17 @@ block variables
   - var ogtitle     = 'Master Vision'
 
 block content
-  .main-wrap.profile-6
+  .main-wrap.profile
     include ../sections/header
 
     //begin content
-    section.main
+    main.main
       include ../sections/profile-header
       include ../sections/profile-top
       include ../sections/profile-counters
+      .profile-main
+        .container
+          include ../sections/profile-aside
     //end content
 
     include ../sections/footer

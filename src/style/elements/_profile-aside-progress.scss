@@ -1,0 +1,28 @@
+.profile-aside__progress-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+.profile-aside__progress-item {
+  padding: 0;
+  list-style: none;
+}
+
+.profile-aside__progress-link {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  width: 63px;
+  height: 63px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-color: #f0f0f5;
+  img {
+    display: block;
+    width: 60%;
+  }
+}

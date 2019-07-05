@@ -3,20 +3,18 @@
   justify-content: space-between;
   width: 100%;
   margin: 0;
-  padding: 25px 50px 10px 350px;
+  padding: 25px 50px 5px 350px;
+
   @include max(1220) {
     padding: 25px 0 10px 290px;
   }
-
   @include max(950) {
     flex-wrap: wrap;
   }
-
   @include max(860) {
     flex-wrap: nowrap;
     padding: 25px 0 10px 0;
   }
-
   @include max(680) {
     flex-wrap: wrap;
   }
@@ -26,14 +24,13 @@
   display: flex;
   padding: 0 10px 20px 10px;
   list-style: none;
+
   @include max(950) {
     width: 50%;
   }
-
   @include max(860) {
     width: auto;
   }
-
   @include max(680) {
     width: 50%;
   }
@@ -44,6 +41,7 @@
   display: block;
   padding-right: 10px;
   color: #4d4ce0;
+
   @include max(375) {
     font-size: 24px;
   }
