@@ -6,201 +6,6 @@
   background-color: #fff;
 }
 
-//begin profile-article__header-row {
-.profile-article__header-row {
-  display: flex;
-}
-
-.profile-article__header-row--main {
-  padding-top: 13px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #e4e4f2;
-}
-
-.profile-article__header-row--title {
-  padding-top: 20px;
-  padding-bottom: 15px;
-}
-
-.profile-article__header-row--undertitle {
-  padding-bottom: 5px;
-}
-
-//end profile-article__header-row {
-
-//begin tabs
-.profile-article__tabs-list {
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 0;
-  padding: 0;
-}
-
-.profile-article__tabs-item {
-  position: relative;
-  margin-right: 30px;
-  padding: 11px 0 0 0;
-  list-style: none;
-  &:last-child {
-    margin-right: 0;
-  }
-  &::before {
-    position: absolute;
-    right: 0;
-    bottom: -13px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    margin: auto;
-    content: '';
-    transition: width .5s;
-    background-color: $highlight-v;
-  }
-  &:hover {
-    .profile-article__tabs-link {
-      color: #1e1e1e;
-    }
-    &::before {
-      width: 100%;
-    }
-  }
-  &.active {
-    pointer-events: none;
-    &::before {
-      width: 100%;
-    }
-    .profile-article__tabs-link {
-      font-weight: 500;
-    }
-  }
-}
-
-.profile-article__tabs-link {
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 1;
-  text-decoration: none;
-  color: #1e1e1e;
-}
-
-//end tabs
-
-//begin btn
-.profile-article__add-article {
-  font-family: $font;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 36px;
-  height: 36px;
-  margin-left: auto;
-  padding: 0 35px;
-  cursor: pointer;
-  color: #fff;
-  border: none;
-  border-radius: 18px !important;
-  background-color: $highlight-v;
-  background-image: $gradient;
-}
-
-//end btn
-
-//begin article__title
-.profile-article__title {
-  font-family: $font;
-  font-size: 25px;
-  font-weight: 500;
-  margin: 0;
-  cursor: pointer;
-  transition: color .5s;
-  color: #1e1e1e;
-  &:hover {
-    color: $highlight-v;
-  }
-}
-
-.profile-article__title-link {
-  text-decoration: none;
-  color: #1e1e1e;
-  &:hover {
-    color: $highlight-v;
-  }
-}
-
-//end article__title
-
-//begin edit-icons
-.profile-article__edit-icons {
-  display: flex;
-  flex: none;
-  margin: 0 0 0 auto;
-  padding: 10px 0 0 0;
-}
-
-.profile-article__edit-icon {
-  margin-left: 11px;
-  padding: 0;
-  list-style: none;
-  cursor: pointer;
-  svg {
-    fill: #e4e4f2;
-    transition: fill .5s;
-    &:hover {
-      fill: #99a1ba;
-    }
-  }
-}
-
-.profile-article__edit-icon--pen svg {
-  width: 20px;
-  height: 19px;
-}
-
-.profile-article__edit-icon--basket svg {
-  width: 15px;
-  height: 19px;
-}
-
-//end edit-icons
-
-//begin profile-article__undertitle
-.profile-article__undertitle {
-  display: flex;
-  margin-right: 40px;
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-.profile-article__undertitle--date {
-  svg {
-    fill: #99a1ba;
-    width: 16px;
-    height: 16px;
-    margin-right: 12px;
-  }
-}
-
-.profile-article__date {
-  font-family: $font;
-  font-size: 14px;
-  font-weight: 300;
-  color: #1e1e1e;
-}
-
-.profile-article__undertitle-descr {
-  font-size: 14px;
-  padding-right: 5px;
-  color: #99a1ba;
-}
-
-.profile-article__undertitle-text {
-  font-size: 14px;
-  text-decoration: none;
-  color: #4d4ce0;
-}
-
-//end profile-article__undertitle
-
 //begin profile-article__body
 .profile-article__body {
   padding-top: 3px;
@@ -213,6 +18,15 @@
     line-height: 23px;
     margin-bottom: 5px;
     color: #1e1e1e;
+  }
+}
+
+.profile-article__body-img {
+  display: block;
+  margin-top: 18px;
+  img {
+    display: block;
+    width: 100%;
   }
 }
 
@@ -229,7 +43,10 @@
   align-items: flex-end;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #e4e4f2;
+
+  @include max(600) {
+    flex-wrap: wrap;
+  }
 }
 
 //begin tags
@@ -291,11 +108,22 @@
   display: flex;
   flex: none;
   margin-left: auto;
+
+  @include max(600) {
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 0;
+  }
 }
 
 .profile-article__icons-icon {
-  margin-right: 9px;
+  display: flex;
   margin-left: 20px;
+
+  @include max(600) {
+    margin-right: 20px;
+    margin-left: 0;
+  }
 }
 
 .profile-article__icon-heart {
@@ -322,16 +150,9 @@
 
 .profile-article__icons-count {
   font-size: 16px;
+  margin-left: 9px;
   padding-top: 2px;
   color: #74767b;
 }
 
 //end profile-article__icons
-
-//begin profile-article__footer
-.profile-article__footer {
-  height: 100px;
-  background-color: #ccc;
-}
-
-//end profile-article__footer

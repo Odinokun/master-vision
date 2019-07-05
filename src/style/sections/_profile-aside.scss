@@ -3,6 +3,10 @@
   width: 270px;
   margin-right: 30px;
   margin-bottom: 30px;
+  @include max(950) {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .aside-item {

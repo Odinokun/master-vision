@@ -1,3 +1,9 @@
+.profile-aside__progress {
+  @include max(950) {
+    display: none;
+  }
+}
+
 .profile-aside__progress-list {
   display: flex;
   flex-wrap: wrap;

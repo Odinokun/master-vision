@@ -1,19 +1,7 @@
-//begin profile-article-01
-.profile-article.profile-article-01
+//begin profile-article-03
+.profile-article.profile-article-03
   //begin profile-article__header
   header.profile-article__header
-    //begin header-row-main
-    .profile-article__header-row.profile-article__header-row--main
-      ul.profile-article__tabs-list
-        li.profile-article__tabs-item.active
-          a(href="#").profile-article__tabs-link Мой блог
-        li.profile-article__tabs-item
-          a(href="#").profile-article__tabs-link Черновики
-        li.profile-article__tabs-item
-          a(href="#").profile-article__tabs-link Избранное
-      button.profile-article__add-article Добавить запись
-    //end header-row-main
-
     //begin header-row-title
     .profile-article__header-row.profile-article__header-row--title
       h2.profile-article__title
@@ -87,12 +75,14 @@
   //begin profile-article__comments
   .profile-article__comments
     include profile-article-comment
-    include profile-article-comment-2
-    //-include profile-article-comment-3
-    //-include profile-article-comment-4
-    //-include profile-article-comment-5
+    include profile-article-comment-6
+    include profile-article-comment-5
+    include profile-article-comment
+
+    a(href="#").profile-article__all-comments Посмотреть все комментарии
+
   //end profile-article__comments
 
   include profile-article-footer
 
-//end profile-article-01
+//end profile-article-03
