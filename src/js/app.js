@@ -9,6 +9,9 @@ $(function() {
   // begin menu
   require('./modules/menu')();
 
+  // begin tags
+  require('./modules/tags')();
+
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
 
