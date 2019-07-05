@@ -1,0 +1,27 @@
+mixin profile-aside__friends-item(pic, name)
+  li.profile-aside__friends-item
+    a(href="#").profile-aside__friends-link
+      .profile-aside__friends-img
+        img(src="assets/img/aside-friends/friend-" + pic + ".jpg" alt="friend")
+      span.profile-aside__friends-name #{name}
+
+//begin profile-aside__friends
+.profile-aside__friends.aside-item
+  header.aside-item__header
+    h3.aside-item__title
+      |Друзья
+      =" "
+      a(href="#").aside-item__title-count 205
+  ul.profile-aside__friends-list
+    +profile-aside__friends-item('01', 'Вячеслава')
+    +profile-aside__friends-item('02', 'Аня')
+    +profile-aside__friends-item('03', 'Валерия')
+    +profile-aside__friends-item('04', 'Мария')
+    +profile-aside__friends-item('05', 'Катюнька')
+    +profile-aside__friends-item('06', 'Яна')
+    +profile-aside__friends-item('07', 'Женя')
+    +profile-aside__friends-item('08', 'Антон')
+    +profile-aside__friends-item('09', 'Вероника')
+  footer.aside-item__footer
+    a(href="#").aside-item__footer-link Посмотреть всех
+//end profile-aside__friends

@@ -1,0 +1,76 @@
+.profile-aside__menu-list {
+  margin: 0;
+  padding: 0;
+}
+
+.profile-aside__menu-item {
+  display: flex;
+  align-items: center;
+  min-height: 39px;
+  padding: 0 0 0 8px;
+  list-style: none;
+  transition: .5s;
+  border-bottom: 1px solid #f0f0f5;
+  &:last-child {
+    border-bottom: none;
+  }
+  &:hover,
+  &.active {
+    border-bottom: 1px solid $highlight-v;
+    background-color: $highlight-v;
+    svg {
+      fill: #fff;
+    }
+    .profile-aside__menu-text {
+      color: #fff;
+    }
+  }
+}
+
+.profile-aside__menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.profile-aside__menu-svg {
+  flex: none;
+  width: 43px;
+  svg {
+    fill: $highlight-v;
+    margin: 0 auto;
+    transition: fill .5s;
+  }
+}
+
+.profile-aside__menu-svg--friend svg {
+  width: 15px;
+  height: 17px;
+}
+
+.profile-aside__menu-svg--invite svg {
+  width: 19px;
+  height: 19px;
+}
+
+.profile-aside__menu-svg--messages svg {
+  width: 19px;
+  height: 18px;
+}
+
+.profile-aside__menu-svg--hat svg {
+  width: 23px;
+  height: 15px;
+}
+
+.profile-aside__menu-svg--wallet svg {
+  width: 18px;
+  height: 16px;
+}
+
+.profile-aside__menu-text {
+  font-size: 15px;
+  font-weight: 400;
+  transition: color .5s;
+  color: #1e1e1e;
+}

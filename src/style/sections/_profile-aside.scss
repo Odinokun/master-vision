@@ -1,0 +1,44 @@
+.profile-aside {
+  flex: none;
+  width: 270px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.aside-item {
+  overflow: hidden;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.aside-item__header {
+  padding: 20px 20px 5px 20px;
+}
+
+.aside-item__title {
+  font-family: $font;
+  font-size: 17px;
+  font-weight: 300;
+  color: #1e1e1e;
+}
+
+.aside-item__title-count {
+  font-family: $font;
+  font-weight: 500;
+  text-decoration: none;
+  color: #4d4ce0;
+}
+
+.aside-item__footer {
+  margin-top: -7px;
+  padding: 0 20px 10px 20px;
+  text-align: right;
+}
+
+.aside-item__footer-link {
+  font-size: 12px;
+  font-weight: 300;
+  text-decoration: none;
+  color: #4d4ce0;
+}

@@ -9,6 +9,9 @@
 @import 'elements/header-menu';
 @import 'elements/social-list';
 @import 'elements/burger';
+@import 'elements/profile-aside-menu';
+@import 'elements/profile-aside-progress';
+@import 'elements/profile-aside-friends';
 // @import 'elements/breadcrumbs';
 // @import 'elements/pagination';
 //@import 'elements/popup';
@@ -20,6 +23,8 @@
 @import 'sections/profile-header';
 @import 'sections/profile-top';
 @import 'sections/profile-counters';
+@import 'sections/profile-aside';
 
 //pages
 @import 'pages/index';
+@import 'pages/profile';

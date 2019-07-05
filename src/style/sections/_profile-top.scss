@@ -24,7 +24,7 @@
   @include max(860) {
     align-items: center;
   }
-  @include max(680) {
+  @include max(768) {
     width: 160px;
   }
   @include max(500) {
@@ -47,7 +47,7 @@
     margin-bottom: 20px;
     transform: translateY(0);
   }
-  @include max(680) {
+  @include max(768) {
     max-width: 150px;
   }
   @include max(500) {
@@ -138,7 +138,7 @@
   color: #fff;
   text-shadow: 0 0 10px rgba(0, 0, 0, .15);
 
-  @include max(680) {
+  @include max(768) {
     font-size: 28px;
   }
 }
@@ -220,7 +220,7 @@
     color: #fff;
     text-shadow: 0 0 10px rgba(0, 0, 0, .15);
 
-    @include max(680) {
+    @include max(768) {
       font-size: 28px;
     }
   }
@@ -230,7 +230,7 @@
   font-size: 16px;
   color: #fff;
 
-  @include max(680) {
+  @include max(768) {
     font-size: 14px;
   }
 }
