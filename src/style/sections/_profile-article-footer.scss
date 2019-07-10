@@ -40,6 +40,22 @@
   }
 }
 
+.profile-article__form-photo {
+  position: absolute;
+  top: 0;
+  right: 75px;
+  bottom: 0;
+  width: 21px;
+  height: 18px;
+  margin: auto;
+  cursor: pointer;
+  svg {
+    fill: #c8c8c8;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .profile-article__form-submit-wrap {
   position: absolute;
   top: 0;
@@ -101,6 +117,10 @@
     fill: #99a1ba;
     width: 13px;
     height: 13px;
+    transition: fill .5s;
+    &:hover {
+      fill: #1e1e1e;
+    }
   }
   &.double {
     margin-right: 20px;
@@ -128,10 +148,16 @@
   height: 3px;
   margin-left: 6px;
   cursor: pointer;
+  &:hover {
+    svg {
+      fill: #1e1e1e;
+    }
+  }
   svg {
     fill: #99a1ba;
     width: 6px;
     height: 3px;
+    transition: fill .5s;
   }
 }
 
