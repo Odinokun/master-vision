@@ -53,6 +53,7 @@
   @include max(500) {
     max-width: 210px;
   }
+
   img {
     display: block;
     width: 100%;
@@ -168,6 +169,7 @@
   position: relative;
   display: inline-block;
   padding-top: 10px;
+  cursor: pointer;
   text-decoration: none;
   color: #fff;
   &:hover {
@@ -189,6 +191,19 @@
     transition: width .5s;
     background-color: #fff;
   }
+}
+
+.profile-top__show-more.active {
+  .profile-top__show-more-open {
+    display: none;
+  }
+  .profile-top__show-more-close {
+    display: block;
+  }
+}
+
+.profile-top__show-more-close {
+  display: none;
 }
 
 //end profile-top__info

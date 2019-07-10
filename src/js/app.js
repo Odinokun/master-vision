@@ -12,6 +12,9 @@ $(function() {
   // begin tags
   require('./modules/tags')();
 
+  // begin showMore
+  require('./modules/showMore')();
+
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
 

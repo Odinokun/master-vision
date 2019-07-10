@@ -1,0 +1,87 @@
+mixin profile-all-info__row(left, right, addClass)
+  div(class="profile-all-info__row " + addClass + "")
+    .profile-all-info__left #{left}
+    .profile-all-info__right #{right}
+
+//begin profile-all-info
+.profile-all-info#profile-all-info
+  //begin profile-all-info__item
+  .profile-all-info__item
+    .profile-all-info__header
+      h3.profile-all-info__title Образование
+    +profile-all-info__row('Учебное заведение (ВУЗ, Курсы):','Тверской институт психологии')
+    +profile-all-info__row('Направление:','Психологии')
+    .profile-all-info__row.profile-all-info__row--large
+      .profile-all-info__left Годы обучения:
+      .profile-all-info__right 2006-2011
+    +profile-all-info__row('Учебное заведение (ВУЗ, Курсы):','Психологический  институт города Москвы')
+    +profile-all-info__row('Направление:','Психологии')
+    +profile-all-info__row('Годы обучения:','2017')
+  //end profile-all-info__item
+
+  //begin profile-all-info__item
+  .profile-all-info__item
+    .profile-all-info__header
+      h3.profile-all-info__title Карьера
+    +profile-all-info__row('Место работы:','"Психологический институт"')
+    +profile-all-info__row('Должность:','Психолог')
+    .profile-all-info__row.profile-all-info__row--large
+      .profile-all-info__left Годы работы:
+      .profile-all-info__right 2011-2012
+    +profile-all-info__row('Место работы:','"Психологический институт Иванова"')
+    +profile-all-info__row('Должность:','Психолог')
+    +profile-all-info__row('Годы работы:','2013-2017')
+  //end profile-all-info__item
+
+  //begin profile-all-info__item
+  .profile-all-info__item
+    .profile-all-info__header
+      h3.profile-all-info__title Личная информация
+    +profile-all-info__row('Языки:','Русский, Арабский')
+    .profile-all-info__row
+      .profile-all-info__left Интересы:
+      .profile-all-info__right
+        a(href="#") Психология,
+        =' '
+        a(href="#") Таро
+    +profile-all-info__row('Уровень профессиональной подготовки: ','Специалист')
+    +profile-all-info__row('Мировоззрение:','Светский гуманизм')
+    +profile-all-info__row('О себе: ','Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.')
+    .profile-all-info__row
+      .profile-all-info__left Сайт:
+      .profile-all-info__right
+        a(href="#") site.ru
+    .profile-all-info__row
+      .profile-all-info__left Социальные сети:
+      .profile-all-info__right.profile-all-info__right--socials
+        a(href="#").profile-all-info__right--vk
+          +svg('vk')
+        a(href="#").profile-all-info__right--fb
+          +svg('fb')
+        a(href="#").profile-all-info__right--inst
+          +svg('inst')
+        a(href="#").profile-all-info__right--youtube
+          +svg('youtube')
+  //end profile-all-info__item
+
+  //begin profile-all-info__item
+  .profile-all-info__item.profile-all-info__item--close
+    .profile-all-info__header.profile-all-info__header--close
+      .profile-all-info__close Скрыть подробную информацию
+  //end profile-all-info__item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//end profile-all-info

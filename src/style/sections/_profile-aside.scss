@@ -1,11 +1,16 @@
 .profile-aside {
   flex: none;
   width: 270px;
+  margin-top: 91px;
   margin-right: 30px;
   margin-bottom: 30px;
   @include max(950) {
     width: 100%;
-    margin: 0;
+    margin: 90px 0 0 0;
+  }
+
+  @include max(860) {
+    margin: 30px 0 0 0;
   }
 }
 

@@ -1,20 +1,27 @@
+.profile-counters {
+  .container {
+    @include max(1220) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
 .profile-counters__list {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin: 0;
-  padding: 25px 50px 5px 350px;
+  padding: 25px 0 5px 0;
 
-  @include max(1220) {
-    padding: 25px 0 10px 290px;
-  }
   @include max(950) {
-    flex-wrap: wrap;
+    padding: 0;
   }
+
   @include max(860) {
-    flex-wrap: nowrap;
-    padding: 25px 0 10px 0;
+    //flex-wrap: nowrap;
   }
+
   @include max(680) {
     flex-wrap: wrap;
   }
@@ -28,9 +35,11 @@
   @include max(950) {
     width: 50%;
   }
+
   @include max(860) {
     width: auto;
   }
+
   @include max(680) {
     width: 50%;
   }
@@ -52,5 +61,10 @@
   font-weight: 400;
   display: block;
   padding-top: 5px;
+  white-space: nowrap;
   color: #4d4ce0;
+
+  @include max(680) {
+    white-space: normal;
+  }
 }
