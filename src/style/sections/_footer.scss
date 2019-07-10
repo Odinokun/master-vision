@@ -38,6 +38,9 @@
   white-space: nowrap;
   text-decoration: none;
   color: #fff;
+  &:hover {
+  color: #fff;
+  }
 }
 
 .footer-top__logo-subtitle {
