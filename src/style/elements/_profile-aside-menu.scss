@@ -38,6 +38,8 @@
   width: 43px;
   svg {
     fill: $highlight-v;
+    width: 15px;
+    height: 15px;
     margin: 0 auto;
     transition: fill .5s;
   }
@@ -66,6 +68,16 @@
 .profile-aside__menu-svg--wallet svg {
   width: 18px;
   height: 16px;
+}
+
+.profile-aside__menu-svg--paper svg {
+  width: 14px;
+  height: 16px;
+}
+
+.profile-aside__menu-svg--lock svg {
+  width: 16px;
+  height: 19px;
 }
 
 .profile-aside__menu-text {
