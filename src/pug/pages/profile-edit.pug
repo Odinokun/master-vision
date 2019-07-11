@@ -6,18 +6,21 @@ block variables
   - var ogtitle     = 'Master Vision'
 
 block content
-  .main-wrap.profile
+  .main-wrap.profile-edit
     include ../sections/header
 
     //begin content
     main.main
       include ../sections/profile-header
-      include ../sections/profile-top
-      //-include ../sections/profile-counters
+      .container.profile-edit__header
+        h2.profile-edit__title Редактирование профиля
+        .profile-edit__return-btn
+          a(href="#").btn.btn--light Вернуться на мою страницу
+
       .profile-main
         .container
-          include ../sections/profile-aside
-          include ../sections/profile-articles
+          include ../sections/profile-aside-edit
+          include ../sections/profile-edit-body
     //end content
 
     include ../sections/footer

@@ -7,7 +7,8 @@ $(document).ready(function ($) {
   pageWidget([
     'index',
     'profile-6',
-    'profile-6-open'
+    'profile-6-open',
+    'profile-edit'
     ]);
 });
 

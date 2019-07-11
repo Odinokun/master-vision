@@ -15,6 +15,9 @@ $(function() {
   // begin showMore
   require('./modules/showMore')();
 
+  // begin radio
+  require('./modules/radio')();
+
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
 

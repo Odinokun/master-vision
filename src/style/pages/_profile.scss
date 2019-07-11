@@ -1,6 +1,17 @@
+.profile {
+  .profile-aside {
+    margin-top: 91px;
+
+    @include max(860) {
+      margin-top: 30px;
+    }
+  }
+}
+
 .profile-main {
   .container {
     display: flex;
+
     @include max(950) {
       flex-direction: column;
     }
