@@ -162,7 +162,7 @@
                     </a></li>
                   <!--end profile-aside__menu-item-->
                   <!--begin profile-aside__menu-item-->
-                  <li class="profile-aside__menu-item active"><a class="profile-aside__menu-link" href="#">
+                  <li class="profile-aside__menu-item "><a class="profile-aside__menu-link" href="#">
                       <div class="profile-aside__menu-svg profile-aside__menu-svg--hat">
                         <svg>
                           <use xlink:href="assets/img/sprite.svg#hat"></use>
@@ -171,7 +171,7 @@
                     </a></li>
                   <!--end profile-aside__menu-item-->
                   <!--begin profile-aside__menu-item-->
-                  <li class="profile-aside__menu-item "><a class="profile-aside__menu-link" href="#">
+                  <li class="profile-aside__menu-item active"><a class="profile-aside__menu-link" href="#">
                       <div class="profile-aside__menu-svg profile-aside__menu-svg--lock">
                         <svg>
                           <use xlink:href="assets/img/sprite.svg#lock"></use>
@@ -208,62 +208,107 @@
               <form class="profile-edit__form">
                 <!--begin profile-edit__form-top-->
                 <div class="profile-edit__form-top">
-                  <h3 class="profile-edit__form-title">Образование</h3>
+                  <h3 class="profile-edit__form-title">Личная информация</h3>
                   <div class="profile-edit__form-row">
-                    <div class="profile-edit__form-label">Учебное заведение (ВУЗ, Курсы):</div>
+                    <div class="profile-edit__form-label">Языки</div>
                     <div class="profile-edit__form-input-wrap">
                       <input class="profile-edit__form-input">
                     </div>
                   </div>
                   <div class="profile-edit__form-row">
-                    <div class="profile-edit__form-label">Направление:</div>
+                    <div class="profile-edit__form-label">Интересы</div>
                     <div class="profile-edit__form-input-wrap">
                       <input class="profile-edit__form-input">
                     </div>
                   </div>
                   <div class="profile-edit__form-row">
-                    <div class="profile-edit__form-label">Годы обучения:</div>
+                    <div class="profile-edit__form-label">Мировоззрение</div>
                     <div class="profile-edit__form-input-wrap">
                       <input class="profile-edit__form-input">
                     </div>
                   </div>
-                  <div class="profile-edit__form-row profile-edit__form-row--add">
-                    <div class="profile-edit__form-label"></div>
+                  <div class="profile-edit__form-row">
+                    <div class="profile-edit__form-label">Уровень профессиональной подготовки:</div>
                     <div class="profile-edit__form-input-wrap">
-                      <svg>
-                        <use xlink:href="assets/img/sprite.svg#invite"></use>
-                      </svg><span>Добавить учебное заведение</span>
+                      <select class="profile-edit__form-select">
+                        <option value="">Специалист</option>
+                        <option value="">Начинающий</option>
+                        <option value="">Гуру</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="profile-edit__form-row">
+                    <div class="profile-edit__form-label">О себе:</div>
+                    <div class="profile-edit__form-input-wrap">
+                      <textarea class="profile-edit__form-textarea"></textarea>
+                    </div>
+                  </div>
+                  <div class="profile-edit__form-row">
+                    <div class="profile-edit__form-label">Сайт:</div>
+                    <div class="profile-edit__form-input-wrap">
+                      <input class="profile-edit__form-input">
+                    </div>
+                  </div>
+                </div>
+                <!--end profile-edit__form-top-->
+                <!--begin profile-edit__checkbox-row-->
+                <div class="profile-edit__radio-row">
+                  <label class="profile-edit__radio-row-label active">
+                    <input type="radio" name="info" checked><span>Показывать мои курсы другим пользователям</span>
+                  </label>
+                  <label class="profile-edit__radio-row-label">
+                    <input type="radio" name="info"><span>Не показывать мои курсы другим пользователям</span>
+                  </label>
+                </div>
+                <!--end profile-edit__checkbox-row-->
+                <!--begin profile-edit__form-top-->
+                <div class="profile-edit__form-top">
+                  <h3 class="profile-edit__form-title">Социальные сети</h3>
+                  <div class="profile-edit__form-row">
+                    <div class="profile-edit__form-label">Вконтакте</div>
+                    <div class="profile-edit__form-input-wrap">
+                      <input class="profile-edit__form-input">
+                    </div>
+                  </div>
+                  <div class="profile-edit__form-row">
+                    <div class="profile-edit__form-label">Facebook</div>
+                    <div class="profile-edit__form-input-wrap">
+                      <input class="profile-edit__form-input">
+                    </div>
+                  </div>
+                  <div class="profile-edit__form-row">
+                    <div class="profile-edit__form-label">Instagram</div>
+                    <div class="profile-edit__form-input-wrap">
+                      <input class="profile-edit__form-input">
+                    </div>
+                  </div>
+                  <div class="profile-edit__form-row">
+                    <div class="profile-edit__form-label">Youtube</div>
+                    <div class="profile-edit__form-input-wrap">
+                      <input class="profile-edit__form-input">
+                    </div>
+                  </div>
+                  <div class="profile-edit__form-row">
+                    <div class="profile-edit__form-label">Telegram</div>
+                    <div class="profile-edit__form-input-wrap">
+                      <input class="profile-edit__form-input">
                     </div>
                   </div>
                 </div>
                 <!--end profile-edit__form-top-->
                 <!--begin profile-edit__form-top-->
                 <div class="profile-edit__form-top profile-edit__form-top--last">
-                  <h3 class="profile-edit__form-title">Карьера</h3>
+                  <h3 class="profile-edit__form-title">Смена пароля</h3>
                   <div class="profile-edit__form-row">
-                    <div class="profile-edit__form-label">Место работы:</div>
+                    <div class="profile-edit__form-label">Старый пароль</div>
                     <div class="profile-edit__form-input-wrap">
                       <input class="profile-edit__form-input">
                     </div>
                   </div>
                   <div class="profile-edit__form-row">
-                    <div class="profile-edit__form-label">Должность:</div>
+                    <div class="profile-edit__form-label">Новый пароль</div>
                     <div class="profile-edit__form-input-wrap">
                       <input class="profile-edit__form-input">
-                    </div>
-                  </div>
-                  <div class="profile-edit__form-row">
-                    <div class="profile-edit__form-label">Годы работы:</div>
-                    <div class="profile-edit__form-input-wrap">
-                      <input class="profile-edit__form-input">
-                    </div>
-                  </div>
-                  <div class="profile-edit__form-row profile-edit__form-row--add">
-                    <div class="profile-edit__form-label"></div>
-                    <div class="profile-edit__form-input-wrap">
-                      <svg>
-                        <use xlink:href="assets/img/sprite.svg#invite"></use>
-                      </svg><span>Добавить место работы</span>
                     </div>
                   </div>
                 </div>
@@ -271,7 +316,7 @@
                 <!--begin profile-edit__form-footer-->
                 <div class="profile-edit__form-footer">
                   <button class="btn btn--grey profile-edit__form-footer--prev">Назад</button>
-                  <button class="btn btn--dark profile-edit__form-footer--next">Далее</button>
+                  <input class="btn btn--dark profile-edit__form-footer--next" type="submit" value="Далее">
                 </div>
                 <!--end profile-edit__form-footer-->
               </form>
