@@ -8,7 +8,8 @@ $(document).ready(function ($) {
     'index',
     'profile-6',
     'profile-6-open',
-    'profile-edit'
+    'profile-edit',
+    'profile-education'
     ]);
 });
 
