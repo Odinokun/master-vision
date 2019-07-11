@@ -1,5 +1,15 @@
 extends ../_template
 
+mixin profile-aside__menu-item(svg, text, active)
+  //begin profile-aside__menu-item
+  li(class='profile-aside__menu-item ' + active + '')
+    a(href="#").profile-aside__menu-link
+      div(class='profile-aside__menu-svg profile-aside__menu-svg--' + svg +'')
+        svg
+          use(xlink:href="assets/img/sprite.svg#" + svg + "")
+      span.profile-aside__menu-text #{text}
+  //end profile-aside__menu-item
+
 block variables
   - var title       = 'Master Vision'
   - var description = 'Master Vision'
@@ -19,8 +29,107 @@ block content
 
       .profile-main
         .container
-          include ../sections/profile-aside-edit
-          include ../sections/profile-edit-body
+          //begin profile-aside
+          .profile-aside
+            //begin profile-aside__menu
+            nav.profile-aside__menu.aside-item
+              ul.profile-aside__menu-list
+                +profile-aside__menu-item('paper', 'Основная информация', 'active')
+                +profile-aside__menu-item('hat', 'Образование','')
+                +profile-aside__menu-item('lock', 'Личная информация','')
+                +profile-aside__menu-item('invite', 'Пригласить друга','')
+                +profile-aside__menu-item('wallet', 'Мой счет','')
+            //end profile-aside__menu
+          //end profile-aside
+
+          //begin profile-edit-body
+          .profile-edit-body
+            //begin profile-edit__form
+            form.profile-edit__form
+              //begin profile-edit__form-top
+              .profile-edit__form-top
+                h3.profile-edit__form-title Основная информация
+                .profile-edit__form-row
+                  .profile-edit__form-label ФИО*:
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input(required)
+                .profile-edit__form-row
+                  .profile-edit__form-label ФИО для сертификата (RUS)*:
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input(required)
+                .profile-edit__form-row
+                  .profile-edit__form-label ФИО для сертификата (ENG)*:
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input(required)
+                .profile-edit__form-row
+                  .profile-edit__form-label Телефон*:
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input(required)
+                .profile-edit__form-row
+                  .profile-edit__form-label Электронная почта*:
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input(required)
+                .profile-edit__form-row.profile-edit__form-row--double
+                  .profile-edit__form-label Дата рождения*:
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input(required)
+                    select.profile-edit__form-select
+                      option(value='') Не показывать дату рождения
+                      option(value='') Показывать дату рождения
+                .profile-edit__form-row
+                  .profile-edit__form-label Пол*:
+                  .profile-edit__form-input-wrap
+                    select.profile-edit__form-select
+                      option(value='') Выберите пол
+                      option(value='') Мужской
+                      option(value='') Женский
+              //end profile-edit__form-top
+
+              //begin profile-edit__form-ava
+              .profile-edit__form-ava
+                .profile-edit__form-ava--left
+                  .profile-edit__ava-lg
+                    //img(src="assets/img/profile-top-ava.jpg" alt="ava")
+                  .profile-edit__ava-circle
+                    //img(src="assets/img/profile-top-ava.jpg" alt="ava")
+                .profile-edit__form-ava--right
+                  .profile-edit__ava-download-btn
+                    input(type='file').btn.btn--dark
+                    span.btn.btn--dark Загрузить аватар
+                  span.profile-edit__ava-text Вы можете загрузить файл в форматах  jpg и png.
+                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+              //end profile-edit__form-ava
+
+              //begin profile-edit__form-decor
+              .profile-edit__form-decor
+                h3.profile-edit__form-title Выберите оформление страницы
+                .profile-edit__form-decor-row
+                  .profile-edit__form-decor-item.active
+                    label.active
+                      input(type='radio' name='decor' checked).profile-edit__form-decor-radio
+                      span Название вариант 1
+                    .profile-edit__form-decor-pic
+                      img(src="assets/img/bg-profile-top.jpg" alt="decor")
+                  .profile-edit__form-decor-item
+                    label
+                      input(type='radio' name='decor').profile-edit__form-decor-radio
+                      span Название вариант 2
+                    .profile-edit__form-decor-pic
+                      img(src="assets/img/bg-profile-top.jpg" alt="decor")
+                  .profile-edit__form-decor-item
+                    label
+                      input(type='radio' name='decor').profile-edit__form-decor-radio
+                      span Название вариант 3
+                    .profile-edit__form-decor-pic
+                      img(src="assets/img/bg-profile-top.jpg" alt="decor")
+              //end profile-edit__form-decor
+
+              //begin profile-edit__form-footer
+              .profile-edit__form-footer
+                button.btn.btn--dark.profile-edit__form-footer--next Далее
+              //end profile-edit__form-footer
+            //end profile-edit__form
+          //end profile-edit-body
     //end content
 
     include ../sections/footer

@@ -22,7 +22,7 @@
 .profile-edit-body {
   width: 100%;
   margin-bottom: 65px;
-  padding: 25px 20px;
+  padding: 0px 20px 25px 20px;
   border-radius: 5px;
   background-color: #fff;
 }
@@ -36,8 +36,13 @@
 }
 
 .profile-edit__form-top {
+  padding-top: 25px;
   padding-bottom: 20px;
   border-bottom: 1px solid #e4e4f2;
+}
+.profile-edit__form-top--second{
+  border-bottom:none;
+  padding-bottom:0;
 }
 
 .profile-edit__form-row {
@@ -209,7 +214,6 @@
 }
 
 .profile-edit__form-decor {
-  margin-bottom: 25px;
   padding-top: 25px;
 }
 
@@ -232,6 +236,7 @@
     width: 100%;
     margin-bottom: 10px;
   }
+
   &.active {
     opacity: 1;
   }
@@ -297,8 +302,41 @@
 
 .profile-edit__form-footer {
   display: flex;
-  justify-content: flex-end;
-  .btn {
-    min-width: 185px;
+  justify-content: space-between;
+  padding-top: 25px;
+}
+
+.profile-edit__form-footer--next {
+  min-width: 185px;
+  margin-left: auto;
+  @include max(500) {
+    min-width: 120px;
+  }
+}
+
+.profile-edit__form-footer--prev {
+  min-width: 185px;
+  @include max(500) {
+    min-width: 120px;
+  }
+}
+
+.profile-edit__form-row--add {
+  .profile-edit__form-input-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+  svg {
+    fill: $highlight-v;
+    width: 17px;
+    height: 17px;
+    margin-right: 9px;
+  }
+  span {
+    font-size: 11px;
+    font-weight: 300;
+    color: #4d4ce0;
   }
 }
