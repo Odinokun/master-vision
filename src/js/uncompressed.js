@@ -9,7 +9,8 @@ $(document).ready(function ($) {
     'profile-6',
     'profile-6-open',
     'profile-edit',
-    'profile-education'
+    'profile-education',
+    'profile-personal'
     ]);
 });
 

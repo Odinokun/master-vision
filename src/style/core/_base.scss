@@ -221,13 +221,13 @@ ol > *:not(li) {
   color: $highlight-v;
   background-color: transparent;
   &:hover {
-    color: #fff;
+    color: $light;
     background-color: $highlight-v;
   }
 }
 
 .btn--dark {
-  color: #fff;
+  color: $light;
   background-color: $highlight-v;
   &:hover {
     color: $highlight-v;
@@ -236,7 +236,7 @@ ol > *:not(li) {
 }
 
 .btn--grey {
-  color: #fff;
+  color: $light;
   border: 1px solid #99a1ba;
   background-color: #99a1ba;
   &:hover {

@@ -1,0 +1,139 @@
+extends ../_template
+
+mixin profile-aside__menu-item(svg, text, active)
+  //begin profile-aside__menu-item
+  li(class='profile-aside__menu-item ' + active + '')
+    a(href="#").profile-aside__menu-link
+      div(class='profile-aside__menu-svg profile-aside__menu-svg--' + svg +'')
+        svg
+          use(xlink:href="assets/img/sprite.svg#" + svg + "")
+      span.profile-aside__menu-text #{text}
+  //end profile-aside__menu-item
+
+block variables
+  - var title       = 'Master Vision'
+  - var description = 'Master Vision'
+  - var ogtitle     = 'Master Vision'
+
+block content
+  .main-wrap.profile-edit
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../sections/profile-header
+      .container.profile-edit__header
+        h2.profile-edit__title Редактирование профиля
+        .profile-edit__return-btn
+          a(href="#").btn.btn--light Вернуться на мою страницу
+
+      .profile-main
+        .container
+          //begin profile-aside
+          .profile-aside
+            //begin profile-aside__menu
+            nav.profile-aside__menu.aside-item
+              ul.profile-aside__menu-list
+                +profile-aside__menu-item('paper', 'Основная информация', '')
+                +profile-aside__menu-item('hat', 'Образование','')
+                +profile-aside__menu-item('lock', 'Личная информация','active')
+                +profile-aside__menu-item('invite', 'Пригласить друга','')
+                +profile-aside__menu-item('wallet', 'Мой счет','')
+            //end profile-aside__menu
+          //end profile-aside
+
+          //begin profile-edit-body
+          .profile-edit-body
+            //begin profile-edit__form
+            form.profile-edit__form
+              //begin profile-edit__form-top
+              .profile-edit__form-top
+                h3.profile-edit__form-title Личная информация
+                .profile-edit__form-row
+                  .profile-edit__form-label Языки
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input
+                .profile-edit__form-row
+                  .profile-edit__form-label Интересы
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input
+                .profile-edit__form-row
+                  .profile-edit__form-label Мировоззрение
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input
+                .profile-edit__form-row
+                  .profile-edit__form-label Уровень профессиональной подготовки:
+                  .profile-edit__form-input-wrap
+                    select.profile-edit__form-select
+                      option(value='') Специалист
+                      option(value='') Начинающий
+                      option(value='') Гуру
+                .profile-edit__form-row
+                  .profile-edit__form-label О себе:
+                  .profile-edit__form-input-wrap
+                    textarea.profile-edit__form-textarea
+                .profile-edit__form-row
+                  .profile-edit__form-label Сайт:
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input
+              //end profile-edit__form-top
+
+              //begin profile-edit__checkbox-row
+              .profile-edit__radio-row
+                label.profile-edit__radio-row-label.active
+                  input(type='radio' name='info' checked)
+                  span Показывать мои курсы другим пользователям
+                label.profile-edit__radio-row-label
+                  input(type='radio' name='info')
+                  span Не показывать мои курсы другим пользователям
+              //end profile-edit__checkbox-row
+
+              //begin profile-edit__form-top
+              .profile-edit__form-top
+                h3.profile-edit__form-title Социальные сети
+                .profile-edit__form-row
+                  .profile-edit__form-label Вконтакте
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input
+                .profile-edit__form-row
+                  .profile-edit__form-label Facebook
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input
+                .profile-edit__form-row
+                  .profile-edit__form-label Instagram
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input
+                .profile-edit__form-row
+                  .profile-edit__form-label Youtube
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input
+                .profile-edit__form-row
+                  .profile-edit__form-label Telegram
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input
+              //end profile-edit__form-top
+
+              //begin profile-edit__form-top
+              .profile-edit__form-top.profile-edit__form-top--last
+                h3.profile-edit__form-title Смена пароля
+                .profile-edit__form-row
+                  .profile-edit__form-label Старый пароль
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input
+                .profile-edit__form-row
+                  .profile-edit__form-label Новый пароль
+                  .profile-edit__form-input-wrap
+                    input.profile-edit__form-input
+              //end profile-edit__form-top
+
+              //begin profile-edit__form-footer
+              .profile-edit__form-footer
+                button.btn.btn--grey.profile-edit__form-footer--prev Назад
+                input(type='submit' value='Далее').btn.btn--dark.profile-edit__form-footer--next
+              //end profile-edit__form-footer
+            //end profile-edit__form
+          //end profile-edit-body
+
+    //end content
+
+    include ../sections/footer
