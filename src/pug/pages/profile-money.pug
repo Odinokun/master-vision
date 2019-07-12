@@ -1,0 +1,117 @@
+extends ../_template
+
+mixin profile-aside__menu-item(svg, text, active)
+  //begin profile-aside__menu-item
+  li(class='profile-aside__menu-item ' + active + '')
+    a(href="#").profile-aside__menu-link
+      div(class='profile-aside__menu-svg profile-aside__menu-svg--' + svg +'')
+        svg
+          use(xlink:href="assets/img/sprite.svg#" + svg + "")
+      span.profile-aside__menu-text #{text}
+  //end profile-aside__menu-item
+
+mixin table-row-inn(date, name, balance)
+  .profile-edit__money-transaction-td
+    .profile-edit__money-transaction-svg
+      +svg('arrow-2')
+  .profile-edit__money-transaction-td.profile-edit__money-transaction--date #{date}
+  .profile-edit__money-transaction-td.profile-edit__money-transaction--name #{name}
+  .profile-edit__money-transaction-td.profile-edit__money-transaction--balance #{balance}
+
+block variables
+  - var title       = 'Master Vision'
+  - var description = 'Master Vision'
+  - var ogtitle     = 'Master Vision'
+
+block content
+  .main-wrap.profile-edit
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../sections/profile-header
+      .container.profile-edit__header
+        h2.profile-edit__title Редактирование профиля
+        .profile-edit__return-btn
+          a(href="#").btn.btn--light Вернуться на мою страницу
+
+      .profile-main
+        .container
+          //begin profile-aside
+          .profile-aside
+            //begin profile-aside__menu
+            nav.profile-aside__menu.aside-item
+              ul.profile-aside__menu-list
+                +profile-aside__menu-item('paper', 'Основная информация', '')
+                +profile-aside__menu-item('hat', 'Образование','')
+                +profile-aside__menu-item('lock', 'Личная информация','')
+                +profile-aside__menu-item('invite', 'Пригласить друга','')
+                +profile-aside__menu-item('wallet', 'Мой счет','active')
+            //end profile-aside__menu
+          //end profile-aside
+
+          //begin profile-edit-body
+          .profile-edit-body
+            //begin profile-edit__money
+            .profile-edit__money
+
+              //begin profile-edit__money-balance
+              .profile-edit__money-balance
+                .profile-edit__money-balance-text
+                  span Ваш баланс
+                .profile-edit__money-balance-text
+                  +svg('wallet')
+                  span.lg 4 000
+                  span баллов
+                a(href="#").btn.btn--dark Пополнить баланс
+              //end profile-edit__money-balance
+
+              //begin profile-edit__money-subscribe
+              .profile-edit__money-subscribe
+                .profile-edit__money-balance-text
+                  +svg('clock')
+                  span.md 15 дней
+                  span до окончания подписки
+                .profile-edit__money-balance-text
+                  p Стоимость подписки: 2000 баллов
+                a(href="#").btn.btn--dark Продлить подписку
+              //end profile-edit__money-subscribe
+
+              //begin profile-edit__money-transaction
+              .profile-edit__money-transaction
+                h3.profile-edit__money-transaction-title Транзакции
+                //begin profile-edit__money-transaction-table
+                .profile-edit__money-transaction-table-wrap
+                  .profile-edit__money-transaction-table
+                    //begin profile-edit__money-transaction-tr
+                    .profile-edit__money-transaction-tr.profile-edit__money-transaction-tr--plus
+                      +table-row-inn('18 июня 12:00', 'Пополнение баланса с банковской карты', '+400 баллов')
+                    //end profile-edit__money-transaction-tr
+
+                    //begin profile-edit__money-transaction-tr
+                    .profile-edit__money-transaction-tr.profile-edit__money-transaction-tr--plus
+                      +table-row-inn('16 июня 13:40', 'Достижение 100 дней на сайте', '+100 баллов')
+                    //end profile-edit__money-transaction-tr
+
+                    //begin profile-edit__money-transaction-tr
+                    .profile-edit__money-transaction-tr.profile-edit__money-transaction-tr--minus
+                      +table-row-inn('15 июня 22:31', 'Оплата подписки', '-2000 баллов')
+                    //end profile-edit__money-transaction-tr
+
+                    //begin profile-edit__money-transaction-tr
+                    .profile-edit__money-transaction-tr.profile-edit__money-transaction-tr--plus
+                      +table-row-inn('14 июня 12:00', 'Пополнение баланса с банковской карты', '+400 баллов')
+                    //end profile-edit__money-transaction-tr
+
+                //end profile-edit__money-transaction-table
+
+                .profile-edit__money-transaction-more
+                  .profile-edit__money-transaction-more-svg
+                    +svg('arr-down')
+                  span Посмотреть еще
+              //end profile-edit__money-transaction
+            //end profile-edit__money
+          //end profile-edit-body
+    //end content
+
+    include ../sections/footer

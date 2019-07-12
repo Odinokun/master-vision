@@ -1,0 +1,227 @@
+.profile-edit__money {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-edit__money-balance {
+  width: 50%;
+  padding-top: 31px;
+
+  @include max(860) {
+    width: 40%;
+  }
+  @include max(680) {
+    width: 100%;
+  }
+  .btn {
+    min-width: 187px;
+    margin-top: 10px;
+  }
+}
+
+.profile-edit__money-subscribe {
+  width: 50%;
+  padding-top: 31px;
+
+  @include max(860) {
+    width: 60%;
+  }
+  @include max(680) {
+    width: 100%;
+  }
+  .btn {
+    min-width: 187px;
+    margin-top: 10px;
+  }
+}
+
+.profile-edit__money-transaction {
+  width: 100%;
+  padding-top: 30px;
+}
+
+.profile-edit__money-balance-text {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 5px;
+
+  @include max(425) {
+    flex-wrap: wrap;
+  }
+  svg {
+    fill: $highlight-r;
+    width: 100%;
+    max-width: 23px;
+    height: 21px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  span {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    display: block;
+    margin-bottom: 10px;
+    color: #1e1e1e;
+  }
+  .lg {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: .7;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    color: #1e1e1e;
+  }
+  .md {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: .8;
+    margin-right: 7px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    color: #1e1e1e;
+  }
+  p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+    display: block;
+    margin: 0 0 10px 0;
+    color: #1e1e1e;
+  }
+}
+
+.profile-edit__money-transaction-title {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #1e1e1e;
+}
+
+//begin table
+.profile-edit__money-transaction-table-wrap {
+  overflow: auto;
+  width: 100%;
+}
+
+.profile-edit__money-transaction-table {
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-radius: 5px;
+
+  @include max(600) {
+    min-width: 650px;
+  }
+}
+
+.profile-edit__money-transaction-tr {
+  display: flex;
+  min-height: 40px;
+  padding: 9px 18px 8px 20px;
+  border-bottom: 1px solid #fff;
+  background-color: #f0f0f5;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.profile-edit__money-transaction-tr--plus {
+  .profile-edit__money-transaction-svg {
+    background-color: $highlight-v;
+  }
+
+  .profile-edit__money-transaction--balance {
+    color: $highlight-v;
+  }
+}
+
+.profile-edit__money-transaction-tr--minus {
+  .profile-edit__money-transaction-svg {
+    transform: rotate(180deg);
+    background-color: $highlight-r;
+  }
+  .profile-edit__money-transaction--balance {
+    color: $highlight-r;
+  }
+}
+
+.profile-edit__money-transaction-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  svg {
+    fill: #fff;
+    width: 12px;
+    height: 10px;
+  }
+}
+
+.profile-edit__money-transaction--date {
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+  flex: none;
+  width: 178px;
+  padding-left: 18px;
+  color: #1e1e1e;
+
+  @include max(1110) {
+    width: 135px;
+  }
+}
+
+.profile-edit__money-transaction--name {
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+  color: #1e1e1e;
+}
+
+.profile-edit__money-transaction--balance {
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 500;
+  flex: none;
+  margin-left: auto;
+  padding-left: 10px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+//end table
+
+.profile-edit__money-transaction-more {
+  display: flex;
+  align-items: center;
+  span {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 300;
+    color: $highlight-v;
+  }
+}
+
+.profile-edit__money-transaction-more-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: $highlight-v;
+  svg {
+    fill: $light;
+    width: 9px;
+    height: 4px;
+  }
+}
