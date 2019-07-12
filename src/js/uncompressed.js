@@ -10,7 +10,8 @@ $(document).ready(function ($) {
     'profile-6-open',
     'profile-edit',
     'profile-education',
-    'profile-personal'
+    'profile-personal',
+    'profile-empty'
     ]);
 });
 
