@@ -11,7 +11,8 @@ $(document).ready(function ($) {
     'profile-edit',
     'profile-education',
     'profile-personal',
-    'profile-empty'
+    'profile-empty',
+    'profile-wallpappers'
     ]);
 });
 
