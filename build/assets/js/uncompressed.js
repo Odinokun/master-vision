@@ -12,7 +12,8 @@ $(document).ready(function ($) {
     'profile-education',
     'profile-personal',
     'profile-empty',
-    'profile-wallpappers'
+    'profile-wallpappers',
+    'profile-money'
     ]);
 });
 
