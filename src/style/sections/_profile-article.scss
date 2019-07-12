@@ -36,6 +36,32 @@
   color: #4d4ce0;
 }
 
+.profile-article__add-articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 30px);
+  min-height: 300px;
+  padding: 20px 0;
+  text-align: center;
+  .btn {
+    min-width: 185px;
+    margin: 10px 0 0 0;
+  }
+}
+
+.profile-article__add-articles-title {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 500;
+  color: #1e1e1e;
+}
+
+.profile-article-empty {
+  height: calc(100% - 120px);
+}
+
 //end profile-article__body
 
 .profile-article__body-footer {
