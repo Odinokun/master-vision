@@ -35,11 +35,17 @@
 .profile-top__ava {
   position: relative;
   z-index: 1;
+  overflow: hidden;
   flex: none;
-  width: 100%;
-  max-width: 210px;
+  width: 210px;
+  height: 255px;
   transform: translateY(60px);
   border: 3px solid white;
+  background-color: #f0f0f5;
+  background-image: url('../img/smile.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 65%;
   box-shadow: 0 0 20px rgba(0, 0, 0, .15);
 
   @include max(860) {
@@ -48,15 +54,26 @@
     transform: translateY(0);
   }
   @include max(768) {
-    max-width: 150px;
+    width: 150px;
+    height: 185px;
   }
   @include max(500) {
-    max-width: 210px;
+    width: 210px;
+    height: 255px;
   }
 
   img {
     display: block;
     width: 100%;
+    min-height: 255px;
+
+    object-fit: cover;
+    @include max(768) {
+      min-height: 185px;
+    }
+    @include max(500) {
+      min-height: 255px;
+    }
   }
 }
 
@@ -146,6 +163,9 @@
 
 .profile-top__info-row {
   display: flex;
+  .btn {
+    margin-top: 20px;
+  }
 }
 
 .profile-top__info-title {

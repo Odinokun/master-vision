@@ -1,0 +1,9 @@
+.profile-empty {
+  .profile-aside {
+    margin-top: 91px;
+
+    @include max(860) {
+      margin-top: 30px;
+    }
+  }
+}
