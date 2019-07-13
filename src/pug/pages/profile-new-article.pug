@@ -1,0 +1,170 @@
+extends ../_template
+
+mixin friend-1(pic, name)
+  //begin profile-friends__friend
+  .profile-friends__friend.profile-friends__friend--new
+    .profile-friends__friend-ava
+      img(src="assets/img/friends/friend-" + pic + ".jpg" alt="ava")
+    .profile-friends__friend-info
+      h4.profile-friends__friend-name #{name}
+      span.profile-friends__friend-status Лидер сообщества
+      .profile-friends__friend-rait
+        include ../elements/red-star
+        span 10 000
+    .profile-friends__friend-btns
+      button.btn.btn--dark Подтвердить
+      button.btn.btn--grey Отклонить
+  //end profile-friends__friend
+
+mixin friend-2(pic, name)
+  //begin profile-friends__friend
+  .profile-friends__friend.profile-friends__friend--new
+    .profile-friends__friend-ava
+      img(src="assets/img/friends/friend-" + pic + ".jpg" alt="ava")
+    .profile-friends__friend-info
+      h4.profile-friends__friend-name #{name}
+      span.profile-friends__friend-status Лидер сообщества
+      .profile-friends__friend-rait
+        include ../elements/red-star
+        span 10 000
+    .profile-friends__friend-popup-wrap
+      .profile-friends__friend-popup-arr
+        +svg('arr-down')
+      ul.profile-friends__friend-popup
+        li.profile-friends__friend-popup-item
+          a(href="#").profile-friends__friend-popup-link Отправить сообщение
+        li.profile-friends__friend-popup-item
+          a(href="#").profile-friends__friend-popup-link Удалить из друзей
+        li.profile-friends__friend-popup-item
+          a(href="#").profile-friends__friend-popup-link Посмотреть друзей
+  //end profile-friends__friend
+
+block variables
+  - var title       = 'Master Vision'
+  - var description = 'Master Vision'
+  - var ogtitle     = 'Master Vision'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.profile-new-article
+      include ../sections/profile-header
+      .container.profile-edit__header
+        .profile-edit__user
+          .profile-edit__user-ava
+            img(src="assets/img/profile-user-ava.jpg" alt="ava")
+          .profile-edit__user-info
+            h4.profile-edit__user-title Мария Иванова
+            span.profile-edit__user-text Новая запись в Блоге
+        .profile-edit__return-btn
+          a(href="#").btn.btn--light Вернуться на мою страницу
+
+
+
+      //begin profile-new-article-body
+      .container.profile-new-article-body
+        //begin profile-new-article__article
+        .profile-new-article__article
+
+          //begin profile-new-article__article-tools
+          .profile-new-article__article-tools
+            ul.profile-article__form-decor-list
+              li.profile-article__form-decor-item.decor-01
+                +svg('decor-01')
+              li.profile-article__form-decor-item.decor-02
+                +svg('decor-02')
+              li.profile-article__form-decor-item.decor-03.double
+                +svg('decor-03')
+              li.profile-article__form-decor-item.double
+                span 15
+                .profile-article__form-decor-double-arrow
+                  .profile-article__form-decor-arrow
+                    +svg('arr-down')
+                  .profile-article__form-decor-arrow
+                    +svg('arr-down')
+              li.profile-article__form-decor-item.decor-04
+                +svg('decor-04')
+              li.profile-article__form-decor-item.decor-05
+                +svg('decor-05')
+              li.profile-article__form-decor-item.decor-06
+                +svg('decor-06')
+              li.profile-article__form-decor-item.decor-07.double
+                +svg('decor-07')
+              li.profile-article__form-decor-item.decor-08
+                +svg('decor-08')
+                .profile-article__form-decor-arrow
+                  +svg('arr-down')
+              li.profile-article__form-decor-item.decor-09
+                +svg('decor-09')
+                .profile-article__form-decor-arrow
+                  +svg('arr-down')
+              li.profile-article__form-decor-item.decor-12
+                +svg('decor-12')
+                .profile-article__form-decor-arrow
+                  +svg('arr-down')
+              li.profile-article__form-decor-item.decor-15
+                +svg('decor-15')
+              li.profile-article__form-decor-item.decor-16
+                +svg('decor-16')
+          //end profile-new-article__article-tools
+
+          h2.profile-new-article__article-title Заголовок
+          p
+            |Включает в себя фундаментальную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладную психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в естественных условиях, и
+            =' '
+            i практическую психологию, занимающуюся применением психологических знаний на практике.
+
+          .profile-new-article__article-img
+            img(src="assets/img/new-article.jpg" alt="image")
+
+          p
+            |Включает в себя фундаментальную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладную психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в естественных условиях, и практическую психологию,
+            =' '
+            strong занимающуюся применением
+            =' '
+            |психологических знаний на практике.
+
+          ol.custom-ol
+            li Включает в себя фундамента́льную психологию
+            li Выявляющую факты, механизмы и законы психической деятельности
+            li Прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии
+
+          p Включает в себя фундаментальную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладную психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в естественных условиях, и практическую психологию, занимающуюся применением психологических знаний на практике.
+
+          ul.custom-ul
+            li Включает в себя фундамента́льную психологию
+            li Выявляющую факты, механизмы и законы психической деятельности
+            li Прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии
+        //end profile-new-article__article
+
+        //begin profile-new-article__aside
+        .profile-new-article__aside
+          select.profile-new-article__aside-select
+            option(value='') Выберите направление
+            option(value='') Направление 1
+            option(value='') Направление 2
+            option(value='') Направление 3
+
+          input(placeholder='Укажите теги').profile-new-article__aside-input
+
+          .profile-new-article__aside-cover-wrap
+            span.profile-new-article__aside-cover-title Обложка записи
+            .profile-new-article__aside-cover
+              img(src="assets/img/cover.jpg" alt="cover")
+            .profile-new-article__aside-cover-download
+              input(type='file')
+              span Загрузить обложку
+
+          .btn.btn--dark Опубликовать запись
+          .btn.btn--grey Сохранить черновик
+          .profile-new-article__aside-cancel
+            +svg('invite')
+            span Отмена
+
+        //end profile-new-article__aside
+
+    //end content
+
+    include ../sections/footer

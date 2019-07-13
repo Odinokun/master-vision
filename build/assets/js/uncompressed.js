@@ -16,7 +16,8 @@ $(document).ready(function ($) {
     'profile-money',
     'profile-invite',
     'profile-alien',
-    'profile-friends'
+    'profile-friends',
+    'profile-new-article'
     ]);
 });
 
