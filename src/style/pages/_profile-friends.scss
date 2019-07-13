@@ -1,0 +1,233 @@
+.profile-friends {
+  padding-bottom: 20px;
+}
+
+.profile-friends__header {
+  padding-top: 28px;
+  padding-bottom: 15px;
+}
+
+.profile-friends__title {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 500;
+  color: #1e1e1e;
+}
+
+.profile-friends__section {
+  margin-bottom: 33px;
+}
+
+.profile-friends__section--new {
+  .profile-friends__friend {
+    @include max(680) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.profile-friends__section--old {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .profile-friends__friend {
+    width: calc(50% - 5px);
+
+    @include max(860) {
+      width: 100%;
+    }
+  }
+}
+
+.profile-friends__section-header {
+  display: flex;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.profile-friends__section-title {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 300;
+  margin-right: 10px;
+  color: #1e1e1e;
+}
+
+.profile-friends__section-count {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 500;
+  color: $highlight-v;
+}
+
+.profile-friends__friend {
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.profile-friends__friend-ava {
+  overflow: hidden;
+  flex: none;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 50%;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.profile-friends__friend-info {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.profile-friends__friend-name {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #1e1e1e;
+}
+
+.profile-friends__friend-status {
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 26px;
+  color: #1e1e1e;
+}
+
+.profile-friends__friend-rait {
+  display: flex;
+  align-items: center;
+  svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+  }
+  span {
+    font-family: $font;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e1e1e;
+  }
+}
+
+.profile-friends__friend-btns {
+  display: flex;
+  align-items: center;
+  flex: none;
+  margin-left: auto;
+
+  @include max(860) {
+    flex-direction: column;
+  }
+  @include max(680) {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .btn {
+    min-width: 185px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+
+    @include max(860) {
+      margin-right: 0;
+    }
+    @include max(680) {
+      margin-right: 20px;
+    }
+    @include max(500) {
+      min-width: 120px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.profile-friends__friend-popup-wrap {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  @include max(500) {
+    top: 15px;
+    right: 15px;
+  }
+  &:hover {
+    .profile-friends__friend-popup {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+}
+
+.profile-friends__friend-popup-arr {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 10px;
+  height: 5px;
+  pointer-events: auto;
+  svg {
+    fill: #99a1ba;
+    width: 10px;
+    height: 5px;
+  }
+}
+
+.profile-friends__friend-popup {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  transition: all .5s;
+  pointer-events: none;
+  opacity: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+}
+
+.profile-friends__friend-popup-item {
+  padding: 0;
+  list-style: none;
+  transition: all .5s;
+  border-bottom: 1px solid #e4e4f2;
+  background-color: #fff;
+  &:last-child {
+    border-bottom: 1px solid #fff;
+  }
+  &:hover {
+    border-bottom: 1px solid $highlight-v;
+    background-color: $highlight-v;
+    .profile-friends__friend-popup-link {
+      color: #fff;
+    }
+  }
+}
+
+.profile-friends__friend-popup-link {
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 33px;
+  display: block;
+  min-width: 210px;
+  min-height: 33px;
+  padding: 0 19px;
+  transition: all .5s;
+  text-decoration: none;
+  color: #99a1ba;
+}
