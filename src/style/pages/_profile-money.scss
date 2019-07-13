@@ -10,9 +10,11 @@
   @include max(860) {
     width: 40%;
   }
+
   @include max(680) {
     width: 100%;
   }
+
   .btn {
     min-width: 187px;
     margin-top: 10px;
@@ -26,9 +28,11 @@
   @include max(860) {
     width: 60%;
   }
+
   @include max(680) {
     width: 100%;
   }
+
   .btn {
     min-width: 187px;
     margin-top: 10px;
@@ -49,6 +53,7 @@
   @include max(425) {
     flex-wrap: wrap;
   }
+
   svg {
     fill: $highlight-r;
     width: 100%;

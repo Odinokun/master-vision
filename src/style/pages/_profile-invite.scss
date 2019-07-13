@@ -1,0 +1,200 @@
+.profile-edit__invite {
+  position: relative;
+  height: 698px;
+  padding-top: 25px;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    bottom: 0;
+    left: -20px;
+    content: '';
+    background-image: url('../img/bg-profile-invite.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: cover;
+  }
+  p {
+    font-family: $font;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+    position: relative;
+    color: #1e1e1e;
+  }
+}
+
+.profile-edit__invite-title {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  color: #1e1e1e;
+}
+
+.profile-edit__invite-link {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.profile-edit__invite-link-title {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  margin-bottom: 15px;
+  color: #1e1e1e;
+}
+
+.profile-edit__invite-link-input {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  width: 100%;
+  max-width: 390px;
+  height: 36px;
+  padding-left: 19px;
+  border-radius: 18px;
+  background-color: #f0f0f5;
+  span {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 300;
+    white-space: nowrap;
+    color: #4d4ce0;
+  }
+  .btn {
+    flex: none;
+    width: 145px;
+    margin-left: auto;
+
+    @include max(500) {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.profile-edit__invite-social {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include max(500) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.profile-edit__invite-social-title {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 22px;
+  margin-bottom: 0;
+  color: #1e1e1e;
+
+  @include max(500) {
+    margin-bottom: 10px;
+  }
+}
+
+.profile-edit__invite-social-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.profile-edit__invite-social-link {
+  margin-right: 17px;
+  &:hover {
+    svg {
+      fill: $highlight-v;
+    }
+  }
+  svg {
+    fill: #99a1ba;
+    width: 20px;
+    height: 20px;
+    transition: fill .5s;
+  }
+}
+
+.profile-edit__invite-social-link--vk svg {
+  width: 25px;
+  height: 14px;
+}
+
+.profile-edit__invite-social-link--fb svg {
+  width: 12px;
+  height: 20px;
+}
+
+//begin invite-table
+.profile-edit__invite-table-wrap {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  margin-top: -40px;
+}
+
+.profile-edit__invite-table {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 5px;
+
+  @include max(600) {
+    min-width: 650px;
+  }
+}
+
+.profile-edit__invite-table-row {
+  display: flex;
+  border-bottom: 1px solid #fff;
+  background-color: #f0f0f5;
+  &:first-child {
+    border-bottom: none;
+    background-color: $highlight-v;
+    .profile-edit__invite-table-td {
+      color: $light;
+    }
+  }
+}
+
+.profile-edit__invite-table-td {
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 400;
+  min-height: 40px;
+  padding: 10px 0;
+  color: #1e1e1e;
+}
+
+.profile-edit__invite-table-td--name {
+  width: 100%;
+  padding-left: 20px;
+}
+
+.profile-edit__invite-table-td--date {
+  flex: none;
+  width: 200px;
+  padding-left: 20px;
+
+  @include max(1220) {
+    width: 160px;
+  }
+}
+
+.profile-edit__invite-table-td--bonus {
+  flex: none;
+  width: 200px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @include max(1220) {
+    width: 160px;
+  }
+}
+
+//end invite-table

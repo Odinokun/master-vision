@@ -1,0 +1,92 @@
+extends ../_template
+
+mixin profile-aside__menu-item(svg, text, active)
+  //begin profile-aside__menu-item
+  li(class='profile-aside__menu-item ' + active + '')
+    a(href="#").profile-aside__menu-link
+      div(class='profile-aside__menu-svg profile-aside__menu-svg--' + svg +'')
+        svg
+          use(xlink:href="assets/img/sprite.svg#" + svg + "")
+      span.profile-aside__menu-text #{text}
+  //end profile-aside__menu-item
+
+mixin invite-table-row(name, date, bonus)
+  //begin profile-edit__invite-table-row
+  .profile-edit__invite-table-row
+    .profile-edit__invite-table-td.profile-edit__invite-table-td--name #{name}
+    .profile-edit__invite-table-td.profile-edit__invite-table-td--date #{date}
+    .profile-edit__invite-table-td.profile-edit__invite-table-td--bonus #{bonus}
+  //end profile-edit__invite-table-row
+
+block variables
+  - var title       = 'Master Vision'
+  - var description = 'Master Vision'
+  - var ogtitle     = 'Master Vision'
+
+block content
+  .main-wrap.profile-edit
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../sections/profile-header
+      .container.profile-edit__header
+        h2.profile-edit__title Редактирование профиля
+        .profile-edit__return-btn
+          a(href="#").btn.btn--light Вернуться на мою страницу
+
+      .profile-main.profile-main--invite
+        .container
+          //begin profile-aside
+          .profile-aside
+            //begin profile-aside__menu
+            nav.profile-aside__menu.aside-item
+              ul.profile-aside__menu-list
+                +profile-aside__menu-item('paper', 'Основная информация', '')
+                +profile-aside__menu-item('hat', 'Образование','')
+                +profile-aside__menu-item('lock', 'Личная информация','')
+                +profile-aside__menu-item('invite', 'Пригласить друга','active')
+                +profile-aside__menu-item('wallet', 'Мой счет','')
+            //end profile-aside__menu
+          //end profile-aside
+
+          //begin profile-edit-body
+          .profile-edit-body
+            //begin profile-edit__invite
+            .profile-edit__invite
+              h3.profile-edit__invite-title По 100 баллов — Вам и Вашим друзьям!
+              p
+                |Поделитесь ссылкой с друзьями. Они получат 100 дополнительных баллов при регистрации,
+                br
+                |а Вы – 100 баллов на свой счёт. Потратить их можно будет в любой момент.
+
+              .profile-edit__invite-link
+                h4.profile-edit__invite-link-title Скопируйте ссылку
+                .profile-edit__invite-link-input
+                  span mastervision.ru/?invite=ivanova
+                  button.btn.btn--dark Скопировать
+
+              .profile-edit__invite-social
+                h4.profile-edit__invite-social-title Или поделитесь в соцсетях
+                .profile-edit__invite-social-wrap
+                  a(href="#").profile-edit__invite-social-link.profile-edit__invite-social-link--vk
+                    +svg('vk')
+                  a(href="#").profile-edit__invite-social-link.profile-edit__invite-social-link--fb
+                    +svg('fb')
+                  a(href="#").profile-edit__invite-social-link.profile-edit__invite-social-link--whats
+                    +svg('whats')
+            //end profile-edit__invite
+
+            //begin profile-edit__invite-table
+            .profile-edit__invite-table-wrap
+              .profile-edit__invite-table
+                +invite-table-row('ФИО', 'Дата регистрации', 'Вознаграждение')
+                +invite-table-row('Иван Иванович Владимиров', '20.06.2019', '+100 баллов')
+                +invite-table-row('Анна Влаимировна Смирнова-Березнева', '23.06.2019', '+100 баллов')
+                +invite-table-row('Иван Владимиров', '20.06.2019', '+100 баллов')
+            //end profile-edit__invite-table
+          //end profile-edit-body
+
+    //end content
+
+    include ../sections/footer
