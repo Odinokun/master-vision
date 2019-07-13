@@ -1,6 +1,7 @@
 .profile-edit__user {
   display: flex;
   margin-top: -5px;
+  padding-right: 15px;
 }
 
 .profile-edit__user-ava {
@@ -32,6 +33,11 @@
 
 .profile-new-article-body {
   display: flex;
+  margin-bottom: 60px;
+
+  @include max(768) {
+    flex-direction: column;
+  }
 }
 
 .profile-new-article__article {
@@ -47,7 +53,112 @@
   width: 270px;
   min-height: 100px;
   margin-left: 30px;
+
+  @include max(768) {
+    width: 100%;
+    max-width: 270px;
+    margin-top: 30px;
+    margin-left: 0;
+  }
 }
+
+//begin profile-new-article__article
+
+.profile-new-article__article {
+  padding: 8px 20px;
+  p {
+    font-family: $font;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+    color: #1e1e1e;
+    strong {
+      font-weight: 500;
+    }
+    i {
+      font-style: italic;
+    }
+  }
+}
+
+.profile-new-article__article-tools {
+  margin-bottom: 18px;
+  border-bottom: 1px solid #e4e4f2;
+  .profile-article__form-decor-list {
+    padding: 0;
+  }
+}
+
+.profile-article__form-decor-double-arrow {
+  .profile-article__form-decor-arrow {
+    padding: 2px 0;
+    &:first-child {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.profile-new-article__article-title {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 500;
+  color: #1e1e1e;
+}
+
+.profile-new-article__article-img {
+  margin-bottom: 25px;
+  padding-top: 10px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+//кастомные пункты списка с цифрами
+.custom-ol {
+  margin: 18px 0 22px 0;
+  padding: 0;
+  list-style: none;
+
+  @include counter(li);
+  li {
+    font-family: $font;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+    position: relative;
+    padding: 0 0 0 30px;
+    color: #1e1e1e;
+  }
+  li::before {
+    font-family: $font;
+    font-size: 15px;
+    font-weight: 500;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    color: #1e1e1e;
+  }
+}
+
+.custom-ul {
+  margin: 15px 0 22px 0;
+  padding: 0;
+  li {
+    font-family: $font;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+    padding: 0 0 0 30px;
+    list-style: none;
+    color: #1e1e1e;
+    background-image: url('../img/ul.svg');
+    background-repeat: no-repeat;
+    background-position: 0 10px;
+  }
+}
+
+//end profile-new-article__article
 
 //begin article-aside
 .profile-new-article__aside {
@@ -65,7 +176,7 @@
   width: 100%;
   height: 36px;
   margin-bottom: 10px;
-  padding: 12px 20px 12px 20px;
+  padding: 12px 20px 9px 20px;
   color: #99a1ba;
   border: none;
   border-radius: 18px !important;
