@@ -168,6 +168,7 @@ ol > *:not(li) {
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
+
   &.no-scroll {
     overflow: hidden;
   }
@@ -243,5 +244,16 @@ ol > *:not(li) {
     color: $highlight-v;
     border: 1px solid $highlight-v;
     background-color: transparent;
+  }
+}
+
+.btn--white {
+  color: #1e1e1e;
+  border: 1px solid #fff;
+  background-color: #fff;
+  &:hover {
+    color: $light;
+    border: 1px solid $highlight-v;
+    background-color: $highlight-v;
   }
 }
