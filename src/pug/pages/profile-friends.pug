@@ -1,0 +1,82 @@
+extends ../_template
+
+mixin friend-1(pic, name)
+  //begin profile-friends__friend
+  .profile-friends__friend.profile-friends__friend--new
+    .profile-friends__friend-ava
+      img(src="assets/img/friends/friend-" + pic + ".jpg" alt="ava")
+    .profile-friends__friend-info
+      h4.profile-friends__friend-name #{name}
+      span.profile-friends__friend-status Лидер сообщества
+      .profile-friends__friend-rait
+        include ../elements/red-star
+        span 10 000
+    .profile-friends__friend-btns
+      button.btn.btn--dark Подтвердить
+      button.btn.btn--grey Отклонить
+  //end profile-friends__friend
+
+mixin friend-2(pic, name)
+  //begin profile-friends__friend
+  .profile-friends__friend.profile-friends__friend--new
+    .profile-friends__friend-ava
+      img(src="assets/img/friends/friend-" + pic + ".jpg" alt="ava")
+    .profile-friends__friend-info
+      h4.profile-friends__friend-name #{name}
+      span.profile-friends__friend-status Лидер сообщества
+      .profile-friends__friend-rait
+        include ../elements/red-star
+        span 10 000
+    .profile-friends__friend-popup-wrap
+      .profile-friends__friend-popup-arr
+        +svg('arr-down')
+      ul.profile-friends__friend-popup
+        li.profile-friends__friend-popup-item
+          a(href="#").profile-friends__friend-popup-link Отправить сообщение
+        li.profile-friends__friend-popup-item
+          a(href="#").profile-friends__friend-popup-link Удалить из друзей
+        li.profile-friends__friend-popup-item
+          a(href="#").profile-friends__friend-popup-link Посмотреть друзей
+  //end profile-friends__friend
+
+block variables
+  - var title       = 'Master Vision'
+  - var description = 'Master Vision'
+  - var ogtitle     = 'Master Vision'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.profile-friends
+      include ../sections/profile-header
+      .container
+        header.profile-friends__header
+          h2.profile-friends__title Друзья
+        //begin profile-friends__section
+        .profile-friends__section.profile-friends__section--new
+          header.profile-friends__section-header
+            h3.profile-friends__section-title Новые заявки
+            .profile-friends__section-count 2
+          +friend-1('01', 'Вячеслава Ивановна Миронова')
+          +friend-1('02', 'Вячеслава Ивановна Миронова')
+        //end profile-friends__section
+
+        //begin profile-friends__section
+        .profile-friends__section.profile-friends__section--old
+          header.profile-friends__section-header
+            h3.profile-friends__section-title Ваши друзья
+            .profile-friends__section-count 206
+          +friend-2('03', 'Вячеслава Ивановна Миронова')
+          +friend-2('07', 'Вячеслава Ивановна Миронова')
+          +friend-2('04', 'Катюнька Донская')
+          +friend-2('08', 'Вячеслава Ивановна Миронова')
+          +friend-2('05', 'Вячеслава Ивановна Миронова')
+          +friend-2('09', 'Катюнька Донская')
+          +friend-2('06', 'Маргарита Валерьевна Осташевская')
+          +friend-2('10', 'Маргарита Валерьевна Осташевская')
+        //end profile-friends__section
+    //end content
+
+    include ../sections/footer
