@@ -1,0 +1,40 @@
+//begin profile-top
+.profile-top(style="background-image:url('assets/img/bg-profile-top.jpg')")
+  .container
+    //begin profile-top__left
+    .profile-top__left
+      .profile-top__ava
+        img(src="assets/img/profile-top-ava-2.jpg" alt="avatar")
+    //end profile-top__left
+
+    //begin profile-top__right
+    .profile-top__right
+      //begin profile-top__add
+      .profile-top__add
+        button.btn.btn--white Добавить в избранное
+      //end profile-top__add
+
+      //begin profile-top__info
+      .profile-top__info
+        h2.profile-top__info-name Светлана Константинова
+        .profile-top__info-row
+          span.profile-top__info-title Место жительства:
+          span.profile-top__info-info Россия, Кротовка
+        .profile-top__info-row
+          span.profile-top__info-title День рождения:
+          span.profile-top__info-info 19 января 1985
+        .profile-top__show-more
+          .profile-top__show-more-open Показать подробную информацию
+          .profile-top__show-more-close Скрыть подробную информацию
+      //end profile-top__info
+
+      //begin profile-top__status
+      .profile-top__status
+        .profile-top__status-rait
+          include ../elements/red-star
+          span 10 000
+        span.profile-top__status-position Лидер сообщества
+      //end profile-top__status
+
+    //begin profile-top__right
+//end profile-top

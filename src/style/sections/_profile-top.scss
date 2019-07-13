@@ -24,9 +24,11 @@
   @include max(860) {
     align-items: center;
   }
+
   @include max(768) {
     width: 160px;
   }
+
   @include max(500) {
     justify-content: flex-start;
   }
@@ -53,10 +55,12 @@
     margin-bottom: 20px;
     transform: translateY(0);
   }
+
   @include max(768) {
     width: 150px;
     height: 185px;
   }
+
   @include max(500) {
     width: 210px;
     height: 255px;
@@ -68,9 +72,11 @@
     min-height: 255px;
 
     object-fit: cover;
+
     @include max(768) {
       min-height: 185px;
     }
+
     @include max(500) {
       min-height: 255px;
     }
@@ -94,9 +100,24 @@
 
     align-content: flex-end;
   }
+
   @include max(500) {
     position: static;
     padding-top: 0;
+  }
+}
+
+.profile-top__add {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  @include max(500) {
+    position: static;
+    margin-bottom: 10px;
   }
 }
 
@@ -111,6 +132,7 @@
   @include max(500) {
     right: 20px;
   }
+
   @include max(425) {
     right: 10px;
   }
