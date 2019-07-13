@@ -13,7 +13,8 @@ $(document).ready(function ($) {
     'profile-personal',
     'profile-empty',
     'profile-wallpappers',
-    'profile-money'
+    'profile-money',
+    'profile-invite'
     ]);
 });
 
