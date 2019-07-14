@@ -16,8 +16,8 @@
 }
 
 .profile-edit__return-btn {
-  margin-bottom: 20px;
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .profile-edit-body {
@@ -89,6 +89,10 @@
 
   @include max(1110) {
     flex-wrap: wrap;
+  }
+
+  .iti {
+    width: 100%;
   }
 }
 
@@ -255,11 +259,11 @@
     opacity: 1;
   }
   label {
-  cursor: pointer;
     position: relative;
-    background-color: #fff;
     display: flex;
     flex-direction: column-reverse;
+    cursor: pointer;
+    background-color: #fff;
     &.active {
       span::after {
         opacity: 1;
@@ -269,35 +273,35 @@
     span {
       font-size: 14px;
       font-weight: 300;
+      position: relative;
       display: block;
       padding-left: 25px;
       color: #1e1e1e;
-      position: relative;
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 16px;
-      margin: auto;
-      height: 16px;
-      content: '';
-      border: 4px solid #f0f0f5;
-      border-radius: 50%;
-      background-color: #f0f0f5;
-    }
-    &::after {
-      position: absolute;
-      top: 0;
-      bottom: 4px;
-      left: 4px;
-      width: 8px;
-      height: 8px;
-      margin: auto;
-      content: '';
-      opacity: 0;
-      border-radius: 50%;
-      background-color: $highlight-v;
-    }
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        margin: auto;
+        content: '';
+        border: 4px solid #f0f0f5;
+        border-radius: 50%;
+        background-color: #f0f0f5;
+      }
+      &::after {
+        position: absolute;
+        top: 0;
+        bottom: 4px;
+        left: 4px;
+        width: 8px;
+        height: 8px;
+        margin: auto;
+        content: '';
+        opacity: 0;
+        border-radius: 50%;
+        background-color: $highlight-v;
+      }
     }
   }
   input {
@@ -382,6 +386,7 @@
   @include max(680) {
     margin-bottom: 15px;
   }
+
   &::before {
     position: absolute;
     top: 1px;
