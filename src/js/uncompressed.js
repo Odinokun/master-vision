@@ -17,7 +17,8 @@ $(document).ready(function ($) {
     'profile-invite',
     'profile-alien',
     'profile-friends',
-    'profile-new-article'
+    'profile-new-article',
+    'profile-teacher'
     ]);
 });
 

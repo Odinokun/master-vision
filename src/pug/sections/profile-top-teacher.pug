@@ -1,0 +1,52 @@
+//begin profile-top-teacher
+.profile-top-teacher(style="background-image:url('assets/img/bg-teacher.jpg')")
+  .container
+    //begin breadcrumbs
+    section.breadcrumbs
+      ul.breadcrumbs__list
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href="#") Главная
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href="#") Преподаватели
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href="#") Петр Максимов
+    //end breadcrumbs
+      
+    .profile-top-teacher__body
+      //begin profile-top-teacher__pic
+      .profile-top-teacher__pic.profile-top-teacher__pic--recommend
+        img(src="assets/img/teacher.png" alt="teacher")
+      //end profile-top-teacher__pic
+
+      //begin profile-top-teacher__info
+      .profile-top-teacher__info
+        h2.profile-top-teacher__name Петр Максимов
+        h3.profile-top-teacher__position
+          |Преподаватель психологии
+          br
+          |и изотерики
+      //end profile-top-teacher__info
+
+      //begin profile-top-teacher__bottom
+      .profile-top-teacher__bottom
+        .profile-top-teacher__rait
+          span Рейтинг
+          .profile-top-teacher__rait-svg.profile-top-teacher__rait-svg--4
+            include ../elements/yellow-star
+            include ../elements/yellow-star
+            include ../elements/yellow-star
+            include ../elements/yellow-star
+            include ../elements/yellow-star
+
+        a(href="#").btn.btn--dark Курсы преподавателя
+        a(href="#").btn.btn--white Добавить в избранное
+      //end profile-top-teacher__bottom
+
+      //begin profile-top-teacher__hashtag
+      .profile-top-teacher__hashtag
+        span #эффективность
+        span #уверенность в себе
+        span #воля
+        span #сила
+      //end profile-top-teacher__hashtag
+//end profile-top-teacher
