@@ -1,0 +1,198 @@
+.profile-top-teacher {
+  padding-top: 15px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.profile-top-teacher__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 493px;
+  padding-left: 370px;
+
+  @include max(860) {
+    min-height: 400px;
+    padding-left: 320px;
+  }
+  @include max(680) {
+    padding-left: 0;
+  }
+}
+
+.profile-top-teacher__pic {
+  position: absolute;
+  bottom: -120px;
+  left: 30px;
+  width: 304px;
+
+  @include max(860) {
+    width: 250px;
+  }
+  @include max(680) {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    order: 100;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.profile-top-teacher__pic--recommend {
+  &::before {
+    position: absolute;
+    top: 147px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    content: '';
+    border-radius: 50%;
+    background-color: $highlight-r;
+    background-image: url('../img/recommend.png');
+    background-repeat: no-repeat;
+    background-position: 49% 47%;
+
+    @include max(375) {
+      left: 0;
+    }
+  }
+}
+
+.profile-top-teacher__info {
+  max-width: 500px;
+  margin-top: auto;
+}
+
+.profile-top-teacher__name {
+  font-family: $font-title;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 80px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #fff;
+
+  @include max(1024) {
+    font-size: 60px;
+    line-height: 1.2;
+  }
+  @include max(860) {
+    font-size: 50px;
+  }
+}
+
+.profile-top-teacher__position {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 40px;
+  margin-bottom: 70px;
+  color: #fff;
+
+  @include max(860) {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+  }
+}
+
+.profile-top-teacher__bottom {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  @include max(1110) {
+    flex-wrap: wrap;
+  }
+  .btn {
+    margin-right: 20px;
+    white-space: nowrap;
+
+    @include max(1110) {
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.profile-top-teacher__rait {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-right: auto;
+
+  @include max(1110) {
+    margin-bottom: 15px;
+  }
+  span {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+    display: block;
+    margin-right: 15px;
+    color: #fff;
+  }
+}
+
+.profile-top-teacher__rait-svg {
+  display: flex;
+  svg {
+    flex: none;
+    width: 21px;
+    height: 21px;
+    margin-right: 7px;
+  }
+}
+
+.profile-top-teacher__rait-svg--1 svg:nth-child(n+2) {
+  .svg-star-rait {
+    fill: #fff;
+  }
+}
+
+.profile-top-teacher__rait-svg--2 svg:nth-child(n+3) {
+  .svg-star-rait {
+    fill: #fff;
+  }
+}
+
+.profile-top-teacher__rait-svg--3 svg:nth-child(n+4) {
+  .svg-star-rait {
+    fill: #fff;
+  }
+}
+
+.profile-top-teacher__rait-svg--4 svg:nth-child(n+5) {
+  .svg-star-rait {
+    fill: #fff;
+  }
+}
+
+.profile-top-teacher__hashtag {
+  position: absolute;
+  top: 75px;
+  right: -40px;
+  transform: rotate(-90deg);
+
+  @include max(950) {
+    display: none;
+  }
+  span {
+    font-family: $font;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 35px;
+    display: block;
+    color: #fff;
+  }
+}

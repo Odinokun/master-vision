@@ -18,11 +18,14 @@ $(function() {
   // begin radio
   require('./modules/radio')();
 
+  // begin video
+  require('./modules/video')();
+
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
 
   // begin Slick slider
-  // require('./modules/slick')();
+  require('./modules/slick')();
 
   // begin Popup
   // require('./modules/popup')();
