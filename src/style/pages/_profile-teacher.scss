@@ -7,3 +7,273 @@
     }
   }
 }
+
+.profile-teacher__blockquote {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 120px;
+  blockquote {
+    font-family: $font;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 23px;
+    margin: 0 0 0 370px;
+    padding: 20px 0 20px 60px;
+    color: #1e1e1e;
+    background-image: url('../img/blockquote.svg');
+    background-repeat: no-repeat;
+    background-position: 0 17px;
+
+    @include max(860) {
+      margin: 0 0 0 320px;
+    }
+    @include max(680) {
+      margin: 0;
+    }
+  }
+}
+
+.profile-teacher-main {
+  display: flex;
+  @include max(950) {
+    flex-wrap: wrap;
+  }
+}
+
+//begin about
+.profile-teacher-about {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  p {
+    margin-bottom: 24px;
+  }
+}
+
+.profile-teacher-about__title {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 500;
+  color: #1e1e1e;
+}
+
+.profile-teacher-about__video {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  iframe {
+    display: block;
+    width: 100%;
+    height: 350px;
+  }
+  &.active {
+    .profile-teacher-about__video-cover {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+}
+
+.profile-teacher-about__video-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transition: opacity .5s;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 57px;
+    height: 40px;
+    margin: auto;
+  }
+}
+
+//end about
+
+//begin education
+.profile-teacher-education {
+  flex: none;
+  width: 470px;
+  margin-left: 30px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: #fff;
+  @include max(950) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.profile-teacher-education__title {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 500;
+  color: #1e1e1e;
+}
+
+.profile-teacher-education__list {
+  margin: 0 0 30px 0;
+  padding: 10px 0 0 0;
+  border-bottom: 1px solid #e4e4f2;
+}
+.profile-teacher-education__item {
+  position: relative;
+  padding: 0 0 22px 40px;
+  list-style: none;
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    top: 3px;
+    left: 2px;
+    width: 13px;
+    height: 13px;
+    content: '';
+    border-radius: 50%;
+    background-color: $highlight-v;
+  }
+  &::after {
+    position: absolute;
+    top: 5px;
+    bottom: -5px;
+    left: 8px;
+    width: 1px;
+    content: '';
+    opacity: .3;
+    background-color: $highlight-v;
+  }
+  span {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+    display: block;
+    color: #1e1e1e;
+  }
+  .sm {
+    color: #99a1ba;
+  }
+}
+
+.profile-teacher-education__sertificate-slider {
+  width: calc(100% + 20px);
+  max-width: 450px;
+  margin: 0 0 0 -10px;
+  padding: 0;
+  &::before {
+    content: '';
+    width: 150px;
+    background-color: #fff;
+    opacity: .5;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    bottom: 0;
+    @include max(500) {
+      display: none;
+    }
+  }
+  .slick-prev {
+    display: none !important;
+      z-index: 2;
+      width: 40px;
+      height: 40px;
+      border-radius: 50% !important;
+      background-color: #fff;
+      background-image: url('../img/arr-right.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+      left: -10px;
+    transform: translate(0,-50%) rotate(180deg);
+    @include max(500) {
+      display: block !important;
+    }
+  }
+  .slick-next {
+    z-index: 2;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    background-color: #fff;
+    background-image: url('../img/arr-right.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    @include max(500) {
+      right: -10px;
+    }
+  }
+}
+.profile-teacher-education__sertificate-slide {
+  position: relative;
+  padding: 0 10px;
+  list-style: none;
+  img {
+    display: block;
+    width: 100%;
+  }
+  &:hover {
+    .profile-teacher-education__sertificate-cover {
+      opacity: 1;
+    }
+  }
+}
+.profile-teacher-education__sertificate-cover {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  left: 10px;
+  transition: opacity .5s;
+  pointer-events: none;
+  opacity: 0;
+  border: 2px solid $highlight-v;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+    background-color: $highlight-v;
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    fill: #fff;
+    width: 14px;
+    height: 13px;
+    margin: auto;
+  }
+}
+
+//end education

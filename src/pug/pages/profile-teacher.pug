@@ -1,5 +1,12 @@
 extends ../_template
 
+mixin profile-teacher-education__sertificate-slide()
+  li.profile-teacher-education__sertificate-slide
+    a(href="assets/img/sertificate.jpg" data-fancybox="sertificate")
+      img(src="assets/img/sertificate.jpg" alt="seftificate")
+    .profile-teacher-education__sertificate-cover
+      +svg('magnific')
+
 block variables
   - var title       = 'Master Vision'
   - var description = 'Master Vision'
@@ -13,10 +20,67 @@ block content
     main.main.profile-teacher
       include ../sections/profile-header
       include ../sections/profile-top-teacher
-      .profile-main
+
+      .profile-teacher__blockquote
         .container
-          include ../sections/profile-aside
-          include ../sections/profile-articles
+          blockquote Мое кредо - видеть хорошее в каждом дне! Все будет круто!
+
+      //begin profile-teacher-main
+      .container.profile-teacher-main
+
+        //begin profile-teacher-about
+        .profile-teacher-about
+          h3.profile-teacher-about__title О преподавателе
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+          .profile-teacher-about__video
+            .profile-teacher-about__video-cover(style="background-image:url('assets/img/teacher-about-video-cover.jpg');")
+              svg(viewBox='0 0 57 40')
+                path(fill='#fff', d='M57 15.08v9.84c0 6.239-.987 9.842-3.3 12.05C51.445 39.121 47.96 40 41.667 40H15.332C2.372 40 0 34.92 0 24.92v-9.84C0 9.917 0 6.187 1.998 3.655 4.048 1.06 7.911 0 15.332 0h26.335c7.255 0 11.054.995 13.111 3.433C56.845 5.883 57 9.635 57 15.08zM37.58 19.73c0-.683-.383-1.309-.991-1.624L24.63 11.914a1.843 1.843 0 0 0-1.802.06c-.549.333-.884.927-.884 1.567v12.424a1.833 1.833 0 0 0 1.839 1.834c.292 0 .584-.07.851-.209l11.96-6.232c.607-.316.987-.944.986-1.627z')
+            iframe(src='https://www.youtube.com/embed/an28rVke-MI', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+
+        //end profile-teacher-about
+
+        //begin profile-teacher-education
+        .profile-teacher-education
+          h3.profile-teacher-education__title Образование
+
+          ul.profile-teacher-education__list
+            li.profile-teacher-education__item
+              span Московский психологический университет им. Иванова
+              span Магистр психологии
+              span.sm 1999-2006 гг
+            li.profile-teacher-education__item
+              span Московский психологический университет им. Иванова
+              span Повышение кваллификации - гештальт-терапия
+              span.sm 2015 г
+            li.profile-teacher-education__item
+              span Московский психологический университет им. Иванова
+              span Повышение кваллификации - психологические практики
+              span.sm 2018 г
+          h3.profile-teacher-education__title Опыт работы
+
+          ul.profile-teacher-education__list
+            li.profile-teacher-education__item
+              span Частная клиника в г.Москва
+              span Практикующий психолог
+              span.sm 2006-2013 гг
+            li.profile-teacher-education__item
+              span Частная клиника в г.Тверь
+              span Ведущий психолог
+              span.sm 2013 г - по настоящее время
+
+          h3.profile-teacher-education__title Сертификаты и дипломы
+
+          ul.profile-teacher-education__sertificate-slider
+            +profile-teacher-education__sertificate-slide()
+            +profile-teacher-education__sertificate-slide()
+            +profile-teacher-education__sertificate-slide()
+            +profile-teacher-education__sertificate-slide()
+            +profile-teacher-education__sertificate-slide()
+        //end profile-teacher-education
+      //end profile-teacher-main
     //end content
 
     include ../sections/footer

@@ -2,13 +2,19 @@ module.exports = function() {
 
   // begin Slick slider
 
-  $('.slick').slick({
-    dots: true,
+  $('.profile-teacher-education__sertificate-slider').slick({
     infinite: true,
-    speed: 500,
-    fade: true,
-    autoplay: true,
-    cssEase: 'linear'
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots:false,
+    responsive: [
+      {
+        breakpoint: 501,
+        settings: {
+          slidesToShow: 2
+        }
+      }
+    ]
   });
 
   // end Slick slider
