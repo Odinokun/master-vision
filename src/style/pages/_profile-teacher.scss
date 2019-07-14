@@ -37,6 +37,7 @@
 
 .profile-teacher-main {
   display: flex;
+
   @include max(950) {
     flex-wrap: wrap;
   }
@@ -88,7 +89,7 @@
   transition: opacity .5s;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: cover;
+  background-size: auto, cover;
   svg {
     position: absolute;
     top: 0;
@@ -105,16 +106,18 @@
 
 //begin education
 .profile-teacher-education {
+  overflow: hidden;
   flex: none;
   width: 470px;
+  margin-bottom: 30px;
   margin-left: 30px;
   padding: 20px;
-  margin-bottom: 30px;
   border-radius: 5px;
   background-color: #fff;
+
   @include max(950) {
-    margin-left: 0;
     width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -130,6 +133,7 @@
   padding: 10px 0 0 0;
   border-bottom: 1px solid #e4e4f2;
 }
+
 .profile-teacher-education__item {
   position: relative;
   padding: 0 0 22px 40px;
@@ -180,52 +184,54 @@
   margin: 0 0 0 -10px;
   padding: 0;
   &::before {
-    content: '';
-    width: 150px;
-    background-color: #fff;
-    opacity: .5;
-    z-index: 1;
     position: absolute;
+    z-index: 1;
     top: 0;
-    right: 0px;
+    right: 0;
     bottom: 0;
+    width: 150px;
+    content: '';
+    opacity: .5;
+    background-color: #fff;
+
     @include max(500) {
       display: none;
     }
   }
+  .slick-prev,
+  .slick-next {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    transition: .5s;
+    border-radius: 50% !important;
+    background-color: #99a1ba;
+    background-image: url('../img/arr-right.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 15px 15px;
+    &:hover {
+      background-color: $highlight-v;
+    }
+  }
   .slick-prev {
+    left: -10px;
     display: none !important;
-      z-index: 2;
-      width: 40px;
-      height: 40px;
-      border-radius: 50% !important;
-      background-color: #fff;
-      background-image: url('../img/arr-right.png');
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: contain;
-      left: -10px;
-    transform: translate(0,-50%) rotate(180deg);
+    transform: translate(0, -50%) rotate(180deg);
+
     @include max(500) {
       display: block !important;
     }
   }
   .slick-next {
-    z-index: 2;
     right: 50px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50% !important;
-    background-color: #fff;
-    background-image: url('../img/arr-right.png');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
+
     @include max(500) {
       right: -10px;
     }
   }
 }
+
 .profile-teacher-education__sertificate-slide {
   position: relative;
   padding: 0 10px;
@@ -240,6 +246,7 @@
     }
   }
 }
+
 .profile-teacher-education__sertificate-cover {
   position: absolute;
   top: 0;
@@ -277,3 +284,418 @@
 }
 
 //end education
+
+//begin courses
+.profile-teacher-courses {
+  margin-bottom: 30px;
+}
+
+.profile-teacher__section-title {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 28px;
+  color: #1e1e1e;
+}
+
+.profile-teacher__courses-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-teacher__course {
+  overflow: hidden;
+  width: 23%;
+  margin-bottom: 20px;
+  padding: 18px 18px 12px 18px;
+  transition: border-color .5s;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: #fff;
+
+  @include max(860) {
+    width: calc(50% - 10px);
+  }
+
+  &:hover {
+    border-color: $highlight-v;
+    .profile-teacher__course-title {
+      color: $highlight-v;
+    }
+  }
+}
+
+.profile-teacher__course-link {
+  text-decoration: none;
+}
+
+.profile-teacher__course-pic {
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.profile-teacher__course-title {
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+  margin-bottom: 0;
+  transition: color .5s;
+  color: #1e1e1e;
+
+  @include max(375) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+.profile-teacher__courses-all {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  &:hover {
+    span {
+      color: $highlight-v;
+    }
+  }
+  span {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 300;
+    display: block;
+    margin-right: 12px;
+    color: $highlight-v;
+  }
+  .svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    transform: rotate(-90deg);
+    border-radius: 50%;
+    background-color: $highlight-v;
+    svg {
+      fill: #fff;
+      width: 9px;
+      height: 4px;
+    }
+  }
+}
+
+//end courses
+
+//begin reviews
+.profile-teacher-reviews {
+  overflow: hidden;
+}
+
+.profile-teacher__reviews-slider {
+  width: calc(100% + 30px);
+  margin: 0 -15px 35px -15px;
+  padding: 0;
+
+  @include max(425) {
+    width: calc(100% + 20px);
+    margin: 0 -10px 35px -10px;
+  }
+  .slick-prev,
+  .slick-next {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    transition: .5s;
+    border-radius: 50% !important;
+    background-color: #99a1ba;
+    background-image: url('../img/arr-right.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 15px 15px;
+    &:hover {
+      background-color: $highlight-v;
+    }
+  }
+  .slick-prev {
+    top: 115px;
+    left: 5px;
+    display: none !important;
+    transform: translate(0, -50%) rotate(180deg);
+
+    @include max(768) {
+      display: block !important;
+    }
+  }
+  .slick-next {
+    top: 115px;
+    right: -5px;
+
+    @include max(768) {
+      right: 5px;
+    }
+  }
+}
+
+.profile-teacher__reviews-slide {
+  padding: 0 15px;
+}
+
+.profile-teacher__reviews-iframe {
+  position: relative;
+  overflow: hidden;
+  height: 230px;
+  margin-bottom: 17px;
+  border-radius: 5px;
+  iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &.active {
+    .profile-teacher__reviews-video-cover {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+}
+
+.profile-teacher__reviews-video-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transition: opacity .5s;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: auto, cover;
+}
+
+.profile-teacher__reviews-text {
+  span {
+    font-family: $font;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 22px;
+    display: block;
+    color: #1e1e1e;
+  }
+}
+
+//end reviews
+
+//begin text reviews
+.profile-teacher__reviews-t {
+  overflow: hidden;
+}
+
+.profile-teacher__reviews-t-slider {
+  width: calc(100% + 30px);
+  margin: 0 0 30px -15px;
+  padding: 0;
+
+  @include max(425) {
+    width: calc(100% + 20px);
+    margin: 0 0 30px -10px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    transition: .5s;
+    border-radius: 50% !important;
+    background-color: #99a1ba;
+    background-image: url('../img/arr-right.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 15px 15px;
+    &:hover {
+      background-color: $highlight-v;
+    }
+  }
+  .slick-prev {
+    left: -5px;
+    display: none !important;
+    transform: translate(0, -50%) rotate(180deg);
+
+    @include max(950) {
+      display: block !important;
+    }
+    @include max(768) {
+      left: 5px;
+    }
+  }
+  .slick-next {
+    right: -5px;
+
+    @include max(768) {
+      right: 5px;
+    }
+  }
+}
+
+.profile-teacher__reviews-t-slide {
+  padding: 0 15px;
+  .profile-top-teacher__rait-svg {
+    margin-left: auto;
+
+    @include max(500) {
+      width: 100%;
+      margin-top: 10px;
+      margin-left: 0;
+      padding-left: 43px;
+    }
+    svg {
+      margin-right: 0;
+      margin-left: 7px;
+    }
+  }
+}
+
+.profile-teacher__reviews-t-slide-inn {
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.profile-teacher__reviews-t-header {
+  display: flex;
+
+  @include max(500) {
+    flex-wrap: wrap;
+  }
+}
+
+.profile-teacher__reviews-t-ava {
+  overflow: hidden;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  margin-right: 14px;
+  border-radius: 50%;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.profile-teacher__reviews-t-name {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #1e1e1e;
+}
+
+.profile-teacher__reviews-t-course {
+  display: flex;
+  align-items: center;
+}
+
+.profile-teacher__reviews-t-course-text {
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 23px;
+  padding-right: 5px;
+  color: #99a1ba;
+}
+
+.profile-teacher__reviews-t-course-name {
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 23px;
+  color: $highlight-v;
+}
+
+.profile-teacher__reviews-t-body {
+  padding-left: 50px;
+  p {
+    font-family: $font;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+    color: #1e1e1e;
+  }
+}
+
+.profile-teacher__reviews-t-footer {
+  padding-left: 50px;
+}
+
+.profile-teacher__reviews-t-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  &:hover {
+    span {
+      color: $highlight-v;
+    }
+  }
+  span {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+    color: $highlight-v;
+  }
+  .svg {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    margin-left: 9px;
+    transform: rotate(-90deg);
+    border-radius: 50%;
+    background-color: $highlight-v;
+    svg {
+      fill: #fff;
+      width: 9px;
+      height: 6px;
+    }
+  }
+}
+
+.profile-teacher__reviews-about {
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+
+  @include max(760) {
+    align-items: flex-start;
+  }
+  svg {
+    flex: none;
+    fill: #99a1ba;
+    width: 45px;
+    height: 53px;
+    margin-right: 23px;
+  }
+}
+
+.profile-teacher__reviews-about-text {
+  span {
+    font-family: $font;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+    display: block;
+    color: #99a1ba;
+  }
+}
+
+//end text reviews
