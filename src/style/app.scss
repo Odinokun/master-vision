@@ -12,7 +12,7 @@
 @import 'elements/profile-aside-menu';
 @import 'elements/profile-aside-progress';
 @import 'elements/profile-aside-friends';
-//@import 'elements/breadcrumbs';
+@import 'elements/breadcrumbs';
 //@import 'elements/pagination';
 //@import 'elements/popup';
 //@import 'elements/slickBase';
@@ -22,6 +22,7 @@
 @import 'sections/header';
 @import 'sections/profile-header';
 @import 'sections/profile-top';
+@import 'sections/profile-top-teacher';
 @import 'sections/profile-counters';
 @import 'sections/profile-aside';
 @import 'sections/profile-articles';
@@ -40,3 +41,4 @@
 @import 'pages/profile-invite';
 @import 'pages/profile-friends';
 @import 'pages/profile-new-article';
+@import 'pages/profile-teacher';

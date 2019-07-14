@@ -1,0 +1,91 @@
+//begin profile-top-teacher
+.profile-top-teacher(style="background-image:url('assets/img/bg-teacher.jpg')")
+  .container
+    //begin breadcrumbs
+    section.breadcrumbs
+      ul.breadcrumbs__list
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href="#") Главная
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href="#") Преподаватели
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href="#") Петр Максимов
+    //end breadcrumbs
+      
+    .profile-top-teacher__body
+      //begin profile-top-teacher__pic
+      .profile-top-teacher__pic.profile-top-teacher__pic--recommend
+        img(src="assets/img/teacher.png" alt="teacher")
+      //end profile-top-teacher__pic
+
+      //begin profile-top-teacher__info
+      .profile-top-teacher__info
+        h2.profile-top-teacher__name Петр Максимов
+        h3.profile-top-teacher__position
+          |Преподаватель психологии
+          br
+          |и изотерики
+      //end profile-top-teacher__info
+
+      //begin profile-top-teacher__bottom
+      .profile-top-teacher__bottom
+        .profile-top-teacher__rait
+          span Рейтинг
+          .profile-top-teacher__rait-svg.profile-top-teacher__rait-svg--4
+            include ../elements/yellow-star
+            include ../elements/yellow-star
+            include ../elements/yellow-star
+            include ../elements/yellow-star
+            include ../elements/yellow-star
+
+        a(href="#").btn.btn--dark Курсы преподавателя
+        a(href="#").btn.btn--white Добавить в избранное
+      //end profile-top-teacher__bottom
+
+      //begin profile-top-teacher__hashtag
+      .profile-top-teacher__hashtag
+        span #эффективность
+        span #уверенность в себе
+        span #воля
+        span #сила
+      //end profile-top-teacher__hashtag
+
+    //begin profile-top__left
+    //.profile-top__left
+      .profile-top__ava
+        img(src="assets/img/profile-top-ava.jpg" alt="avatar")
+    //end profile-top__left
+
+    //begin profile-top__right
+    //.profile-top__right
+      //begin profile-top__edit
+      .profile-top__edit
+        .profile-top__edit-icon
+          +svg('edit')
+        span.profile-top__edit-text Редактировать
+      //end profile-top__edit
+
+      //begin profile-top__info
+      .profile-top__info
+        h2.profile-top__info-name Мария Иванова
+        .profile-top__info-row
+          span.profile-top__info-title Место жительства:
+          span.profile-top__info-info Россия, Кротовка
+        .profile-top__info-row
+          span.profile-top__info-title День рождения:
+          span.profile-top__info-info 19 января 1985
+        .profile-top__show-more
+          .profile-top__show-more-open Показать подробную информацию
+          .profile-top__show-more-close Скрыть подробную информацию
+      //end profile-top__info
+
+      //begin profile-top__status
+      .profile-top__status
+        .profile-top__status-rait
+          include ../elements/red-star
+          span 10 000
+        span.profile-top__status-position Лидер сообщества
+      //end profile-top__status
+
+    //begin profile-top__right
+//end profile-top-teacher
