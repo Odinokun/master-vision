@@ -242,8 +242,6 @@
 }
 
 .profile-edit__form-decor-item {
-  display: flex;
-  flex-direction: column-reverse;
   width: 32.5%;
   transition: opacity .5s;
   opacity: .3;
@@ -257,17 +255,31 @@
     opacity: 1;
   }
   label {
+  cursor: pointer;
     position: relative;
+    background-color: #fff;
     display: flex;
-    align-items: center;
+    flex-direction: column-reverse;
+    &.active {
+      span::after {
+        opacity: 1;
+      }
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 300;
+      display: block;
+      padding-left: 25px;
+      color: #1e1e1e;
+      position: relative;
     &::before {
       position: absolute;
       top: 0;
-      bottom: 0;
       left: 0;
       width: 16px;
-      height: 16px;
       margin: auto;
+      height: 16px;
       content: '';
       border: 4px solid #f0f0f5;
       border-radius: 50%;
@@ -276,7 +288,7 @@
     &::after {
       position: absolute;
       top: 0;
-      bottom: 0;
+      bottom: 4px;
       left: 4px;
       width: 8px;
       height: 8px;
@@ -286,18 +298,6 @@
       border-radius: 50%;
       background-color: $highlight-v;
     }
-    &.active {
-      &::after {
-        opacity: 1;
-      }
-    }
-
-    span {
-      font-size: 14px;
-      font-weight: 300;
-      display: block;
-      margin-left: 10px;
-      color: #1e1e1e;
     }
   }
   input {
