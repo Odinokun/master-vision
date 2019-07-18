@@ -1,17 +1,82 @@
 //begin popup
 .popup__layer
-.popup
-  .popup__close
+
+//begin popup-form
+#popup-form.popup
+  span.popup__close
     +svg('close')
-  .popup__header
-    h2.popup__title Write Review
-  .popup__body
-    // begin schedule-item__form
+  .popup__inner.popup__inner--for-form
     form.popup__form
-        input(name='name' placeholder='Your Name').popup__form-input.input
-        input(name='email' placeholder='Email').popup__form-input.input
-        textarea(placeholder='Your review').popup__form-textarea.textarea
-        .popup__form-submit.btn
-          input(type='submit' value='send')
-    // begin schedule-item__form
-//end popup
+      p.popup__title Авторизация
+      input.popup__input(name='phone', type='tel', placeholder='Email или мобильный телефон')
+      input.popup__input(name='password', type='text', placeholder='Пароль')
+      p.popup__text
+        a(href='#') Забыли пароль?
+      .popup__social
+        .popup__social--title Войти через Социальные сети
+        .popup__social-icons
+          a.popup__social-icon.popup__social-icon--vk(href='#')
+            +svg('vk')
+          a.popup__social-icon.popup__social-icon--fb(href='#')
+            +svg('fb')
+          a.popup__social-icon.popup__social-icon--mail(href='#')
+            +svg('mailru')
+          a.popup__social-icon.popup__social-icon--yandex(href='#')
+            +svg('yandex')
+          a.popup__social-icon.popup__social-icon--gmail(href='#')
+            +svg('google')
+        p.popup__social-text Не беспокойтесь, мы ничего не публикуем без вашего разрешения
+      .popup__input__agree
+        input#agree1.popup__input__checkbox(type='checkbox', name='agree', value='yes')
+        label(for='agree1')
+          span
+          i.popup__text-input
+            | Я даю согласие на обработку
+            =' '
+            a(href='#') персональных данных*
+      input.btn.btn--dark(type='submit', value='Войти')
+      p.popup__text
+        | Нет аккаунта?
+        =' '
+        a.popup-link(href='#popup-form-regist') Зарегистрироваться
+//end popup-form
+
+
+//begin popup-form-regist
+#popup-form-regist.popup
+  span.popup__close
+    +svg('close')
+  .popup__inner.popup__inner--for-form
+    form.popup__form
+      p.popup__title Регистрация
+      input.popup__input(name='email', type='email', placeholder='Email')
+      input.popup__input(name='phone', type='tel', placeholder='Мобильный телефон')
+      input.popup__input(name='password', type='text', placeholder='Пароль')
+      .popup__social
+        .popup__social--title Зарегистрироваться через Социальные сети
+        .popup__social-icons
+          a.popup__social-icon.popup__social-icon--vk(href='#')
+            +svg('vk')
+          a.popup__social-icon.popup__social-icon--fb(href='#')
+            +svg('fb')
+          a.popup__social-icon.popup__social-icon--mail(href='#')
+            +svg('mailru')
+          a.popup__social-icon.popup__social-icon--yandex(href='#')
+            +svg('yandex')
+          a.popup__social-icon.popup__social-icon--gmail(href='#')
+            +svg('google')
+        p.popup__social-text Не беспокойтесь, мы ничего не публикуем без вашего разрешения
+      .popup__input__agree
+        input#agree2.popup__input__checkbox(type='checkbox', name='agree', value='yes')
+        label(for='agree2')
+          span
+          i.popup__text-input
+            | Я даю согласие на обработку
+            =' '
+            a(href='#') персональных данных*
+      input.btn.btn--dark(type='submit', value='Войти')
+      p.popup__text
+        | Есть аккаунт?
+        =' '
+        a.popup-link(href='#popup-form') Авторизоваться
+//end popup-form-regist

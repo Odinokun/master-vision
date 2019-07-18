@@ -260,5 +260,13 @@
     height: 5px;
   }
 }
+.profile-header__enter{
+  width: 100%;
+  display: flex;
+  .btn{
+    margin-left: auto;
+    min-width: 185px;
+  }
+}
 
 //end profile-header__user

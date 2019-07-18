@@ -22,6 +22,9 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 320px;
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 h1,
@@ -168,10 +171,6 @@ ol > *:not(li) {
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
-
-  &.no-scroll {
-    overflow: hidden;
-  }
 }
 
 .main {
