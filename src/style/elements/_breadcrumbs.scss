@@ -40,3 +40,23 @@
     color: $light;
   }
 }
+
+.teachers {
+  .breadcrumbs__list {
+    margin-bottom: 20px;
+    padding-top: 15px;
+  }
+  .breadcrumbs__link {
+    color: #99a1ba;
+  }
+  .breadcrumbs__item {
+    &::after {
+      color: #99a1ba;
+    }
+    &:last-child {
+      .breadcrumbs__link {
+        color: #1e1e1e;
+      }
+    }
+  }
+}

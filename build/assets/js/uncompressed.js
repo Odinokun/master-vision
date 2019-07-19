@@ -19,7 +19,8 @@ $(document).ready(function ($) {
     'profile-friends',
     'profile-new-article',
     'profile-teacher',
-    'profile-stranger'
+    'profile-stranger',
+    'teachers'
     ]);
 });
 
