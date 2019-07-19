@@ -13,7 +13,6 @@
 .teachers-main {
   .container {
     display: flex;
-    overflow: hidden;
     align-items: flex-start;
 
     @include max(760) {
@@ -62,6 +61,7 @@
   background-position: calc(100% - 15px) 50%;
 
   appearance: none;
+
   @include placeholder-color(#99a1ba);
 }
 
@@ -215,6 +215,7 @@
 
 .teachers-item__footer {
   display: flex;
+
   //justify-content: space-between;
   flex-wrap: wrap;
   .btn {
