@@ -113,11 +113,11 @@
                   </svg>
                   <div class="profile-header__icons-counter"><span>22</span></div>
                 </a></li>
-              <li class="profile-header__icons-item"><a class="profile-header__icons-link profile-header__icons-link--hat" href="#">
+              <li class="profile-header__icons-item"><a class="profile-header__icons-link profile-header__icons-link--hat popup-open" href="#popup-form-regist">
                   <svg>
                     <use xlink:href="assets/img/sprite.svg#hat"></use>
                   </svg></a></li>
-              <li class="profile-header__icons-item"><a class="profile-header__icons-link profile-header__icons-link--info" href="#">
+              <li class="profile-header__icons-item"><a class="profile-header__icons-link profile-header__icons-link--info popup-open" href="#popup-form">
                   <svg>
                     <use xlink:href="assets/img/sprite.svg#info"></use>
                   </svg></a></li>
@@ -394,6 +394,92 @@
       </footer>
       <!--end footer-->
     </div>
+    <!--begin popup-->
+    <div class="popup__layer"></div>
+    <!--begin popup-form-->
+    <div class="popup" id="popup-form"><span class="popup__close">
+        <svg>
+          <use xlink:href="assets/img/sprite.svg#close"></use>
+        </svg></span>
+      <div class="popup__inner popup__inner--for-form">
+        <form class="popup__form">
+          <p class="popup__title">Авторизация</p>
+          <input class="popup__input" name="phone" type="tel" placeholder="Email или мобильный телефон">
+          <input class="popup__input" name="password" type="text" placeholder="Пароль">
+          <p class="popup__text"><a href="#">Забыли пароль?</a></p>
+          <div class="popup__social">
+            <div class="popup__social--title">Войти через Социальные сети</div>
+            <div class="popup__social-icons"><a class="popup__social-icon popup__social-icon--vk" href="#">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#vk"></use>
+                </svg></a><a class="popup__social-icon popup__social-icon--fb" href="#">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#fb"></use>
+                </svg></a><a class="popup__social-icon popup__social-icon--mail" href="#">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#mailru"></use>
+                </svg></a><a class="popup__social-icon popup__social-icon--yandex" href="#">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#yandex"></use>
+                </svg></a><a class="popup__social-icon popup__social-icon--gmail" href="#">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#google"></use>
+                </svg></a></div>
+            <p class="popup__social-text">Не беспокойтесь, мы ничего не публикуем без вашего разрешения</p>
+          </div>
+          <div class="popup__input__agree">
+            <input class="popup__input__checkbox" id="agree1" type="checkbox" name="agree" value="yes">
+            <label for="agree1"><span></span><i class="popup__text-input">Я даю согласие на обработку <a href="#">персональных данных*</a></i></label>
+          </div>
+          <input class="btn btn--dark" type="submit" value="Войти">
+          <p class="popup__text">Нет аккаунта? <a class="popup-link" href="#popup-form-regist">Зарегистрироваться</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <!--end popup-form-->
+    <!--begin popup-form-regist-->
+    <div class="popup" id="popup-form-regist"><span class="popup__close">
+        <svg>
+          <use xlink:href="assets/img/sprite.svg#close"></use>
+        </svg></span>
+      <div class="popup__inner popup__inner--for-form">
+        <form class="popup__form">
+          <p class="popup__title">Регистрация</p>
+          <input class="popup__input" name="email" type="email" placeholder="Email">
+          <input class="popup__input" name="phone" type="tel" placeholder="Мобильный телефон">
+          <input class="popup__input" name="password" type="text" placeholder="Пароль">
+          <div class="popup__social">
+            <div class="popup__social--title">Зарегистрироваться через Социальные сети</div>
+            <div class="popup__social-icons"><a class="popup__social-icon popup__social-icon--vk" href="#">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#vk"></use>
+                </svg></a><a class="popup__social-icon popup__social-icon--fb" href="#">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#fb"></use>
+                </svg></a><a class="popup__social-icon popup__social-icon--mail" href="#">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#mailru"></use>
+                </svg></a><a class="popup__social-icon popup__social-icon--yandex" href="#">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#yandex"></use>
+                </svg></a><a class="popup__social-icon popup__social-icon--gmail" href="#">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#google"></use>
+                </svg></a></div>
+            <p class="popup__social-text">Не беспокойтесь, мы ничего не публикуем без вашего разрешения</p>
+          </div>
+          <div class="popup__input__agree">
+            <input class="popup__input__checkbox" id="agree2" type="checkbox" name="agree" value="yes">
+            <label for="agree2"><span></span><i class="popup__text-input">Я даю согласие на обработку <a href="#">персональных данных*</a></i></label>
+          </div>
+          <input class="btn btn--dark" type="submit" value="Войти">
+          <p class="popup__text">Есть аккаунт? <a class="popup-link" href="#popup-form">Авторизоваться</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <!--end popup-form-regist-->
     <!--begin back2top button-->
     <div class="back2top" id="back2top">
       <div class="back2top__btn">

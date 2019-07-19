@@ -123,8 +123,9 @@
   align-items: center;
   margin: 0 20px 0 0;
   padding: 0;
+
   @include max(375) {
-  margin: 10px auto 10px 0;
+    margin: 10px auto 10px 0;
     padding-right: 10px;
   }
 }
@@ -153,6 +154,7 @@
     margin-right: 25px;
     margin-left: 0;
   }
+
   &:hover,
   &.active {
     svg {
@@ -206,6 +208,7 @@
   align-items: center;
   flex: none;
   margin-left: auto;
+
   @include max(375) {
     margin: 10px 0;
   }
@@ -258,6 +261,15 @@
     fill: #fff;
     width: 10px;
     height: 5px;
+  }
+}
+
+.profile-header__enter {
+  display: flex;
+  width: 100%;
+  .btn {
+    min-width: 192px;
+    margin-left: auto;
   }
 }
 

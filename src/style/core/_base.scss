@@ -22,6 +22,9 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 320px;
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 h1,
@@ -168,10 +171,6 @@ ol > *:not(li) {
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
-
-  &.no-scroll {
-    overflow: hidden;
-  }
 }
 
 .main {
@@ -255,5 +254,16 @@ ol > *:not(li) {
     color: $light;
     border: 1px solid $highlight-v;
     background-color: $highlight-v;
+  }
+}
+
+.btn--light {
+  color: #1e1e1e;
+  border: 1px solid #fff;
+  background-color: #fff;
+  &:hover {
+    color: $light;
+    border: 1px solid $light;
+    background-color: transparent;
   }
 }

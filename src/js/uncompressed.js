@@ -18,7 +18,8 @@ $(document).ready(function ($) {
     'profile-alien',
     'profile-friends',
     'profile-new-article',
-    'profile-teacher'
+    'profile-teacher',
+    'profile-stranger'
     ]);
 });
 
