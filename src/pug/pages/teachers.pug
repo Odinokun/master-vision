@@ -1,0 +1,98 @@
+extends ../_template
+
+mixin teachers-item(pic, name, label)
+  div(class="teachers-item " + label + "")
+    .teachers-item__header
+      .teachers-item__ava
+        img(src="assets/img/teacher-ava-" + pic + ".jpg" alt="ava")
+      .teachers-item__info
+        .teachers-item__rating.teachers-item__rating--4
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          span.teachers-item__rating-numb 10
+        h4.teachers-item__name #{name}
+        a(href="#").teachers-item__course Психолого-исторические науки
+    .teachers-item__body
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+    .teachers-item__footer
+      a(href="#").btn.btn--dark Курсы преподавателя
+      a(href="#").btn.btn--grey Добавить в избранное
+
+
+
+block variables
+  - var title       = 'Master Vision'
+  - var description = 'Master Vision'
+  - var ogtitle     = 'Master Vision'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.teachers
+      include ../sections/profile-header
+      .teachers-header
+        .container
+          //begin breadcrumbs
+          .breadcrumbs
+            ul.breadcrumbs__list
+              li.breadcrumbs__item
+                a.breadcrumbs__link(href="#") Главная
+              li.breadcrumbs__item
+                a.breadcrumbs__link(href="#") Преподаватели
+              li.breadcrumbs__item
+                a.breadcrumbs__link(href="#") Преподаватели
+          //end breadcrumbs
+          h2.teachers-header__title Преподаватели
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+      .teachers-main
+        .container
+          //begin teachers-aside
+          aside.teachers-aside
+            .teachers-filter
+              h3.teachers-filter__title Выбрать по критериям
+              form.teachers-filter__form
+                select.teachers-filter__select
+                  option(value='') Выберите специальность
+                  option(value='') Специальность 1
+                  option(value='') Специальность 2
+                  option(value='') Специальность 3
+                select.teachers-filter__select
+                  option(value='') Рейтинг по возрастанию
+                  option(value='') Рейтинг по убыванию
+                .teachers-filter__checkbox.checkbox.active
+                  label
+                    input(type='checkbox')
+                    span Избранные
+                .teachers-filter__checkbox.checkbox.active
+                  label
+                    input(type='checkbox')
+                    span Эксклюзив
+                .teachers-filter__checkbox.checkbox
+                  label
+                    input(type='checkbox')
+                    span Рекомендуем
+          //end teachers-aside
+
+          //begin teachers-list
+          .teachers-list
+            +teachers-item('01', 'Петр Максимов', '')
+            +teachers-item('02', 'Анна Иванова', 'teachers-item--recommend')
+            +teachers-item('01', 'Петр Максимов', 'teachers-item--exclusive')
+            +teachers-item('02', 'Анна Иванова', '')
+            +teachers-item('01', 'Петр Максимов', '')
+            +teachers-item('02', 'Анна Иванова', '')
+
+            include ../elements/pagination
+          //end teachers-list
+
+
+
+    //end content
+
+    include ../sections/footer

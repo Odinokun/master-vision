@@ -18,6 +18,9 @@ $(function() {
   // begin radio
   require('./modules/radio')();
 
+  // begin checkbox
+  require('./modules/checkbox')();
+
   // begin video
   require('./modules/video')();
 
