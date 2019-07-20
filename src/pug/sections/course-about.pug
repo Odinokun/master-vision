@@ -1,0 +1,44 @@
+//begin course-about
+.course-about
+  .container
+    //begin course-about__descr
+    .course-about__descr
+      h3.course-about__title Описание курса
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+      h3.course-about__title Результат  прохождения курса
+      ul.custom-ul
+        li Включает в себя фундаментальную психологию
+        li Выявляющую факты, механизмы и законы психической деятельности
+        li Прикладную психологию, изучающую, с опорой на данные фундаментальной психологии
+    //end course-about__descr
+
+    //begin course-about__teacher
+    .course-about__teacher
+      h3.course-about__title Преподаватель курса
+      //begin course-about__teacher-header
+      .course-about__teacher-header
+        .course-about__teacher-ava
+          img(src="assets/img/teacher-ava-01.jpg" alt="ava")
+
+        //begin course-about__teacher-info
+        .course-about__teacher-info
+          //begin course-about__teacher-rait
+          .course-about__teacher-rait.course-about__teacher-rait--4
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            span.course-about__teacher-rait-numb 10
+          //end course-about__teacher-rait
+          h3.course-about__teacher-name Петр Максимов
+          a(href="#").course-about__teacher-course Психолого-исторические науки
+        //end course-about__teacher-info
+      //end course-about__teacher-header
+
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+      a(href="#").btn.btn--grey Добавить в избранное
+    //end course-about__teacher
+
+//end   course-about

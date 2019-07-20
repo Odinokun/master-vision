@@ -61,91 +61,9 @@ block content
     main.main.course
       include ../sections/profile-header
       include ../sections/course-top
-
-      .profile-teacher__blockquote
-        .container
-          blockquote Мое кредо - видеть хорошее в каждом дне! Все будет круто!
-
-      //begin profile-teacher-main
-      .container.profile-teacher-main
-        //begin profile-teacher-about
-        .profile-teacher-about
-          h3.profile-teacher-about__title О преподавателе
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
-          .profile-teacher-about__video
-            .profile-teacher-about__video-cover(style="background-image:url('assets/img/youtube.svg'), url('assets/img/teacher-about-video-cover.jpg');")
-            iframe(src='https://www.youtube.com/embed/an28rVke-MI', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
-
-        //end profile-teacher-about
-
-        //begin profile-teacher-education
-        .profile-teacher-education
-          h3.profile-teacher-education__title Образование
-
-          ul.profile-teacher-education__list
-            li.profile-teacher-education__item
-              span Московский психологический университет им. Иванова
-              span Магистр психологии
-              span.sm 1999-2006 гг
-            li.profile-teacher-education__item
-              span Московский психологический университет им. Иванова
-              span Повышение кваллификации - гештальт-терапия
-              span.sm 2015 г
-            li.profile-teacher-education__item
-              span Московский психологический университет им. Иванова
-              span Повышение кваллификации - психологические практики
-              span.sm 2018 г
-          h3.profile-teacher-education__title Опыт работы
-
-          ul.profile-teacher-education__list
-            li.profile-teacher-education__item
-              span Частная клиника в г.Москва
-              span Практикующий психолог
-              span.sm 2006-2013 гг
-            li.profile-teacher-education__item
-              span Частная клиника в г.Тверь
-              span Ведущий психолог
-              span.sm 2013 г - по настоящее время
-
-          h3.profile-teacher-education__title Сертификаты и дипломы
-
-          ul.profile-teacher-education__sertificate-slider
-            +profile-teacher-education__sertificate-slide()
-            +profile-teacher-education__sertificate-slide()
-            +profile-teacher-education__sertificate-slide()
-            +profile-teacher-education__sertificate-slide()
-            +profile-teacher-education__sertificate-slide()
-        //end profile-teacher-education
-      //end profile-teacher-main
-
-      .container.profile-teacher-courses
-        h3.profile-teacher__section-title Курсы преподавателя
-        //begin profile-teacher__courses
-        .profile-teacher__courses
-          ul.profile-teacher__courses-list
-            +profile-teacher__course('01', 'Основы общей психологии для чайников')
-            +profile-teacher__course('02', 'Основы общей психологии для женщин и мужчин')
-            +profile-teacher__course('03', 'Основы общей психологии для чайников')
-            +profile-teacher__course('04', 'Основы общей психологии')
-          a(href="#").profile-teacher__courses-all
-            span Посмотреть все
-            .svg
-              +svg('arr-down')
-        //end profile-teacher__courses
-
-      .container.profile-teacher-reviews
-        h3.profile-teacher__section-title Видео отзывы
-        //begin profile-teacher__reviews-slider
-        ul.profile-teacher__reviews-slider
-          +profile-teacher__reviews-slide('01', 'Основы общей психологии это крутой курс! Он сильно мне помог')
-          +profile-teacher__reviews-slide('02', 'Основы общей психологии это крутой курс! Даша посоветовала')
-          +profile-teacher__reviews-slide('03', 'Основы общей психологии это крутой курс!')
-          +profile-teacher__reviews-slide('01', 'Основы общей психологии это крутой курс! Он сильно мне помог')
-          +profile-teacher__reviews-slide('02', 'Основы общей психологии это крутой курс! Даша посоветовала')
-          +profile-teacher__reviews-slide('03', 'Основы общей психологии это крутой курс!')
-        //end profile-teacher__reviews-slider
+      include ../sections/course-about
+      include ../sections/course-schedule
+      include ../sections/course-banner
 
       .container.profile-teacher-reviews-t
         h3.profile-teacher__section-title Отзывы
@@ -159,13 +77,21 @@ block content
           +profile-teacher__reviews-t-slide('03', 'Основы общей психологии это крутой курс!')
         //end profile-teacher__reviews-t-slider
 
-        .profile-teacher__reviews-about
-          +svg('shield')
-          .profile-teacher__reviews-about-text
-            span Все опубликованные отзывы были оставлены учениками, прошедшими курс у данного преподавателя.
-            span Рейтинг преподавателя формируется на основании среднего балла отзывов.
 
-
+      .container.profile-teacher-courses
+        h3.profile-teacher__section-title Похожие курсы
+        //begin profile-teacher__courses
+        .profile-teacher__courses
+          ul.profile-teacher__courses-list
+            +profile-teacher__course('01', 'Основы общей психологии для чайников')
+            +profile-teacher__course('02', 'Основы общей психологии для женщин и мужчин')
+            +profile-teacher__course('03', 'Основы общей психологии для чайников')
+            +profile-teacher__course('04', 'Основы общей психологии')
+          a(href="#").profile-teacher__courses-all
+            span Посмотреть все
+            .svg
+              +svg('arr-down')
+        //end profile-teacher__courses
     //end content
 
     include ../sections/footer

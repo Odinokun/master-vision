@@ -53,6 +53,39 @@ module.exports = function() {
     ]
   });
 
+  $('.course-schedule__slider').slick({
+    infinite: false,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    dots:false,
+    responsive: [
+      {
+        breakpoint: 1111,
+        settings: {
+          slidesToShow: 5
+        }
+      },
+      {
+        breakpoint: 951,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 681,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 501,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+    ]
+  });
+
   // end Slick slider
 
 };

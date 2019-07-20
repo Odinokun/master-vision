@@ -1,0 +1,63 @@
+.course-schedule__slider {
+  margin: 0 0 45px 0;
+  padding: 3px 0 0  0;
+  .slick-prev {
+    display: none !important;
+  }
+  .slick-next {
+    z-index: 2;
+    top: 9px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    transition: .5s;
+    border-radius: 50% !important;
+    background-color: #99a1ba;
+    background-image: url('../img/arr-right.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 15px 15px;
+    @include max(768) {
+      right: -10px;
+    }
+    @include max(425) {
+      right: -5px;
+    }
+    &:hover {
+      background-color: $highlight-v;
+    }
+  }
+}
+.course-schedule__slide {
+  position: relative;
+  padding: 25px 20px 0 0;
+  list-style: none;
+  span {
+    font-size: 15px;
+    display: block;
+    font-weight: 300;
+    line-height: 23px;
+    max-width: 180px;
+    color: #1e1e1e;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    content: '';
+    border-radius: 50%;
+    background-color: $highlight-v;
+  }
+  &::after {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: rgba(77, 76, 224, .3);
+  }
+}

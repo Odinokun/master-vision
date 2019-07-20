@@ -1,0 +1,140 @@
+.course-about {
+  margin-bottom: 13px;
+  .container {
+    display: flex;
+    align-items: flex-start;
+    @include max(768) {
+      flex-direction: column;
+    }
+  }
+}
+
+.course-about__descr {
+  width: 100%;
+  margin: 30px 0;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  p {
+    margin-bottom: 25px;
+  }
+  .custom-ul {
+    margin-bottom: 10px;
+  }
+}
+
+.course-about__title {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 500;
+  color: #1e1e1e;
+}
+
+.course-about__teacher {
+  flex: none;
+  width: 420px;
+  margin: 30px 0 30px 30px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  @include max(950) {
+    width: 380px;
+  }
+  @include max(768) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 25px;
+  }
+  .btn {
+    padding: 0 18px;
+  }
+}
+
+.course-about__teacher-header {
+  display: flex;
+}
+
+.course-about__teacher-ava {
+  overflow: hidden;
+  flex: none;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 50%;
+  @include max(425) {
+    width: 80px;
+    height: 80px;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.course-about__teacher-rait {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  @include max(425) {
+    margin-top: 5px;
+  }
+  svg {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+  }
+}
+
+.course-about__teacher-rait--1 svg:nth-child(n+2) {
+  .svg-star-rait {
+    fill: #fff;
+  }
+}
+
+.course-about__teacher-rait--2 svg:nth-child(n+3) {
+  .svg-star-rait {
+    fill: #fff;
+  }
+}
+
+.course-about__teacher-rait--3 svg:nth-child(n+4) {
+  .svg-star-rait {
+    fill: #fff;
+  }
+}
+
+.course-about__teacher-rait--4 svg:nth-child(n+5) {
+  .svg-star-rait {
+    fill: #fff;
+  }
+}
+
+.course-about__teacher-rait-numb {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fc6;
+}
+
+.course-about__teacher-name {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: #1e1e1e;
+}
+
+.course-about__teacher-course {
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 23px;
+  text-decoration: none;
+  color: $highlight-v;
+  &:hover {
+    color: $highlight-v;
+  }
+}
