@@ -1,0 +1,71 @@
+//begin course-top
+.course-top(style="background-image:url('assets/img/bg-course-top.jpg')")
+  .container
+    .course-top__pic-exclusive
+
+    //begin course-top__left
+    .course-top__left
+      //begin breadcrumbs
+      .breadcrumbs
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Главная
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Курсы
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Курс Психологии
+      //end breadcrumbs
+      .course-top__header
+        .course-top__header-title
+          span Психология
+        //begin course-top__rait
+        .course-top__rait
+          span Рейтинг
+          .course-top__rait-svg.course-top__rait-svg--4
+            include ../elements/yellow-star
+            include ../elements/yellow-star
+            include ../elements/yellow-star
+            include ../elements/yellow-star
+            include ../elements/yellow-star
+        //end course-top__rait
+      h2.course-top__title Курс Психология 2.0
+      .course-top__descr
+        span Краткое описание курса: Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+      //begin course-top__item-row
+      .course-top__item-row
+        .course-top__item
+          span.course-top__item-lg 16 часов
+          span.course-top__item-sm время прохождения курса
+        .course-top__item
+          span.course-top__item-lg 8 занятий
+          span.course-top__item-sm включая домашние задания
+        .course-top__item
+          span.course-top__item-lg 150 человек
+          span.course-top__item-sm прошли обучение
+      //end course-top__item-row
+
+      //begin course-top__hashtag-row
+      .course-top__hashtag-row
+        span.course-top__hashtag #психология
+        span.course-top__hashtag #психология
+        span.course-top__hashtag #психология
+      //end course-top__hashtag-row
+
+    //end course-top__left
+
+    //begin course-top__right
+    .course-top__right
+      .course-top__points
+        span.lg 2 000
+        =' '
+        span.sm баллов
+      .course-top__right-btns
+        a(href="#").btn.btn--white Добавить в избранное
+        a(href="#").btn.btn--dark Пройти обучение
+      .course-top__right-footer
+        span Вы можете пройти курс в рамках действующей подписки
+
+    //end course-top__right
+
+//end course-top

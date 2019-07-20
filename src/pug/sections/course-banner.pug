@@ -1,0 +1,38 @@
+//begin course-top
+.course-banner-wrap
+  .container
+    .course-banner(style="background-image:url('assets/img/bg-course-top.jpg')")
+      .course-banner__pic-exclusive
+
+      //begin course-top__left
+      .course-banner__left
+        .course-banner__header
+          .course-banner__header-title
+            span Психология
+          //begin course-top__rait
+          .course-banner__rait
+            span Рейтинг
+            .course-banner__rait-svg.course-banner__rait-svg--4
+              include ../elements/yellow-star
+              include ../elements/yellow-star
+              include ../elements/yellow-star
+              include ../elements/yellow-star
+              include ../elements/yellow-star
+          //end course-top__rait
+        h2.course-banner__title Курс Психология 2.0
+        .course-banner__descr
+          span Вы можете пройти курс в рамках действующей подписки
+      //end course-top__left
+
+      //begin course-top__right
+      .course-banner__right
+        .course-banner__points
+          span.lg 2 000
+          =' '
+          span.sm баллов
+        .course-banner__right-btns
+          a(href="#").btn.btn--dark Пройти обучение
+          a(href="#").btn.btn--white Добавить в избранное
+      //end course-top__right
+
+//end course-top

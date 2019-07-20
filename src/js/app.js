@@ -33,6 +33,9 @@ $(function() {
   // begin Popup
   require('./modules/popup')();
 
+  // begin tabs
+  require('./modules/tabs')();
+
   // begin Animate.css
   // require('./modules/waypoints')();
   // require('./modules/animateCss')();

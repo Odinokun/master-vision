@@ -1,0 +1,74 @@
+.course-questions {
+  margin-bottom: 40px;
+  padding-top: 10px;
+  .profile-teacher__section-title {
+    margin-bottom: 22px;
+  }
+}
+
+.course-questions-tabs {
+  border-bottom: 1px solid #d0d5e2;
+}
+
+.course-questions-tabs-row {
+  padding-top: 17px;
+  padding-bottom: 5px;
+  border-top: 1px solid #d0d5e2;
+
+  &.active {
+    .course-questions-tabs__question-svg {
+      transform: rotate(180deg);
+    }
+    .course-questions-tabs__question-text {
+      color: #1e1e1e;
+    }
+  }
+}
+
+.course-questions-tabs__question {
+  display: flex;
+  padding-bottom: 13px;
+  cursor: pointer;
+}
+
+.course-questions-tabs__question-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 17px;
+  height: 17px;
+  margin-right: 23px;
+  transition: transform .5s;
+  border-radius: 50%;
+  background-color: $highlight-v;
+
+  will-change: transform;
+  svg {
+    fill: #fff;
+    width: 9px;
+    height: 4px;
+  }
+}
+
+.course-questions-tabs__question-text {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color .5s;
+  color: $highlight-v;
+}
+
+.course-questions-tabs__answer {
+  display: none;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  p {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+    margin: 0;
+    color: #1e1e1e;
+  }
+}
