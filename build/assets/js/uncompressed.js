@@ -20,7 +20,8 @@ $(document).ready(function ($) {
     'profile-new-article',
     'profile-teacher',
     'profile-stranger',
-    'teachers'
+    'teachers',
+    'course'
     ]);
 });
 

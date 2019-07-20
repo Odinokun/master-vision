@@ -1,0 +1,171 @@
+extends ../_template
+
+mixin profile-teacher-education__sertificate-slide()
+  li.profile-teacher-education__sertificate-slide
+    a(href="assets/img/sertificate.jpg" data-fancybox="sertificate")
+      img(src="assets/img/sertificate.jpg" alt="seftificate")
+    .profile-teacher-education__sertificate-cover
+      +svg('magnific')
+
+mixin profile-teacher__course(pic, title)
+  li.profile-teacher__course
+    a(href="#").profile-teacher__course-link
+      .profile-teacher__course-pic
+        img(src="assets/img/course-" + pic + ".jpg" alt="pic")
+      h5.profile-teacher__course-title #{title}
+
+mixin profile-teacher__reviews-slide(pic, text)
+  li.profile-teacher__reviews-slide
+    .profile-teacher__reviews-iframe
+      iframe(src='https://www.youtube.com/embed/an28rVke-MI', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+      .profile-teacher__reviews-video-cover(style="background-image:url('assets/img/youtube.svg'), url('assets/img/review-" + pic + ".jpg');")
+    .profile-teacher__reviews-text
+      span #{text}
+
+mixin profile-teacher__reviews-t-slide()
+  li.profile-teacher__reviews-t-slide
+    .profile-teacher__reviews-t-slide-inn
+      .profile-teacher__reviews-t-header
+        .profile-teacher__reviews-t-ava
+          img(src="assets/img/reviews-ava.jpg" alt="ava")
+        .profile-teacher__reviews-t-info
+          h4.profile-teacher__reviews-t-name Катерина Егорова
+          .profile-teacher__reviews-t-course
+            span.profile-teacher__reviews-t-course-text Курс:
+            span.profile-teacher__reviews-t-course-name Психология
+        .profile-top-teacher__rait-svg.profile-top-teacher__rait-svg--4
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+      .profile-teacher__reviews-t-body
+        p Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в
+      .profile-teacher__reviews-t-footer
+        a(href="#").profile-teacher__reviews-t-link
+          span Подробнее
+          .svg
+            +svg('arr-down')
+
+
+block variables
+  - var title       = 'Master Vision'
+  - var description = 'Master Vision'
+  - var ogtitle     = 'Master Vision'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.course
+      include ../sections/profile-header
+      include ../sections/course-top
+
+      .profile-teacher__blockquote
+        .container
+          blockquote Мое кредо - видеть хорошее в каждом дне! Все будет круто!
+
+      //begin profile-teacher-main
+      .container.profile-teacher-main
+        //begin profile-teacher-about
+        .profile-teacher-about
+          h3.profile-teacher-about__title О преподавателе
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+          .profile-teacher-about__video
+            .profile-teacher-about__video-cover(style="background-image:url('assets/img/youtube.svg'), url('assets/img/teacher-about-video-cover.jpg');")
+            iframe(src='https://www.youtube.com/embed/an28rVke-MI', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+
+        //end profile-teacher-about
+
+        //begin profile-teacher-education
+        .profile-teacher-education
+          h3.profile-teacher-education__title Образование
+
+          ul.profile-teacher-education__list
+            li.profile-teacher-education__item
+              span Московский психологический университет им. Иванова
+              span Магистр психологии
+              span.sm 1999-2006 гг
+            li.profile-teacher-education__item
+              span Московский психологический университет им. Иванова
+              span Повышение кваллификации - гештальт-терапия
+              span.sm 2015 г
+            li.profile-teacher-education__item
+              span Московский психологический университет им. Иванова
+              span Повышение кваллификации - психологические практики
+              span.sm 2018 г
+          h3.profile-teacher-education__title Опыт работы
+
+          ul.profile-teacher-education__list
+            li.profile-teacher-education__item
+              span Частная клиника в г.Москва
+              span Практикующий психолог
+              span.sm 2006-2013 гг
+            li.profile-teacher-education__item
+              span Частная клиника в г.Тверь
+              span Ведущий психолог
+              span.sm 2013 г - по настоящее время
+
+          h3.profile-teacher-education__title Сертификаты и дипломы
+
+          ul.profile-teacher-education__sertificate-slider
+            +profile-teacher-education__sertificate-slide()
+            +profile-teacher-education__sertificate-slide()
+            +profile-teacher-education__sertificate-slide()
+            +profile-teacher-education__sertificate-slide()
+            +profile-teacher-education__sertificate-slide()
+        //end profile-teacher-education
+      //end profile-teacher-main
+
+      .container.profile-teacher-courses
+        h3.profile-teacher__section-title Курсы преподавателя
+        //begin profile-teacher__courses
+        .profile-teacher__courses
+          ul.profile-teacher__courses-list
+            +profile-teacher__course('01', 'Основы общей психологии для чайников')
+            +profile-teacher__course('02', 'Основы общей психологии для женщин и мужчин')
+            +profile-teacher__course('03', 'Основы общей психологии для чайников')
+            +profile-teacher__course('04', 'Основы общей психологии')
+          a(href="#").profile-teacher__courses-all
+            span Посмотреть все
+            .svg
+              +svg('arr-down')
+        //end profile-teacher__courses
+
+      .container.profile-teacher-reviews
+        h3.profile-teacher__section-title Видео отзывы
+        //begin profile-teacher__reviews-slider
+        ul.profile-teacher__reviews-slider
+          +profile-teacher__reviews-slide('01', 'Основы общей психологии это крутой курс! Он сильно мне помог')
+          +profile-teacher__reviews-slide('02', 'Основы общей психологии это крутой курс! Даша посоветовала')
+          +profile-teacher__reviews-slide('03', 'Основы общей психологии это крутой курс!')
+          +profile-teacher__reviews-slide('01', 'Основы общей психологии это крутой курс! Он сильно мне помог')
+          +profile-teacher__reviews-slide('02', 'Основы общей психологии это крутой курс! Даша посоветовала')
+          +profile-teacher__reviews-slide('03', 'Основы общей психологии это крутой курс!')
+        //end profile-teacher__reviews-slider
+
+      .container.profile-teacher-reviews-t
+        h3.profile-teacher__section-title Отзывы
+        //begin profile-teacher__reviews-t-slider
+        ul.profile-teacher__reviews-t-slider
+          +profile-teacher__reviews-t-slide('01', 'Основы общей психологии это крутой курс! Он сильно мне помог')
+          +profile-teacher__reviews-t-slide('02', 'Основы общей психологии это крутой курс! Даша посоветовала')
+          +profile-teacher__reviews-t-slide('03', 'Основы общей психологии это крутой курс!')
+          +profile-teacher__reviews-t-slide('01', 'Основы общей психологии это крутой курс! Он сильно мне помог')
+          +profile-teacher__reviews-t-slide('02', 'Основы общей психологии это крутой курс! Даша посоветовала')
+          +profile-teacher__reviews-t-slide('03', 'Основы общей психологии это крутой курс!')
+        //end profile-teacher__reviews-t-slider
+
+        .profile-teacher__reviews-about
+          +svg('shield')
+          .profile-teacher__reviews-about-text
+            span Все опубликованные отзывы были оставлены учениками, прошедшими курс у данного преподавателя.
+            span Рейтинг преподавателя формируется на основании среднего балла отзывов.
+
+
+    //end content
+
+    include ../sections/footer
