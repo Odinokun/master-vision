@@ -94,6 +94,7 @@
 }
 
 .teachers-item--recommend,
+.teachers-item--chosen,
 .teachers-item--exclusive {
   &::before {
     position: absolute;
@@ -126,7 +127,14 @@
 .teachers-item--exclusive {
   &::before {
     background-color: #f9ac13;
-    background-image: url('../img/exclusive.png');
+    background-image: url('../img/exclusive-2.png');
+  }
+}
+
+.teachers-item--chosen {
+  &::before {
+    background-color: #1cac54;
+    background-image: url('../img/chosen-2.png');
   }
 }
 

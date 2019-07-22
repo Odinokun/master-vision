@@ -39,12 +39,15 @@
     max-width: 300px;
     margin: 0 auto;
   }
+
   img {
     display: block;
     width: 100%;
   }
 }
 
+.profile-top-teacher__pic--exclusive,
+.profile-top-teacher__pic--chosen,
 .profile-top-teacher__pic--recommend {
   &::before {
     position: absolute;
@@ -54,8 +57,6 @@
     height: 100px;
     content: '';
     border-radius: 50%;
-    background-color: $highlight-r;
-    background-image: url('../img/recommend.png');
     background-repeat: no-repeat;
     background-position: 49% 47%;
 
@@ -63,6 +64,21 @@
       left: 0;
     }
   }
+}
+
+.profile-top-teacher__pic--exclusive::before {
+  background-color: #f9ac13;
+  background-image: url('../img/exclusive.png');
+}
+
+.profile-top-teacher__pic--chosen::before {
+  background-color: #1cac54;
+  background-image: url('../img/chosen.png');
+}
+
+.profile-top-teacher__pic--recommend::before {
+  background-color: $highlight-r;
+  background-image: url('../img/recommend.png');
 }
 
 .profile-top-teacher__info {
@@ -111,6 +127,7 @@
   @include max(1110) {
     flex-wrap: wrap;
   }
+
   .btn {
     margin-right: 20px;
     white-space: nowrap;
@@ -118,6 +135,7 @@
     @include max(1110) {
       margin-bottom: 10px;
     }
+
     &:last-child {
       margin-right: 0;
     }
@@ -133,6 +151,7 @@
   @include max(1110) {
     margin-bottom: 15px;
   }
+
   span {
     font-family: $font;
     font-size: 14px;
@@ -187,6 +206,7 @@
   @include max(950) {
     display: none;
   }
+
   span {
     font-family: $font;
     font-size: 20px;
