@@ -407,6 +407,7 @@
     width: calc(100% + 20px);
     margin: 0 -10px 35px -10px;
   }
+
   .slick-prev,
   .slick-next {
     z-index: 2;
@@ -555,6 +556,7 @@
       margin-left: 0;
       padding-left: 43px;
     }
+
     svg {
       margin-right: 0;
       margin-left: 7px;
@@ -641,7 +643,11 @@
   text-decoration: none;
   &:hover {
     span {
+      opacity: .4;
       color: $highlight-v;
+    }
+    .svg {
+      opacity: .4;
     }
   }
   span {
@@ -649,6 +655,7 @@
     font-size: 14px;
     font-weight: 300;
     line-height: 25px;
+    transition: opacity .5s;
     color: $highlight-v;
   }
   .svg {
@@ -659,6 +666,7 @@
     width: 17px;
     height: 17px;
     margin-left: 9px;
+    transition: opacity .5s;
     transform: rotate(-90deg);
     border-radius: 50%;
     background-color: $highlight-v;
@@ -678,6 +686,7 @@
   @include max(760) {
     align-items: flex-start;
   }
+
   svg {
     flex: none;
     fill: #99a1ba;

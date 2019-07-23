@@ -157,6 +157,12 @@
   }
 }
 
+.teachers-item__info {
+  a {
+    text-decoration: none;
+  }
+}
+
 .teachers-item__rating {
   display: flex;
   align-items: center;
