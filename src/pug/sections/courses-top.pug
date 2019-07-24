@@ -1,62 +1,64 @@
-//begin course-top
-.course-top(style="background-image:url('assets/img/bg-courses-top.jpg')")
-  .container
-    .course-top__pic-exclusive
+mixin courses-top__slide(className, classNameCourse, theme, name, pointsLg,  pointsSm, btnClass, btn)
+  //begin courses-top__slide
+  .courses-top__slide-wrap
+    div(class="courses-top__slide courses-top__slide--" + className + "")
+      //begin courses-top__slide-header
+      .courses-top__slide-header
+        div(class="courses-top__slide-theme courses-top__slide-theme--" + classNameCourse + "")
+          span #{theme}
+        //begin courses-top__slide-rait
+        .courses-top__slide-rait
+          .profile-top-teacher__rait-svg.profile-top-teacher__rait-svg--4
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+        //end courses-top__slide-rait
+      //end courses-top__slide-header
 
-    //begin course-top__left
-    .course-top__left
+      h3.courses-top__slide-title #{name}
 
-      .course-top__header
-        .course-top__header-title
-          span Психология
-        //begin course-top__rait
-        .course-top__rait
-          span Рейтинг
-          .course-top__rait-svg.course-top__rait-svg--4
-            include ../elements/yellow-star
-            include ../elements/yellow-star
-            include ../elements/yellow-star
-            include ../elements/yellow-star
-            include ../elements/yellow-star
-        //end course-top__rait
-      h2.course-top__title Курс Психология 2.0
-      .course-top__descr
-        span Краткое описание курса: Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
-
-      //begin course-top__item-row
-      .course-top__item-row
-        .course-top__item
-          span.course-top__item-lg 16 часов
-          span.course-top__item-sm время прохождения курса
-        .course-top__item
-          span.course-top__item-lg 8 занятий
-          span.course-top__item-sm включая домашние задания
-        .course-top__item
-          span.course-top__item-lg 150 человек
-          span.course-top__item-sm прошли обучение
-      //end course-top__item-row
-
-      //begin course-top__hashtag-row
-      .course-top__hashtag-row
-        span.course-top__hashtag #психология
-        span.course-top__hashtag #психология
-        span.course-top__hashtag #психология
-      //end course-top__hashtag-row
-
-    //end course-top__left
-
-    //begin course-top__right
-    .course-top__right
-      .course-top__points
-        span.lg 2 000
+      .courses-top__slide-teacher
+        span.courses-top__slide-teacher-position Преподаватель:
         =' '
-        span.sm баллов
-      .course-top__right-btns
-        a(href="#").btn.btn--white Добавить в избранное
-        a(href="#").btn.btn--dark Пройти обучение
-      .course-top__right-footer
-        span Вы можете пройти курс в рамках действующей подписки
+        a(href="#").courses-top__slide-teacher-name Петр Максимов
 
-    //end course-top__right
+      //begin courses-top__slide-info
+      .courses-top__slide-info
+        span.courses-top__slide-info-item 16 часов
+        span.courses-top__slide-info-item 8 занятий
+        span.courses-top__slide-info-item 150 человек
+      //end courses-top__slide-info
 
-//end course-top
+      .courses-top__slide-text
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+
+      //begin courses-top__slide-points
+      .courses-top__slide-points
+        span.courses-top__slide-points-lg #{pointsLg}
+        span.courses-top__slide-points-sm #{pointsSm}
+      //end courses-top__slide-points
+
+      //begin courses-top__slide-btns
+      .courses-top__slide-btns
+        a(href="#" class="btn btn--" + btnClass + "") #{btn}
+        a(href="#").btn.btn--dark Подробнее
+      //end courses-top__slide-btns
+
+  //end courses-top__slide
+
+//begin courses-top
+.courses-top(style="background-image:url('assets/img/bg-courses-top.jpg')")
+  .container
+    h3.courses-top__title Рекомендованные курсы
+    .courses-top__slider
+      +courses-top__slide('exclusive', 'psychology', 'Психология', 'Курс Психология 2.0',
+        '2 000 ', 'баллов', 'light', 'В избранное')
+      +courses-top__slide('recommend', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0',
+        '', 'Вы уже проходите курс', 'grey', 'В избранном')
+      +courses-top__slide('new', 'psychology', 'Психология', 'Курс Психология 2.0',
+        '2 000 ', 'баллов', 'light', 'В избранное')
+      +courses-top__slide('chosen', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0',
+        '', 'Вы уже проходите курс', 'grey', 'В избранном')
+//end courses-top
