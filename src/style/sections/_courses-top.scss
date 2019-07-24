@@ -77,16 +77,6 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 60px 60px;
-    //@include max(425) {
-    //  right: 0;
-    //}
-
-    //@include max(350) {
-    //  top: -25px;
-    //  width: 50px;
-    //  height: 50px;
-    //  background-size: 40px 40px;
-    //}
   }
 }
 
@@ -114,6 +104,10 @@
   display: flex;
   align-items: center;
   margin-bottom: 7px;
+
+  @include max(425) {
+    flex-wrap: wrap;
+  }
 }
 
 .courses-top__slide-theme {
@@ -143,6 +137,9 @@
 }
 
 .courses-top__slide-rait {
+  @include max(425) {
+    width: 100%;
+  }
   svg {
     width: 18px;
     height: 18px;
