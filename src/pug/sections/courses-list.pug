@@ -1,7 +1,7 @@
-mixin courses-top__slide(className, classNameCourse, theme, name, pointsLg,  pointsSm, btnClass, btn)
+mixin courses-top__slide(className, classNameCourse, theme, name)
   //begin courses-top__slide
   .courses-top__slide-wrap
-    div(class="courses-top__slide courses-top__slide--" + className + "")
+    div(class="courses-top__slide " + className + "")
       //begin courses-top__slide-header
       .courses-top__slide-header
         div(class="courses-top__slide-theme courses-top__slide-theme--" + classNameCourse + "")
@@ -32,33 +32,32 @@ mixin courses-top__slide(className, classNameCourse, theme, name, pointsLg,  poi
       //end courses-top__slide-info
 
       .courses-top__slide-text
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+        p Lorem ipsum dolor amet, consectetur adipiscing. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
 
       //begin courses-top__slide-points
       .courses-top__slide-points
-        span.courses-top__slide-points-lg #{pointsLg}
-        span.courses-top__slide-points-sm #{pointsSm}
+        span.courses-top__slide-points-lg 2 000
+        span.courses-top__slide-points-sm баллов
       //end courses-top__slide-points
 
       //begin courses-top__slide-btns
       .courses-top__slide-btns
-        a(href="#" class="btn btn--" + btnClass + "") #{btn}
+        a(href="#").btn.btn--light В избранное
         a(href="#").btn.btn--dark Подробнее
       //end courses-top__slide-btns
-
   //end courses-top__slide
 
-//begin courses-top
-.courses-top(style="background-image:url('assets/img/bg-courses-top.jpg')")
+
+
+//begin courses-list
+.courses-list
   .container
-    h3.courses-top__title Рекомендованные курсы
-    .courses-top__slider
-      +courses-top__slide('exclusive', 'psychology', 'Психология', 'Курс Психология 2.0',
-        '2 000 ', 'баллов', 'light', 'В избранное')
-      +courses-top__slide('recommend', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0',
-        '', 'Вы уже проходите курс', 'grey', 'В избранном')
-      +courses-top__slide('new', 'psychology', 'Психология', 'Курс Психология 2.0',
-        '2 000 ', 'баллов', 'light', 'В избранное')
-      +courses-top__slide('chosen', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0',
-        '', 'Вы уже проходите курс', 'grey', 'В избранном')
-//end courses-top
+    +courses-top__slide('courses-top__slide--exclusive', 'psychology', 'Психология', 'Курс Психология 2.0')
+    +courses-top__slide('', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0')
+    +courses-top__slide('courses-top__slide--new', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0')
+    +courses-top__slide('', 'psychology', 'Психология', 'Курс Психология 2.0')
+    +courses-top__slide('courses-top__slide--recommend', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0')
+    +courses-top__slide('', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0')
+
+    include ../elements/pagination
+//end courses-list

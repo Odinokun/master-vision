@@ -1,0 +1,51 @@
+.courses-list {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include max(950) {
+      justify-content: space-between;
+    }
+  }
+
+  .courses-top__slide-wrap {
+    width: calc(33.33% - 20px);
+    margin-right: 30px;
+    padding-right: 0;
+    padding-left: 0;
+
+    @include max(950) {
+      width: calc(50% - 15px);
+      margin-right: 0;
+    }
+    @include max(600) {
+      width: 100%;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  .courses-top__slide-header {
+    @include max(1220) {
+      flex-wrap: wrap;
+    }
+  }
+  .courses-top__slide-rait {
+    @include max(1220) {
+      width: 100%;
+    }
+  }
+
+  .courses-top__slide-title {
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+
+  .courses-top__slide-text {
+    margin-bottom: 5px;
+  }
+  .pagination {
+    margin-bottom: 37px;
+    padding-top: 15px;
+  }
+}
