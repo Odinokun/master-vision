@@ -93,6 +93,7 @@
   }
 }
 
+.teachers-item--new,
 .teachers-item--recommend,
 .teachers-item--chosen,
 .teachers-item--exclusive {
@@ -135,6 +136,13 @@
   &::before {
     background-color: #1cac54;
     background-image: url('../img/chosen-2.png');
+  }
+}
+
+.teachers-item--new {
+  &::before {
+    background-color: #8185ec;
+    background-image: url('../img/new.png');
   }
 }
 

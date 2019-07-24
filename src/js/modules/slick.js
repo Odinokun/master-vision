@@ -82,7 +82,22 @@ module.exports = function() {
         settings: {
           slidesToShow: 2
         }
-      },
+      }
+    ]
+  });
+
+  $('.courses-top__slider').slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    dots:false,
+    responsive: [
+      {
+        breakpoint: 861,
+        settings: {
+          slidesToShow: 1
+        }
+      }
     ]
   });
 

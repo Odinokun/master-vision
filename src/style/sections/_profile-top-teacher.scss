@@ -46,6 +46,7 @@
   }
 }
 
+.profile-top-teacher__pic--new,
 .profile-top-teacher__pic--exclusive,
 .profile-top-teacher__pic--chosen,
 .profile-top-teacher__pic--recommend {
@@ -79,6 +80,11 @@
 .profile-top-teacher__pic--recommend::before {
   background-color: $highlight-r;
   background-image: url('../img/recommend.png');
+}
+
+.profile-top-teacher__pic--new::before {
+  background-color: #8185ec;
+  background-image: url('../img/new.png');
 }
 
 .profile-top-teacher__info {

@@ -1,0 +1,34 @@
+//begin courses-filter
+.courses-filter
+  .container
+    .courses-filter__title Подобрать курс:
+
+    //begin courses-filter__selected
+    select.courses-filter__select
+      option(value='Выберите направление') Выберите направление
+      option(value='Направление 1') Направление 1
+      option(value='Направление 2') Направление 2
+      option(value='Направление 3') Направление 3
+    select.courses-filter__select
+      option(value='По популярности') По популярности
+      option(value='По названию') По названию
+      option(value='По цене') По цене
+    //end courses-filter__selected
+
+    //begin courses-filter__checkboxes
+    .courses-filter__checkboxes
+      .courses-filter__checkbox.checkbox.active
+        label
+          input(type='checkbox')
+          span Избранные
+      .courses-filter__checkbox.checkbox.active
+        label
+          input(type='checkbox')
+          span Эксклюзив
+      .courses-filter__checkbox.checkbox
+        label
+          input(type='checkbox')
+          span Рекомендуем
+    //end courses-filter__checkboxes
+//end courses-filter
+
