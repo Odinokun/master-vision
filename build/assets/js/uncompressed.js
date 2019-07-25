@@ -22,7 +22,8 @@ $(document).ready(function ($) {
     'profile-stranger',
     'teachers',
     'course',
-    'courses'
+    'courses',
+    'my-courses'
     ]);
 });
 
