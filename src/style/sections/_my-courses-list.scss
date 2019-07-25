@@ -1,0 +1,57 @@
+.my-courses-list {
+  margin-bottom: 40px;
+  .container {
+    display: flex;
+
+    @include max(860) {
+      flex-direction: column;
+    }
+  }
+  .courses-top__slide {
+    min-height: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.my-courses-active {
+  flex: 1;
+
+  @include max(860) {
+    width: 100%;
+  }
+  .courses-top__slide-text {
+    margin-bottom: 20px;
+    p {
+      margin-top: 0;
+    }
+  }
+  .btn--dark {
+    padding: 0 37px;
+  }
+}
+
+.my-courses-recommend {
+  flex: none;
+  width: 370px;
+  margin-left: 30px;
+
+  @include max(860) {
+    flex: auto;
+    width: 100%;
+    margin-left: 0;
+  }
+  .courses-top__slide-title {
+    font-size: 18px;
+  }
+  .courses-top__slide-text {
+    margin-bottom: 5px;
+  }
+}
+
+.my-courses-list__title {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  color: #1e1e1e;
+}
