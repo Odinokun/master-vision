@@ -23,7 +23,7 @@ $(document).ready(function ($) {
     'teachers',
     'course',
     'courses',
-    'my-courses'
+    'my-course'
     ]);
 });
 
