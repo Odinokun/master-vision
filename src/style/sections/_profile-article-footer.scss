@@ -10,7 +10,8 @@
   margin-bottom: 10px;
 }
 
-.profile-article__form-input {
+.profile-article__form-input,
+.profile-article__form-textarea {
   font-size: 14px;
   line-height: 36px;
   width: 100%;
@@ -20,9 +21,15 @@
   border: none;
   border-radius: 18px !important;
   background-color: #f0f0f5;
+  overflow: hidden;
 
   @include placeholder-color(#99a1ba);
 }
+
+.profile-article__form-textarea {
+  line-height: 34px;
+}
+
 
 .profile-article__form-smile {
   position: absolute;
