@@ -1,0 +1,16 @@
+mixin course-questions-tabs-row
+  .course-questions-tabs-row
+    .course-questions-tabs__question
+      .course-questions-tabs__question-svg
+        +svg('arr-down')
+      span.course-questions-tabs__question-text Как пройти обучение на курсе?
+    .course-questions-tabs__answer
+      p Lorem ipsum dolor sit amet, consectetur. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+
+//begin course-questions-tab
+.course-questions-tabs
+  +course-questions-tabs-row
+  +course-questions-tabs-row
+  +course-questions-tabs-row
+//end course-questions-tab

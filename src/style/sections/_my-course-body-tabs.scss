@@ -45,13 +45,22 @@
   margin-right: 30px;
   padding: 18px 0;
   cursor: pointer;
-  white-space: nowrap;
   color: #1e1e1e;
 
+  @include max(860) {
+    font-size: 15px;
+    margin-right: 25px;
+  }
+  @include max(760) {
+    font-size: 17px;
+  }
   @include max(540) {
     display: inline-block;
     margin-right: 0;
     padding-bottom: 7px;
+  }
+  &:last-child {
+    margin-right: 0;
   }
   &::before {
     position: absolute;
@@ -181,12 +190,12 @@
 }
 
 .my-course-body-tabs__materials {
-  margin-bottom: 25px;
-  padding-bottom: 27px;
-  border-bottom: 1px solid #e4e4f2;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: 25px;
+  padding-bottom: 27px;
+  border-bottom: 1px solid #e4e4f2;
 }
 
 .my-course-body-tabs__materials-link {
@@ -199,6 +208,7 @@
   padding-left: 50px;
   text-decoration: none;
   color: #1e1e1e;
+
   @include max(425) {
     font-size: 16px;
     padding-left: 40px;
@@ -237,4 +247,21 @@
 
 .my-course-body-tabs__materials-link--video::before {
   background-position: 0 -152px;
+}
+
+.my-course-body-tabs__tab-03 {
+  .my-course-body-tabs__tab-title {
+    margin-bottom: 5px;
+  }
+  .course-questions-tabs__answer p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+    margin-bottom: 0;
+    color: #1e1e1e;
+  }
+  .course-questions-tabs {
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
 }

@@ -57,6 +57,9 @@
 }
 
 .my-course-body{
-  width: 100%;
+  width: calc(100% - 300px);
   margin-bottom: 60px;
+  @include max(760) {
+    width: 100%;
+  }
 }
