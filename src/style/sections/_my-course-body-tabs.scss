@@ -91,6 +91,7 @@
     min-height: 350px;
     margin-bottom: 20px;
     border-radius: 5px;
+
     @include max(600) {
       min-height: 200px;
     }
@@ -112,6 +113,7 @@
   width: calc(50% - 10px);
   margin-bottom: 20px;
   border-radius: 5px;
+
   @include max(600) {
     width: 100%;
   }
@@ -128,6 +130,7 @@
   margin-bottom: 20px;
   padding-bottom: 38px;
   border-bottom: 1px solid #e4e4f2;
+
   @include max(950) {
     flex-direction: column;
     align-items: flex-end;
@@ -145,6 +148,7 @@
   display: flex;
   margin-right: 30px;
   text-align: right;
+
   @include max(950) {
     margin-right: 0;
   }
@@ -163,4 +167,54 @@
     width: 36px;
     height: 36px;
   }
+}
+
+.my-course-body-tabs__tab-02 {
+  .my-course-body-tabs__tab-title {
+    margin-bottom: 5px;
+  }
+}
+
+.my-course-body-tabs__tab-subtitle {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.my-course-body-tabs__materials {
+  margin-bottom: 25px;
+  padding-bottom: 27px;
+  border-bottom: 1px solid #e4e4f2;
+}
+
+.my-course-body-tabs__materials-link {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 38px;
+  display: block;
+  min-height: 26px;
+  padding-left: 50px;
+  text-decoration: none;
+  color: #1e1e1e;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.my-course-body-tabs__materials-link--pdf {
+  background-image: url('../img/pdf.svg');
+}
+
+.my-course-body-tabs__materials-link--excel {
+  background-image: url('../img/excel.svg');
+}
+
+.my-course-body-tabs__materials-link--word {
+  background-image: url('../img/word.svg');
+}
+
+.my-course-body-tabs__materials-link--img {
+  background-image: url('../img/img.svg');
+}
+
+.my-course-body-tabs__materials-link--video {
+  background-image: url('../img/video.svg');
 }
