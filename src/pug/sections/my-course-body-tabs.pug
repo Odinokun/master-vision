@@ -1,0 +1,49 @@
+//begin my-course-body-tabs
+.my-course-body-tabs
+  .my-course-body-tabs__btns
+    span.my-course-body-tabs__btn.active(data-tab='01') Занятие
+    span.my-course-body-tabs__btn(data-tab='02') Материалы занятия
+    span.my-course-body-tabs__btn(data-tab='03') Вопросы и ответы
+
+  .my-course-body-tabs__body
+    //begin my-course-body-tabs__tab-01
+    .my-course-body-tabs__tab.my-course-body-tabs__tab-01.active
+      h2.my-course-body-tabs__tab-title Лекция по Психологии
+      p Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в естественных условиях, и практи́ческую психологию, занимающуюся применением психологических знаний на практике.
+      .my-course-body-tabs__tab-video
+        iframe(src='https://www.youtube.com/embed/an28rVke-MI', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+      p Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в естественных условиях, и практи́ческую психологию, занимающуюся применением психологических знаний на практике.
+      .my-course-body-tabs__tab-half-row
+        .my-course-body-tabs__tab-half-img
+          img(src="assets/img/half-01.jpg" alt="picture")
+        .my-course-body-tabs__tab-half-img
+          img(src="assets/img/half-02.jpg" alt="picture")
+      p Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в естественных условиях, и практи́ческую психологию, занимающуюся применением психологических знаний на практике.
+
+      .my-course-body-tabs__tab-agree
+        .my-course-body-tabs__tab-agree-text
+          span
+            | Нажатие на кнопку подтверждает ознакомление
+            br
+            | со всеми материалами этого занятия
+          .my-course-body-tabs__tab-agree-icon
+            +svg('agree')
+        button.btn.btn--dark Я прошел занятие
+
+
+      h2.my-course-body-tabs__tab-title Комментарии к занятию
+      include ../sections/profile-article-comment
+      include ../sections/profile-article-comment-2
+      include ../sections/profile-article-footer-crop
+    //end my-course-body-tabs__tab-01
+
+    //begin my-course-body-tabs__tab-02
+    .my-course-body-tabs__tab.my-course-body-tabs__tab-02
+      h1 TAB 02
+    //end my-course-body-tabs__tab-02
+
+    //begin my-course-body-tabs__tab-03
+    .my-course-body-tabs__tab.my-course-body-tabs__tab-03
+      h1 TAB 03
+    //end my-course-body-tabs__tab-03
+//end my-course-body-tabs
