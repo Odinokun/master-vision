@@ -21,9 +21,6 @@ $(function() {
   // begin checkbox
   require('./modules/checkbox')();
 
-  // begin video
-  require('./modules/video')();
-
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
 
