@@ -1,15 +1,5 @@
 extends ../_template
 
-mixin profile-aside__menu-item(svg, text, active)
-  //begin profile-aside__menu-item
-  li(class='profile-aside__menu-item ' + active + '')
-    a(href="#").profile-aside__menu-link
-      div(class='profile-aside__menu-svg profile-aside__menu-svg--' + svg +'')
-        svg
-          use(xlink:href="assets/img/sprite.svg#" + svg + "")
-      span.profile-aside__menu-text #{text}
-  //end profile-aside__menu-item
-
 block variables
   - var title       = 'Master Vision'
   - var description = 'Master Vision'
@@ -23,81 +13,24 @@ block content
     main.main.my-course
       include ../sections/profile-header
       .container.my-course__header
-        .my-course__header-label.my-course__header-label--psychology
-          span Психология
-        h2.my-course__title Курс Психология 2.0
+        .my-course__header-left
+          .my-course__header-label.my-course__header-label--psychology
+            span Психология
+          h2.my-course__title Курс Психология 2.0
         .my-course__return-btn
           a(href="#").btn.btn--light Мои курсы
 
-      .profile-main
+
+
+      .my-course-main
         .container
-          //begin profile-aside
-          .profile-aside
-            //begin profile-aside__menu
-            nav.profile-aside__menu.aside-item
-              ul.profile-aside__menu-list
-                +profile-aside__menu-item('camera', 'Основная информация', '')
-                +profile-aside__menu-item('note', 'Образование','active')
-                +profile-aside__menu-item('book', 'Личная информация','')
-                +profile-aside__menu-item('camera', 'Пригласить друга','')
-                +profile-aside__menu-item('note', 'Мой счет','')
-            //end profile-aside__menu
-          //end profile-aside
+          include ../sections/my-course-aside
 
-          //begin profile-edit-body
-          .profile-edit-body
-            //begin profile-edit__form
-            form.profile-edit__form
-              //begin profile-edit__form-top
-              .profile-edit__form-top
-                h3.profile-edit__form-title Образование
-                .profile-edit__form-row
-                  .profile-edit__form-label Учебное заведение (ВУЗ, Курсы):
-                  .profile-edit__form-input-wrap
-                    input.profile-edit__form-input
-                .profile-edit__form-row
-                  .profile-edit__form-label Направление:
-                  .profile-edit__form-input-wrap
-                    input.profile-edit__form-input
-                .profile-edit__form-row
-                  .profile-edit__form-label Годы обучения:
-                  .profile-edit__form-input-wrap
-                    input.profile-edit__form-input
-                .profile-edit__form-row.profile-edit__form-row--add
-                  .profile-edit__form-label
-                  .profile-edit__form-input-wrap
-                    +svg('invite')
-                    span Добавить учебное заведение
-              //end profile-edit__form-top
+          //begin my-course-body
+          .my-course-body
+            include ../sections/my-course-body-tabs
 
-              //begin profile-edit__form-top
-              .profile-edit__form-top.profile-edit__form-top--last
-                h3.profile-edit__form-title Карьера
-                .profile-edit__form-row
-                  .profile-edit__form-label Место работы:
-                  .profile-edit__form-input-wrap
-                    input.profile-edit__form-input
-                .profile-edit__form-row
-                  .profile-edit__form-label Должность:
-                  .profile-edit__form-input-wrap
-                    input.profile-edit__form-input
-                .profile-edit__form-row
-                  .profile-edit__form-label Годы работы:
-                  .profile-edit__form-input-wrap
-                    input.profile-edit__form-input
-                .profile-edit__form-row.profile-edit__form-row--add
-                  .profile-edit__form-label
-                  .profile-edit__form-input-wrap
-                    +svg('invite')
-                    span Добавить место работы
-              //end profile-edit__form-top
 
-              //begin profile-edit__form-footer
-              .profile-edit__form-footer
-                button.btn.btn--grey.profile-edit__form-footer--prev Назад
-                button.btn.btn--dark.profile-edit__form-footer--next Далее
-              //end profile-edit__form-footer
-            //end profile-edit__form
           //end profile-edit-body
 
     //end content
