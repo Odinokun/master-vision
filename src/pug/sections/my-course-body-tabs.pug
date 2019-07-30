@@ -1,13 +1,13 @@
 //begin my-course-body-tabs
 .my-course-body-tabs
   .my-course-body-tabs__btns
-    span.my-course-body-tabs__btn(data-tab='01') Занятие
-    span.my-course-body-tabs__btn.active(data-tab='02') Материалы занятия
+    span.my-course-body-tabs__btn.active(data-tab='01') Занятие
+    span.my-course-body-tabs__btn(data-tab='02') Материалы занятия
     span.my-course-body-tabs__btn(data-tab='03') Вопросы и ответы
 
   .my-course-body-tabs__body
     //begin my-course-body-tabs__tab-01
-    .my-course-body-tabs__tab.my-course-body-tabs__tab-01
+    .my-course-body-tabs__tab.my-course-body-tabs__tab-01.active
       h2.my-course-body-tabs__tab-title Лекция по Психологии
       p Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в естественных условиях, и практи́ческую психологию, занимающуюся применением психологических знаний на практике.
       iframe(src='https://www.youtube.com/embed/an28rVke-MI', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
@@ -37,7 +37,7 @@
     //end my-course-body-tabs__tab-01
 
     //begin my-course-body-tabs__tab-02
-    .my-course-body-tabs__tab.my-course-body-tabs__tab-02.active
+    .my-course-body-tabs__tab.my-course-body-tabs__tab-02
       h2.my-course-body-tabs__tab-title Лекция по Психологии
       span.my-course-body-tabs__tab-subtitle Материалы к занятию
 
