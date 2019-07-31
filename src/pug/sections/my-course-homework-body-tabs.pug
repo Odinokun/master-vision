@@ -1,0 +1,136 @@
+//begin my-course-body-tabs
+.my-course-body-tabs
+  .my-course-body-tabs__btns
+    span.my-course-body-tabs__btn.active(data-tab='01') Занятие
+    span.my-course-body-tabs__btn(data-tab='02') Материалы занятия
+
+  .my-course-body-tabs__body
+    //begin my-course-body-tabs__tab-01
+    .my-course-body-tabs__tab.my-course-body-tabs__tab-01.active
+      h2.my-course-body-tabs__tab-title Домашнее задание номер 1
+      p Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в естественных условиях, и практи́ческую психологию, занимающуюся применением психологических знаний на практике.
+
+      //begin my-course-homework__item
+      .my-course-homework__item
+        h3.my-course-homework__item-title 1. Текст заголовок вопроса
+        p Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии?
+        .my-course-homework__item-radiolist
+          label.my-course-homework__item-radio.active
+            input(type='radio' name='homework' checked)
+            span Показывать мои курсы другим пользователям
+          label.my-course-homework__item-radio
+            input(type='radio' name='homework')
+            span Показывать мои курсы
+          label.my-course-homework__item-radio
+            input(type='radio' name='homework')
+            span Показывать мои курсы другим пользователям
+      //end my-course-homework__item
+
+      //begin my-course-homework__item
+      .my-course-homework__item
+        h3.my-course-homework__item-title 2. Текст заголовок вопроса
+        p Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии?
+        .my-course-homework__item-checkboxlist
+          label.my-course-homework__item-checkbox.active
+            input(type='checkbox' checked)
+            span Показывать мои курсы другим пользователям
+          label.my-course-homework__item-checkbox
+            input(type='checkbox')
+            span Показывать мои курсы
+          label.my-course-homework__item-checkbox
+            input(type='checkbox')
+            span Показывать мои курсы другим пользователям
+      //end my-course-homework__item
+
+      //begin my-course-homework__item
+      .my-course-homework__item
+        h3.my-course-homework__item-title 3. Текст заголовок вопроса
+        p Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии?
+      //end my-course-homework__item
+
+      //begin my-course-homework__item
+      .my-course-homework__item
+        h3.my-course-homework__item-title 4. Текст заголовок вопроса
+        p Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии?
+      //end my-course-homework__item
+
+      //begin my-course-homework__item
+      .my-course-homework__item
+        h3.my-course-homework__item-title 5. Текст заголовок вопроса
+        p Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии?
+      //end my-course-homework__item
+
+      //begin my-course-homework__item
+      .my-course-homework__item
+        h3.my-course-homework__item-title 6. Текст заголовок вопроса
+        p Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии?
+        .my-course-homework__item-3-pic
+          a(href="#").my-course-homework__item-pic
+            img(src="assets/img/homework-01.jpg" alt="picture")
+          a(href="#").my-course-homework__item-pic
+            img(src="assets/img/homework-02.jpg" alt="picture")
+          a(href="#").my-course-homework__item-pic
+            img(src="assets/img/homework-03.jpg" alt="picture")
+      //end my-course-homework__item
+
+      //begin my-course-homework__item
+      .my-course-homework__item
+        h3.my-course-homework__item-title 6. Текст заголовок вопроса
+        p Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии?
+        input(type='file')
+        +svg('addfile')
+        span Прикрепить файл
+      //end my-course-homework__item
+
+
+
+      .my-course-body-tabs__tab-agree
+        .my-course-body-tabs__tab-agree-text
+          span
+            | После нажатия на кнопку ответ будет отправлен на проверку,
+            br
+            | внесение изменений в ответы станут недоступны
+          .my-course-body-tabs__tab-agree-icon
+            +svg('plane')
+        button.btn.btn--dark Отправить на проверку
+
+
+      h2.my-course-body-tabs__tab-title Комментарии к занятию
+      include ../sections/profile-article-comment
+      include ../sections/profile-article-comment-2
+      include ../sections/profile-article-footer-crop
+    //end my-course-body-tabs__tab-01
+
+    //begin my-course-body-tabs__tab-02
+    .my-course-body-tabs__tab.my-course-body-tabs__tab-02
+      h2.my-course-body-tabs__tab-title Лекция по Психологии
+      span.my-course-body-tabs__tab-subtitle Материалы к занятию
+
+      //begin my-course-body-tabs__materials
+      .my-course-body-tabs__materials
+        a(href="#").my-course-body-tabs__materials-link.my-course-body-tabs__materials-link--pdf Презентация к курсу Психология.pdf
+        a(href="#").my-course-body-tabs__materials-link.my-course-body-tabs__materials-link--excel Таблица к курсу.xls
+        a(href="#").my-course-body-tabs__materials-link.my-course-body-tabs__materials-link--word Документ к курсу Психология.doc
+        a(href="#").my-course-body-tabs__materials-link.my-course-body-tabs__materials-link--img Картинка к курсу.jpg
+        a(href="#").my-course-body-tabs__materials-link.my-course-body-tabs__materials-link--video Ссылка на видео (Youtube)
+
+      h2.my-course-body-tabs__tab-title Комментарии к занятию
+      include ../sections/profile-article-comment
+      include ../sections/profile-article-comment-2
+      include ../sections/profile-article-footer-crop
+      //end my-course-body-tabs__materials
+
+    //end my-course-body-tabs__tab-02
+
+    //begin my-course-body-tabs__tab-03
+    .my-course-body-tabs__tab.my-course-body-tabs__tab-03
+      h2.my-course-body-tabs__tab-title Вопросы и ответы
+
+      include ../sections/my-course-questions
+
+      h2.my-course-body-tabs__tab-title Комментарии к занятию
+      include ../sections/profile-article-comment
+      include ../sections/profile-article-comment-2
+      include ../sections/profile-article-footer-crop
+    //end my-course-body-tabs__tab-03
+//end my-course-body-tabs

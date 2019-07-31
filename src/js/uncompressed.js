@@ -23,7 +23,8 @@ $(document).ready(function ($) {
     'teachers',
     'course',
     'courses',
-    'my-course'
+    'my-course',
+    'my-course-homework'
     ]);
 });
 

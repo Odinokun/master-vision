@@ -1,8 +1,7 @@
 .my-course-aside {
   flex: none;
   width: 270px;
-  margin-right: 30px;
-  @include max(760) {
+  margin-right: 30px;@include max(760) {
     width: 100%;
     margin-right: 0;
   }
@@ -98,7 +97,19 @@
   }
 }
 
-.my-course-aside__menu-text--finished {
+.my-course-aside__menu-item--fixed {
+  .my-course-aside__menu-svg svg {
+    fill: $highlight-v;
+  }
+  .my-course-aside__menu-text {
+    span {
+      color: $highlight-v;
+    }
+  }
+}
+
+.my-course-aside__menu-text--finished,
+.my-course-aside__menu-text--fixed {
   display: flex;
   align-items: center;
   svg {

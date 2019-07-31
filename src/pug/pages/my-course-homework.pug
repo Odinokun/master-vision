@@ -42,15 +42,15 @@ block content
                 //end my-course-aside__menu-item
 
                 //begin my-course-aside__menu-item
-                li.my-course-aside__menu-item.my-course-aside__menu-item--finished
+                li.my-course-aside__menu-item.my-course-aside__menu-item--fixed
                   a(href="#").my-course-aside__menu-link
                     .my-course-aside__menu-svg.my-course-aside__menu-svg--note
                       +svg('note')
                     .my-course-aside__menu-text
                       span Домашнее задание к видеолекции по психологии
-                      .my-course-aside__menu-text--finished
-                        +svg('finished')
-                        span пройдено
+                      .my-course-aside__menu-text--fixed
+                        +svg('fixed')
+                        span доработка
                 //end my-course-aside__menu-item
 
                 //begin my-course-aside__menu-item
@@ -59,7 +59,7 @@ block content
                     .my-course-aside__menu-svg.my-course-aside__menu-svg--book
                       +svg('book')
                     .my-course-aside__menu-text
-                      span Лекция по психологии
+                      span Домашнее задание номер 1
                 //end my-course-aside__menu-item
 
                 //begin my-course-aside__menu-item
@@ -79,8 +79,6 @@ block content
                     .my-course-aside__menu-text
                       span Домашнее задание
                 //end my-course-aside__menu-item
-
-
             //end my-course-aside__menu
 
             //begin my-course-aside__teacher
@@ -108,13 +106,12 @@ block content
               .my-course-aside__sertificate-svg
                 +svg('sertificate')
               span.my-course-aside__sertificate-text Сертификат доступен после прохождения курса
-
             //end my-course-aside__sertificate
           //end my-course-aside
 
           //begin my-course-body
           .my-course-body
-            include ../sections/my-course-body-tabs
+            include ../sections/my-course-homework-body-tabs
           //end profile-edit-body
     //end content
 

@@ -12,6 +12,12 @@ module.exports = function() {
     $('.profile-edit__radio-row-label').removeClass('active');
     $(this).addClass('active');
   });
+
+  $('.my-course-homework__item-radio').on('click', function () {
+    var radioParent = $(this).parents('.my-course-homework__item-radiolist');
+    $(radioParent).children('.my-course-homework__item-radio').removeClass('active');
+    $(this).addClass('active');
+  });
   // end radio
 
 };
