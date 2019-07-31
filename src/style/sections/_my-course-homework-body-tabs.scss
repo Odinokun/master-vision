@@ -1,7 +1,10 @@
 .my-course-homework__item {
   padding-top: 25px;
-  padding-bottom: 18px;
+  padding-bottom: 20px;
   border-top: 1px solid #e4e4f2;
+  p {
+    margin-bottom: 15px;
+  }
 }
 
 .my-course-homework__item-title {
@@ -20,9 +23,12 @@
 .my-course-homework__item-radio {
   position: relative;
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   padding: 0;
   cursor: pointer;
+  &:last-child {
+    margin-bottom: 0;
+  }
   input {
     position: absolute;
     opacity: 0;
@@ -71,8 +77,12 @@
 .my-course-homework__item-checkbox {
   position: relative;
   display: block;
+  margin-bottom: 5px;
   padding: 0;
   cursor: pointer;
+  &:last-child {
+    margin-bottom: 0;
+  }
   span {
     font-size: 15px;
     font-weight: 500;
@@ -109,6 +119,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .my-course-homework__item-pic {
@@ -118,6 +129,9 @@
   width: calc(33% - 7px);
   margin-bottom: 10px;
   border-radius: 5px;
+  @include max(540) {
+    width: 100%;
+  }
   &:hover {
     &::before {
       opacity: 1;
@@ -134,11 +148,247 @@
     transition: opacity .5s;
     pointer-events: none;
     opacity: 0;
-    border: 3px solid $highlight-v;;
-    border-radius: 5px;
+    border: 3px solid $highlight-v;
+    border-radius: 5px;;
   }
   img {
     display: block;
     width: 100%;
   }
+}
+
+.my-course-homework__item-druglist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.my-course-homework__item-drug {
+  position: relative;
+  display: flex;
+  margin-bottom: 8px;
+  padding: 7px 32px 7px 9px;
+  cursor: move;
+  border-radius: 5px;
+  background-color: #f0f0f5;
+  &::before {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 18px;
+    height: 18px;
+    content: '';
+    transition: opacity .5s;
+    opacity: 0;
+    background-image: url('../img/drug.svg');
+    background-repeat: no-repeat;
+  }
+  &:hover {
+    background-color: #d0d5e2;
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.my-course-homework__item-drug-numb {
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 15px;
+  color: $highlight-v;
+}
+
+.my-course-homework__item-drug-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1e1e1e;
+}
+.my-course-homework__item-add-texts {
+  span {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 40px;
+    color: #1e1e1e;
+  }
+  input {
+    width: 100%;
+    max-width: 246px;
+    height: 30px;
+    margin: 0 5px 0 0;
+    border: none;
+    border-radius: 5px !important;
+    background-color: #f0f0f5;
+    box-shadow: none;
+  }
+}
+
+.my-course-homework__item-2-lists {
+  display: flex;
+  justify-content: space-between;
+}
+.my-course-homework__item-lists-questions,
+.my-course-homework__item-lists-answers {
+  width: calc(50% - 5px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.my-course-homework__item-lists-question {
+  margin-bottom: 8px;
+  padding: 7px 32px 7px 9px;
+  border: 1px solid #f0f0f5;
+  border-radius: 5px;
+  background-color: #fff;
+  span {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1e1e1e;
+  }
+}
+.my-course-homework__item-lists-answer {
+  position: relative;
+  margin-bottom: 8px;
+  padding: 7px 32px 7px 9px;
+  cursor: move;
+  border: 1px solid #f0f0f5;
+  border-radius: 5px;
+  background-color: #f0f0f5;
+  &::before {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 18px;
+    height: 18px;
+    content: '';
+    transition: opacity .5s;
+    opacity: 0;
+    background-image: url('../img/drug.svg');
+    background-repeat: no-repeat;
+  }
+  &:hover {
+    background-color: #d0d5e2;
+    &::before {
+      opacity: 1;
+    }
+  }
+  span {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1e1e1e;
+  }
+}
+
+.my-course-homework__item-downloads{
+  position: relative;
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    left: 0;
+    cursor: pointer;
+    margin: auto;
+    width: 100%;
+  }
+}
+.my-course-homework__item-download-field{
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 19px;
+  height: 113px;
+  background-color: #f0f0f5;
+}
+.my-course-homework__item-download-btn{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+  justify-content: flex-start;
+  svg {
+    flex: none;
+    margin-right: 11px;
+    width: 17px;
+    height: 17px;
+    fill:$highlight-v;
+  }
+  span {
+    color: #4d4ce0;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+
+.download-files{
+  display: flex;
+  flex-direction: column;
+}
+.download-file{
+  color: #99a1ba;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  display: block;
+  &:last-child{
+    margin-bottom: 15px;
+  }
+}
+
+
+.my-course-homework__agree {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-top: 35px;
+  padding-bottom: 38px;
+  border-bottom: 1px solid #e4e4f2;
+  border-top: 1px solid #e4e4f2;
+
+  @include max(950) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .btn {
+    min-width: 225px;
+
+    @include max(950) {
+      margin-top: 20px;
+    }
+  }
+}
+.my-course-homework__agree-text {
+  display: flex;
+  margin-right: 30px;
+  text-align: right;
+
+  @include max(950) {
+    margin-right: 0;
+  }
+  span {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 19px;
+    color: #99a1ba;
+  }
+}
+
+.my-course-homework__agree-icon {
+  margin-left: 19px;
+  svg {
+    fill: #99a1ba;
+    width: 36px;
+    height: 36px;
+  }
+}
+.my-course-homework__agree-right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.my-course-homework__agree-try{
+  color: #1e1e1e;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
