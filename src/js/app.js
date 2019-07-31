@@ -21,6 +21,12 @@ $(function() {
   // begin checkbox
   require('./modules/checkbox')();
 
+  // begin addFileName
+  require('./modules/addFileName')();
+
+  // begin DND
+  require('./modules/drugNdrop')();
+
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
 

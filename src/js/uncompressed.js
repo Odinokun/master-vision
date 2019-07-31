@@ -47,19 +47,3 @@ function pageWidget(pages) {
 
 
 //====== Begin Programmer code ======
-$( function() {
-  $('.my-course-homework__item-druglist').sortable();
-  $('.my-course-homework__item-druglist').disableSelection();
-  $('.my-course-homework__item-lists-answers').sortable();
-  $('.my-course-homework__item-lists-answers').disableSelection();
-} );
-
-// begin addFile
-$('input[type=file]').change(function(){
-  // console.log($(this).val());
-  var path = $(this).val();
-  var fileName = path.replace('C:\\fakepath\\', '');
-
-  $(this).siblings('.download-files').append('<span class="download-file">' + fileName + '</span>');
-});
-// end addFile
