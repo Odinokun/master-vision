@@ -43,6 +43,15 @@
           |баллов
         .profile-header__user-arrow
           +svg('arr-down')
+      ul.profile-header__user-menu#profile-header__user-menu
+        li.profile-header__user-item
+          a(href="#").profile-header__user-link Моя страница
+        li.profile-header__user-item.active
+          a(href="#").profile-header__user-link Мой счет: 4000 баллов
+        li.profile-header__user-item
+          a(href="#").profile-header__user-link Редактировать
+        li.profile-header__user-item
+          a(href="#").profile-header__user-link Выйти
     //end profile-header__user
 
 //end   profile-header

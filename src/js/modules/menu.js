@@ -8,6 +8,10 @@ module.exports = function () {
   $('.header__menu-link').on('click', function () {
     $('#header__menu').removeClass('active');
   });
+
+  $('.profile-header__user-arrow').on('click', function () {
+    $('#profile-header__user-menu').slideToggle();
+  });
   // end menu
 
 };

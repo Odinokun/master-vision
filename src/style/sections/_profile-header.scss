@@ -204,6 +204,7 @@
 
 //begin profile-header__user
 .profile-header__user {
+  position: relative;
   display: flex;
   align-items: center;
   flex: none;
@@ -271,6 +272,44 @@
     min-width: 192px;
     margin-left: auto;
   }
+}
+
+.profile-header__user-menu {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 0;
+  display: none;
+  overflow: hidden;
+  width: 200px;
+  margin: 0;
+  @include max(375) {
+    width: 100%;
+  }
+  padding: 0;
+  border-radius: 5px;
+}
+.profile-header__user-item {
+  padding: 10px 20px 10px 14px;
+  list-style: none;
+  text-align: right;
+  border-bottom: 1px solid #fff;
+  background-color: #d0d5e2;
+  &:last-child {
+    border-bottom: none;
+  }
+  &.active {
+    background-color: #9a9be9;
+    .profile-header__user-link {
+      color: #fff;
+    }
+  }
+}
+.profile-header__user-link {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #1e1e1e;
 }
 
 //end profile-header__user
