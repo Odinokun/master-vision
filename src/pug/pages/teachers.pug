@@ -1,6 +1,6 @@
 extends ../_template
 
-mixin teachers-item(pic, name, label)
+mixin teachers-item-1(pic, name, label)
   div(class="teachers-item " + label + "")
     .teachers-item__header
       .teachers-item__ava
@@ -12,14 +12,33 @@ mixin teachers-item(pic, name, label)
           include ../elements/yellow-star-2
           include ../elements/yellow-star-2
           include ../elements/yellow-star-2
-          span.teachers-item__rating-numb 10
         h4.teachers-item__name #{name}
         a(href="#").teachers-item__course Психолого-исторические науки
     .teachers-item__body
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+      p Lorem ipsum dolor sit amet, consectetur  elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
     .teachers-item__footer
-      a(href="#").btn.btn--dark Курсы преподавателя
-      a(href="#").btn.btn--grey Добавить в избранное
+      a(href="#").btn.btn--dark Курсы
+      a(href="#").btn.btn--light В избранное
+
+mixin teachers-item-2(pic, name, label)
+  div(class="teachers-item " + label + "")
+    .teachers-item__header
+      .teachers-item__ava
+        img(src="assets/img/teacher-ava-" + pic + ".jpg" alt="ava")
+      .teachers-item__info
+        .teachers-item__rating.teachers-item__rating--4
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+        h4.teachers-item__name #{name}
+        a(href="#").teachers-item__course Психолого-исторические науки
+    .teachers-item__body
+      p Lorem ipsum dolor sit amet, consectetur  elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+    .teachers-item__footer
+      a(href="#").btn.btn--dark Курсы
+      a(href="#").btn.btn--grey В избранном
 
 
 
@@ -51,42 +70,19 @@ block content
           p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
 
       .teachers-main
+        include ../sections/teachers-filter
         .container
-          //begin teachers-aside
-          aside.teachers-aside
-            .teachers-filter
-              h3.teachers-filter__title Выбрать по критериям
-              form.teachers-filter__form
-                select.teachers-filter__select
-                  option(value='') Выберите специальность
-                  option(value='') Специальность 1
-                  option(value='') Специальность 2
-                  option(value='') Специальность 3
-                select.teachers-filter__select
-                  option(value='') Рейтинг по возрастанию
-                  option(value='') Рейтинг по убыванию
-                .teachers-filter__checkbox.checkbox.active
-                  label
-                    input(type='checkbox')
-                    span Избранные
-                .teachers-filter__checkbox.checkbox.active
-                  label
-                    input(type='checkbox')
-                    span Эксклюзив
-                .teachers-filter__checkbox.checkbox
-                  label
-                    input(type='checkbox')
-                    span Рекомендуем
-          //end teachers-aside
-
           //begin teachers-list
           .teachers-list
-            +teachers-item('01', 'Петр Максимов', 'teachers-item--chosen')
-            +teachers-item('02', 'Анна Иванова', 'teachers-item--recommend')
-            +teachers-item('01', 'Петр Максимов', 'teachers-item--exclusive')
-            +teachers-item('02', 'Анна Иванова', '')
-            +teachers-item('01', 'Петр Максимов', '')
-            +teachers-item('02', 'Анна Иванова', '')
+            +teachers-item-1('01', 'Петр Максимов', 'teachers-item--exclusive')
+            +teachers-item-2('02', 'Анна Иванова',  'teachers-item--recommend')
+            +teachers-item-1('02', 'Анна Иванова',  '')
+            +teachers-item-1('01', 'Петр Максимов', '')
+            +teachers-item-1('02', 'Анна Иванова',  '')
+            +teachers-item-1('01', 'Петр Максимов', '')
+            +teachers-item-1('02', 'Анна Иванова',  '')
+            +teachers-item-1('01', 'Петр Максимов', '')
+            +teachers-item-1('02', 'Анна Иванова',  '')
 
             include ../elements/pagination
           //end teachers-list
