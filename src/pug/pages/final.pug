@@ -1,0 +1,120 @@
+extends ../_template
+
+block variables
+  - var title       = 'Master Vision'
+  - var description = 'Master Vision'
+  - var ogtitle     = 'Master Vision'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.my-course
+      include ../sections/profile-header
+      .container.my-course__header
+        .my-course__header-left
+          .my-course__header-label.my-course__header-label--psychology
+            span Психология
+          h2.my-course__title Курс Психология 2.0
+        .my-course__return-btn
+          a(href="#").btn.btn--light Мои курсы
+
+      .my-course-main
+        .container
+          //begin my-course-aside
+          .my-course-aside
+            //begin my-course-aside__menu
+            .my-course-aside__menu
+              .my-course-aside__menu-title
+                span Расписание занятий
+              ul.my-course-aside__menu-list
+                //begin my-course-aside__menu-item
+                li.my-course-aside__menu-item.my-course-aside__menu-item--finished
+                  a(href="#").my-course-aside__menu-link
+                    .my-course-aside__menu-svg.my-course-aside__menu-svg--camera
+                      +svg('camera')
+                    .my-course-aside__menu-text
+                      span Видеолекция о психологии
+                      .my-course-aside__menu-text--finished
+                        +svg('finished')
+                        span пройдено
+                //end my-course-aside__menu-item
+
+                //begin my-course-aside__menu-item
+                li.my-course-aside__menu-item.my-course-aside__menu-item--finished
+                  a(href="#").my-course-aside__menu-link
+                    .my-course-aside__menu-svg.my-course-aside__menu-svg--note
+                      +svg('note')
+                    .my-course-aside__menu-text
+                      span Домашнее задание к видеолекции по психологии
+                      .my-course-aside__menu-text--finished
+                        +svg('finished')
+                        span пройдено
+                //end my-course-aside__menu-item
+
+                //begin my-course-aside__menu-item
+                li.my-course-aside__menu-item.active
+                  a(href="#").my-course-aside__menu-link
+                    .my-course-aside__menu-svg.my-course-aside__menu-svg--book
+                      +svg('book')
+                    .my-course-aside__menu-text
+                      span Лекция по психологии
+                //end my-course-aside__menu-item
+
+                //begin my-course-aside__menu-item
+                li.my-course-aside__menu-item
+                  a(href="#").my-course-aside__menu-link
+                    .my-course-aside__menu-svg.my-course-aside__menu-svg--camera
+                      +svg('camera')
+                    .my-course-aside__menu-text
+                      span Видеолекция о психологии домашних животных
+                //end my-course-aside__menu-item
+
+                //begin my-course-aside__menu-item
+                li.my-course-aside__menu-item
+                  a(href="#").my-course-aside__menu-link
+                    .my-course-aside__menu-svg.my-course-aside__menu-svg--note
+                      +svg('note')
+                    .my-course-aside__menu-text
+                      span Домашнее задание
+                //end my-course-aside__menu-item
+
+
+            //end my-course-aside__menu
+
+            //begin my-course-aside__teacher
+            .my-course-aside__teacher
+              .my-course-aside__teacher-title
+                span Преподаватель
+              .my-course-aside__teacher-body
+                .my-course-aside__teacher-ava
+                  img(src="assets/img/teacher-ava-01.jpg" alt="picture")
+                .my-course-aside__teacher-info
+                  //begin course-about__teacher-rait
+                  .course-about__teacher-rait.course-about__teacher-rait--4
+                    include ../elements/yellow-star-2
+                    include ../elements/yellow-star-2
+                    include ../elements/yellow-star-2
+                    include ../elements/yellow-star-2
+                    include ../elements/yellow-star-2
+                  //end course-about__teacher-rait
+                  h4.my-course-aside__teacher-name Петр Максимов
+                  .my-course-aside__teacher-position Психолого-исторические науки
+            //end my-course-aside__teacher
+
+            //begin my-course-aside__sertificate
+            a(href="#").my-course-aside__sertificate.active
+              .my-course-aside__sertificate-svg
+                +svg('sertificate')
+              span.my-course-aside__sertificate-text Сертификат доступен после прохождения курса
+            //end my-course-aside__sertificate
+          //end my-course-aside
+
+          //begin my-course-body
+          .my-course-body
+            include ../sections/my-course-final
+          //end profile-edit-body
+    //end content
+
+    include ../sections/footer

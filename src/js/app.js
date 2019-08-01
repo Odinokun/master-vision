@@ -27,6 +27,9 @@ $(function() {
   // begin DND
   require('./modules/drugNdrop')();
 
+  // begin rait
+  require('./modules/rait')();
+
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
 

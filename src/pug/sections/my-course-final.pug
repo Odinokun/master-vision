@@ -1,0 +1,54 @@
+//begin my-course-final__body
+.my-course-final__body
+  h2.my-course-body-tabs__tab-title Поздравляем с прохождением курса Психология 2.0!
+  span.my-course-body-tabs__tab-subtitle В этом разделе Вы можете скачать сертификаты о прохождения курса и оставить отзыв об обучении.
+
+  //begin my-course-final__item
+  .my-course-final__item
+    h3.my-course-final__item-title Сертификат о прохождении курса
+    .my-course-final__certificates
+      .my-course-final__certificate
+        .my-course-final__certificate-pic
+          img(src="assets/img/certificate-1.jpg" alt="picture")
+        a(href="#").btn.btn--dark Скачать
+      .my-course-final__certificate
+        .my-course-final__certificate-pic
+          img(src="assets/img/certificate-1.jpg" alt="picture")
+        a(href="#").btn.btn--dark Скачать
+      .my-course-final__certificate-label
+  //end my-course-final__item
+
+  //begin my-course-final__item
+  .my-course-final__item
+    .my-course-final__rait-edit
+      .my-course-final__rait-edit-svg
+        +svg('pen')
+      span Редактировать
+
+    h3.my-course-final__item-title Отзыв о курсе
+    span.my-course-final__item-subtitle Пожалуйста, оцените курс и преподавателя, у которого Вы обучались.
+    form.my-course-final__rait-form
+      .my-course-final__rait-header
+        .my-course-final__rait-item
+          span Оцените курс:
+          .course-about__teacher-rait.course-about__teacher-rait--4
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+        .my-course-final__rait-item
+          span Оцените преподавателя:
+          .course-about__teacher-rait.course-about__teacher-rait--4
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+      textarea.my-course-final__rait-textarea(placeholder='Текст отзыва')
+      input(type='submit' value='Сохранить').btn.btn--dark
+
+
+
+  //end my-course-final__item
+//end my-course-final__body

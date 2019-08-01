@@ -1,7 +1,9 @@
 .my-course-aside {
   flex: none;
   width: 270px;
-  margin-right: 30px;@include max(760) {
+  margin-right: 30px;
+
+@include max(760) {
     width: 100%;
     margin-right: 0;
   }
@@ -192,6 +194,15 @@
   display: flex;
   margin-bottom: 30px;
   padding-right: 15px;
+  text-decoration: none;
+  &.active {
+    svg{
+      fill:$highlight-v;
+    }
+    .my-course-aside__sertificate-text {
+      color: $highlight-v;
+    }
+  }
 }
 
 .my-course-aside__sertificate-svg {
