@@ -1,0 +1,57 @@
+div.sceditor-grip {
+  display: none;
+}
+
+div.sceditor-toolbar, div.sceditor-group {
+  margin-top: 5px;
+  padding: 0;
+  border-bottom: 0;
+  background-color: transparent;
+}
+
+.sceditor-button div {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 15px 15px;
+}
+.sceditor-button-bold div {
+  background-image: url('../img/bold.png');
+}
+.sceditor-button-italic div {
+  background-image: url('../img/italic.png');
+
+}
+.sceditor-button-underline div {
+  background-image: url('../img/underline.png');
+
+}
+.sceditor-button-link div {
+  background-image: url('../img/link.png');
+
+}
+.sceditor-button-unlink  div {
+  background-image: url('../img/link-broken.png');
+}
+.sceditor-button-quote div {
+  background-image: url('../img/quote.png');
+
+  }
+
+.sceditor-container {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100% !important;
+  border: none;
+  iframe {
+    font-size: 14px;
+    line-height: 34px;
+    overflow: hidden;
+    margin: 0;
+    padding-left: 10px;
+    color: #99a1ba;
+    border: none;
+    border-radius: 18px !important;
+    background-color: #f0f0f5;
+  }
+}
