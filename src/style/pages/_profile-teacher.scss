@@ -50,13 +50,13 @@
   padding: 20px;
   border-radius: 5px;
   background-color: #fff;
-    iframe{
-      display: block;
-      width: 100%;
-      margin-bottom: 17px;
-      border-radius: 5px;
-      min-height: 350px;
-    }
+  iframe {
+    display: block;
+    width: 100%;
+    min-height: 350px;
+    margin-bottom: 17px;
+    border-radius: 5px;
+  }
 
   p {
     margin-bottom: 24px;
@@ -394,11 +394,16 @@
   }
   .slick-prev {
     top: 115px;
-    left: 5px;
+    left: -5px;
     display: none !important;
     transform: translate(0, -50%) rotate(180deg);
 
     @include max(768) {
+      left: 5px;
+      display: block !important;
+    }
+
+    &.active {
       display: block !important;
     }
   }
@@ -414,12 +419,12 @@
 
 .profile-teacher__reviews-slide {
   padding: 0 15px;
-  iframe{
+  iframe {
     display: block;
     width: 100%;
-    margin-bottom: 17px;
-  border-radius: 5px;
     min-height: 230px;
+    margin-bottom: 17px;
+    border-radius: 5px;
   }
 }
 
@@ -433,6 +438,7 @@
     color: #1e1e1e;
   }
 }
+
 //end reviews
 
 //begin text reviews
@@ -476,6 +482,9 @@
     }
     @include max(768) {
       left: 5px;
+    }
+    &.active {
+      display: block !important;
     }
   }
   .slick-next {

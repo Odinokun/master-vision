@@ -25,12 +25,9 @@
     margin-left: 0;
   }
 
-  .slick-prev {
-    display: none !important;
-  }
+  .slick-prev,
   .slick-next {
     z-index: 2;
-    right: -5px;
     width: 40px;
     height: 40px;
     transition: .5s;
@@ -40,13 +37,21 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 15px 15px;
-
-    @include max(425) {
-      //right: 0px;
-    }
     &:hover {
       background-color: $highlight-v;
     }
+  }
+
+  .slick-prev {
+    left: -5px;
+    display: none !important;
+    transform: translate(0, -50%) rotate(180deg);
+    &.active {
+      display: block !important;
+    }
+  }
+  .slick-next {
+    right: -5px;
   }
 }
 
