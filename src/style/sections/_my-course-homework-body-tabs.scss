@@ -129,6 +129,7 @@
   width: calc(33% - 7px);
   margin-bottom: 10px;
   border-radius: 5px;
+
   @include max(540) {
     width: 100%;
   }
@@ -203,6 +204,7 @@
   font-weight: 500;
   color: #1e1e1e;
 }
+
 .my-course-homework__item-add-texts {
   span {
     font-size: 15px;
@@ -226,6 +228,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .my-course-homework__item-lists-questions,
 .my-course-homework__item-lists-answers {
   width: calc(50% - 5px);
@@ -233,6 +236,7 @@
   padding: 0;
   list-style: none;
 }
+
 .my-course-homework__item-lists-question {
   margin-bottom: 8px;
   padding: 7px 32px 7px 9px;
@@ -245,6 +249,7 @@
     color: #1e1e1e;
   }
 }
+
 .my-course-homework__item-lists-answer {
   position: relative;
   margin-bottom: 8px;
@@ -278,62 +283,76 @@
   }
 }
 
-.my-course-homework__item-downloads{
+.my-course-homework__item-downloads {
   position: relative;
   input {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    opacity: 0;
     left: 0;
-    cursor: pointer;
-    margin: auto;
     width: 100%;
-  }
-}
-.my-course-homework__item-download-field{
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 19px;
-  height: 113px;
-  background-color: #f0f0f5;
-}
-.my-course-homework__item-download-btn{
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  cursor: pointer;
-  justify-content: flex-start;
-  svg {
-    flex: none;
-    margin-right: 11px;
-    width: 17px;
-    height: 17px;
-    fill:$highlight-v;
-  }
-  span {
-    color: #4d4ce0;
-    font-size: 14px;
-    font-weight: 300;
+    margin: auto;
+    cursor: pointer;
+    opacity: 0;
   }
 }
 
-.download-files{
+.my-course-homework__item-textarea {
+  font-size: 14px;
+  line-height: 36px;
+  overflow: hidden;
+  width: 100%;
+  height: 113px;
+  margin-bottom: 19px;
+  padding-left: 20px;
+  color: #99a1ba;
+  border: none;
+  border-radius: 18px !important;
+  background-color: #f0f0f5;
+
+  @include placeholder-color(#99a1ba);
+}
+
+.profile-article__form-textarea {
+  line-height: 34px;
+}
+
+.my-course-homework__item-download-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+  svg {
+    flex: none;
+    fill: $highlight-v;
+    width: 17px;
+    height: 17px;
+    margin-right: 11px;
+  }
+  span {
+    font-size: 14px;
+    font-weight: 300;
+    color: #4d4ce0;
+  }
+}
+
+.download-files {
   display: flex;
   flex-direction: column;
 }
-.download-file{
-  color: #99a1ba;
+
+.download-file {
   font-size: 14px;
   font-weight: 300;
   line-height: 20px;
   display: block;
-  &:last-child{
+  color: #99a1ba;
+  &:last-child {
     margin-bottom: 15px;
   }
 }
-
 
 .my-course-homework__agree {
   display: flex;
@@ -342,8 +361,8 @@
   margin-bottom: 20px;
   padding-top: 35px;
   padding-bottom: 38px;
-  border-bottom: 1px solid #e4e4f2;
   border-top: 1px solid #e4e4f2;
+  border-bottom: 1px solid #e4e4f2;
 
   @include max(950) {
     flex-direction: column;
@@ -357,6 +376,7 @@
     }
   }
 }
+
 .my-course-homework__agree-text {
   display: flex;
   margin-right: 30px;
@@ -381,14 +401,16 @@
     height: 36px;
   }
 }
-.my-course-homework__agree-right{
+
+.my-course-homework__agree-right {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.my-course-homework__agree-try{
-  color: #1e1e1e;
+
+.my-course-homework__agree-try {
   font-size: 18px;
-  margin-bottom: 10px;
   font-weight: 500;
+  margin-bottom: 10px;
+  color: #1e1e1e;
 }
