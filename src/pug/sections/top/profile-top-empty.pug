@@ -1,0 +1,37 @@
+//begin profile-top
+.profile-top(style="background-image:url('assets/img/bg-profile-top.jpg')")
+  .container
+    //begin profile-top__left
+    .profile-top__left
+      .profile-top__ava
+        //-img(src="assets/img/profile-top-ava.jpg" alt="avatar")
+    //end profile-top__left
+
+    //begin profile-top__right
+    .profile-top__right
+      //begin profile-top__edit
+      .profile-top__edit
+        .profile-top__edit-icon
+          +svg('edit')
+        span.profile-top__edit-text Редактировать
+      //end profile-top__edit
+
+      //begin profile-top__info
+      .profile-top__info
+        h2.profile-top__info-name Мария Иванова
+        .profile-top__info-row
+          span.profile-top__info-title Пожалуйста, заполните ваш профиль
+        .profile-top__info-row
+          a(href="#").btn.btn--dark Заполнить профиль
+      //end profile-top__info
+
+      //begin profile-top__status
+      .profile-top__status
+        .profile-top__status-rait
+          include ../../elements/red-star
+          span 1
+        span.profile-top__status-position Новичок
+      //end profile-top__status
+
+    //begin profile-top__right
+//end profile-top

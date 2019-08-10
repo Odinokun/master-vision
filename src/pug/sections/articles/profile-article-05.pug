@@ -1,0 +1,120 @@
+//begin profile-article-05
+.profile-article.profile-article-05
+  //begin profile-article__header
+  header.profile-article__header
+    //begin header-row-main
+    .profile-article__header-row.profile-article__header-row--main
+      ul.profile-article__tabs-list
+        li.profile-article__tabs-item
+          a(href="#").profile-article__tabs-link Мой блог
+        li.profile-article__tabs-item
+          a(href="#").profile-article__tabs-link Черновики
+        li.profile-article__tabs-item
+          a(href="#").profile-article__tabs-link Избранное
+        li.profile-article__tabs-item.active
+          a(href="#").profile-article__tabs-link Мои комментарии
+      button.profile-article__add-article Добавить запись
+    //end header-row-main
+
+    //begin profile-article__image-header
+    .profile-article__image-header-wrap
+      //begin profile-article__image-header
+      .profile-article__image-header(style="background-image:url('assets/img/bg-image-header.jpg')")
+        //begin article-image-header__header
+        .article-image-header__header
+          .article-image-header__author
+            .article-image-header__author-ava
+              img(src="assets/img/reviews-ava.jpg" alt="picture")
+            h4.article-image-header__author-name Катерина Егорова
+
+
+          //begin article-image-header__dropdown
+          .article-image-header__dropdown
+            .article-image-header__dropdown-arr
+            ul.article-image-header__dropdown-list
+              li.article-image-header__dropdown-item
+                a(href="#").article-image-header__dropdown-link Отписаться от блога
+              li.article-image-header__dropdown-item
+                a(href="#").article-image-header__dropdown-link Отписаться от комментариев
+          //end article-image-header__dropdown
+        //end article-image-header__header
+
+        h2.article-image-header__title Статья на тему психологии
+
+        //begin article-image-header__footer
+        .article-image-header__footer
+          .article-image-header__footer-date
+            .article-image-header__footer-date-svg
+              +svg('calendar')
+            span.article-image-header__footer-date-text 18.06.2019
+          .article-image-header__footer-direction
+            span Направление:
+            span Психология
+        //end article-image-header__footer
+      //end profile-article__image-header
+    //end profile-article__image-header
+  //end profile-article__header
+
+  //begin profile-article__body
+  .profile-article__body
+    .profile-article__body-text
+      p Включает в себя фундаментальную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладную психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в естественных условиях, и практическую психологию, занимающуюся применением психологических знаний на практике.
+    a(href="#").profile-article__body-more Полный текст
+
+    //begin profile-article__body-full
+    .profile-article__body-full
+      .profile-article__body-half-wrap
+        .profile-article__body-half-pic
+          img(src="assets/img/article-half-01.jpg" alt="picture")
+        .profile-article__body-half-pic
+          img(src="assets/img/article-half-02.jpg" alt="picture")
+      .profile-article__body-text
+        p Включает в себя фундаментальную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладную психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в естественных условиях, и практическую психологию, занимающуюся применением психологических знаний на практике.
+
+      a(href="#").profile-article__body-unmore Свернуть
+      a(href="#").profile-article__body-sneak Пожаловаться
+    //end profile-article__body-full
+
+    .profile-article__body-footer
+      include ../../elements/hashtags
+
+      //begin profile-article__icons
+      .profile-article__icons
+        //begin profile-article__icon
+        .profile-article__icons-icon
+          .profile-article__icon-heart
+            svg(viewBox='-2 -2 30 24')
+              path.svg-heart(fill='transparent', stroke='#fc4c3b', stroke-width='2', d='M26 6.858C26 3.07 22.856 0 18.979 0a7.045 7.045 0 0 0-5.98 3.277A7.046' +
+              ' 7.046 0 0 0 7.02 0C3.143 0 0 3.07 0 6.858c0 2.062.935 3.907 2.41 5.164l9.95' +
+              ' 9.719c.17.166.4.259.64.259s.47-.093.64-.26l9.95-9.718C25.064 10.765 26 8.92 26 6.858z')
+          span.profile-article__icons-count 56
+        //end profile-article__icon
+
+        //begin profile-article__icon
+        .profile-article__icons-icon
+          .profile-article__icon-message
+            svg(viewBox='-1 -1 28 28')
+              path(fill='none', stroke='#4d4ce0', stroke-width='2', d='M11.992 0c6.623 0 11.992 4.658 11.992 10.405 0 5.746-5.369 10.405-11.992 ' +
+              '10.405-.636 0-1.26-.044-1.87-.127C7.546 23.434 4.572 23.927 1.6 24v-.673c1.605-.84 2.898-2.37 ' +
+              '2.898-4.118 0-.244-.018-.484-.05-.718C1.733 16.584 0 13.67 0 10.405 0 4.658 5.369 0 11.992 0z')
+          span.profile-article__icons-count 2
+        //end profile-article__icon
+
+        //begin profile-article__icon
+        .profile-article__icons-icon
+          .profile-article__icon-star
+            svg(viewBox='-1 -1 30 27')
+              path.svg-star(fill='transparent', stroke='#4d4ce0', stroke-width='2', d='M20.98 25c-.158 0-.317-.025-.47-.078l-7.01-2.414v0l-7.012 2.414c-.433.15-.916.082-1.29-.18a1.34 1.34 0 0 1-.575-1.133l.204-7.204v0L.29 10.694A1.319 1.319 0 0 1 .068 9.45a1.38 1.38 0 0 1 .935-.88l7.136-2.038v0L12.346.588A1.413 1.413 0 0 1 13.5 0c.46 0 .892.22 1.153.588l4.207 5.944v0l7.137 2.038c.442.126.792.456.934.88.143.425.06.89-.221 1.244l-4.538 5.711v0l.205 7.204c.013.446-.203.87-.576 1.133a1.43 1.43 0 0 1-.822.259z', clip-path='url("#9s44a")')
+        //end profile-article__icon
+      //end profile-article__icons
+  //end profile-article__body
+
+  //begin profile-article__comments
+  .profile-article__comments
+    include ../comments/profile-article-comment
+    include ../comments/profile-article-comment-2
+  //end profile-article__comments
+
+  include ../profile-article-footer-crop
+
+//end profile-article-05

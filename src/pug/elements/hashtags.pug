@@ -1,0 +1,16 @@
+//begin hashtags
+.profile-article__tags
+  - var x = 3;
+  - var h = 17;
+  ul.profile-article__tags-list
+    - for (var i=1; i<=x; i++) {
+    li.profile-article__tags-item
+      a(href="#").profile-article__tags-link #психология
+    - }
+    - for (var i=1; i<=h; i++) {
+    li.profile-article__tags-item.hidden
+      a(href="#").profile-article__tags-link #психология
+    - }
+    li.profile-article__tags-item.profile-article__tags-item--arrow
+      +svg('arr-down')
+//end hashtags

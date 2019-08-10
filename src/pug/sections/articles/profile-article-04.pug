@@ -6,6 +6,11 @@
     .profile-article__header-row.profile-article__header-row--title
       h2.profile-article__title
         a(href="#").profile-article__title-link Статья на тему психологии
+      ul.profile-article__edit-icons
+        li.profile-article__edit-icon.profile-article__edit-icon--pen
+          +svg('pen')
+        li.profile-article__edit-icon.profile-article__edit-icon--basket
+          +svg('basket')
     //end header-row-title
 
     //begin header-row-undertitle
@@ -18,7 +23,7 @@
         a(href="#").profile-article__undertitle-text Психология
       .profile-article__undertitle
         .profile-article__undertitle-descr Автор:
-        a(href="#").profile-article__undertitle-text Светлана Константинова
+        a(href="#").profile-article__undertitle-text Мария Иванова
     //end header-row-undertitle
   //end profile-article__header
 
@@ -28,20 +33,7 @@
       img(src="assets/img/profile-article.jpg" alt="article")
 
     .profile-article__body-footer
-      .profile-article__tags
-        - var x = 3;
-        - var h = 17;
-        ul.profile-article__tags-list
-          - for (var i=1; i<=x; i++) {
-          li.profile-article__tags-item
-            a(href="#").profile-article__tags-link #психология
-          - }
-          - for (var i=1; i<=h; i++) {
-          li.profile-article__tags-item.hidden
-            a(href="#").profile-article__tags-link #психология
-          - }
-          li.profile-article__tags-item.profile-article__tags-item--arrow
-            +svg('arr-down')
+      include ../../elements/hashtags
 
       //begin profile-article__icons
       .profile-article__icons
@@ -64,16 +56,9 @@
               '2.898-4.118 0-.244-.018-.484-.05-.718C1.733 16.584 0 13.67 0 10.405 0 4.658 5.369 0 11.992 0z')
           span.profile-article__icons-count 0
         //end profile-article__icon
-
-        //begin profile-article__icon
-        .profile-article__icons-icon
-          .profile-article__icon-star
-            svg(viewBox='-1 -1 30 27')
-              path.svg-star(fill='transparent', stroke='#4d4ce0', stroke-width='2', d='M20.98 25c-.158 0-.317-.025-.47-.078l-7.01-2.414v0l-7.012 2.414c-.433.15-.916.082-1.29-.18a1.34 1.34 0 0 1-.575-1.133l.204-7.204v0L.29 10.694A1.319 1.319 0 0 1 .068 9.45a1.38 1.38 0 0 1 .935-.88l7.136-2.038v0L12.346.588A1.413 1.413 0 0 1 13.5 0c.46 0 .892.22 1.153.588l4.207 5.944v0l7.137 2.038c.442.126.792.456.934.88.143.425.06.89-.221 1.244l-4.538 5.711v0l.205 7.204c.013.446-.203.87-.576 1.133a1.43 1.43 0 0 1-.822.259z', clip-path='url("#9s44a")')
-        //end profile-article__icon
       //end profile-article__icons
   //end profile-article__body
 
-  include profile-article-footer-crop
+  include ../profile-article-footer-crop
 
 //end profile-article-04

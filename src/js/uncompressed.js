@@ -25,7 +25,8 @@ $(document).ready(function ($) {
     'courses',
     'my-course',
     'my-course-homework',
-    'final'
+    'final',
+    'profile-my-comments'
     ]);
 });
 

@@ -1,14 +1,20 @@
-//begin profile-article-01
-.profile-article.profile-article-01
+//begin profile-article-07
+.profile-article.profile-article-07
   //begin profile-article__header
   header.profile-article__header
-    //begin header-row-main
-    .profile-article__header-row.profile-article__header-row--main
-      ul.profile-article__tabs-list
-        li.profile-article__tabs-item.active
-          a(href="#").profile-article__tabs-link Блог
-      button.profile-article__add-article Подписаться на блог
-    //end header-row-main
+    //begin header-row-ava
+    .profile-article__header-row.profile-article__header-row--ava
+      .profile-article__ava
+        .profile-article__ava-pic
+          img(src="assets/img/reviews-ava.jpg" alt="picture")
+        h3.profile-article__ava-name Катерина Егорова
+
+      .profile-article__unsubscribe
+        .profile-article__unsubscribe-arr
+        ul.profile-article__unsubscribe-list
+          li.profile-article__unsubscribe-item
+            a(href="#").profile-article__unsubscribe-link Отписаться от комментариев
+    //end header-row-ava
 
     //begin header-row-title
     .profile-article__header-row.profile-article__header-row--title
@@ -24,9 +30,6 @@
       .profile-article__undertitle
         .profile-article__undertitle-descr Направление:
         a(href="#").profile-article__undertitle-text Психология
-      .profile-article__undertitle
-        .profile-article__undertitle-descr Автор:
-        a(href="#").profile-article__undertitle-text Светлана Константинова
     //end header-row-undertitle
   //end profile-article__header
 
@@ -34,22 +37,25 @@
   .profile-article__body
     .profile-article__body-text
       p Включает в себя фундаментальную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладную психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в естественных условиях, и практическую психологию, занимающуюся применением психологических знаний на практике.
+
     a(href="#").profile-article__body-more Полный текст
+
+    //begin profile-article__body-full
+    .profile-article__body-full
+      .profile-article__body-half-wrap
+        .profile-article__body-half-pic
+          img(src="assets/img/article-half-01.jpg" alt="picture")
+        .profile-article__body-half-pic
+          img(src="assets/img/article-half-02.jpg" alt="picture")
+      .profile-article__body-text
+        p Включает в себя фундаментальную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладную психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в естественных условиях, и практическую психологию, занимающуюся применением психологических знаний на практике.
+
+      a(href="#").profile-article__body-unmore Свернуть
+      a(href="#").profile-article__body-sneak Пожаловаться
+    //end profile-article__body-full
+
     .profile-article__body-footer
-      .profile-article__tags
-        - var x = 3;
-        - var h = 17;
-        ul.profile-article__tags-list
-          - for (var i=1; i<=x; i++) {
-          li.profile-article__tags-item
-            a(href="#").profile-article__tags-link #психология
-          - }
-          - for (var i=1; i<=h; i++) {
-          li.profile-article__tags-item.hidden
-            a(href="#").profile-article__tags-link #психология
-          - }
-          li.profile-article__tags-item.profile-article__tags-item--arrow
-            +svg('arr-down')
+      include ../../elements/hashtags
 
       //begin profile-article__icons
       .profile-article__icons
@@ -84,13 +90,13 @@
 
   //begin profile-article__comments
   .profile-article__comments
-    include profile-article-comment
-    include profile-article-comment-2
-    //-include profile-article-comment-3
-    //-include profile-article-comment-4
-    //-include profile-article-comment-5
+    include ../comments/profile-article-comment
+    include ../comments/profile-article-comment-6
+    include ../comments/profile-article-comment-2
   //end profile-article__comments
 
-  include profile-article-footer
+  a(href="#").profile-article__all-comments Посмотреть все комментарии
 
-//end profile-article-01
+  include ../profile-article-footer-crop
+
+//end profile-article-07
