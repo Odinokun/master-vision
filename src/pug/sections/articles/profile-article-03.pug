@@ -1,5 +1,5 @@
-//begin profile-article-04
-.profile-article.profile-article-04
+//begin profile-article-03
+.profile-article.profile-article-03
   //begin profile-article__header
   header.profile-article__header
     //begin header-row-title
@@ -29,24 +29,11 @@
 
   //begin profile-article__body
   .profile-article__body
-    a(href="assets/img/profile-article.jpg" data-fancybox="gallery").profile-article__body-img
-      img(src="assets/img/profile-article.jpg" alt="article")
-
+    .profile-article__body-text
+      p Включает в себя фундаментальную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладную психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в естественных условиях, и практическую психологию, занимающуюся применением психологических знаний на практике.
+    a(href="#").profile-article__body-more Полный текст
     .profile-article__body-footer
-      .profile-article__tags
-        - var x = 3;
-        - var h = 17;
-        ul.profile-article__tags-list
-          - for (var i=1; i<=x; i++) {
-          li.profile-article__tags-item
-            a(href="#").profile-article__tags-link #психология
-          - }
-          - for (var i=1; i<=h; i++) {
-          li.profile-article__tags-item.hidden
-            a(href="#").profile-article__tags-link #психология
-          - }
-          li.profile-article__tags-item.profile-article__tags-item--arrow
-            +svg('arr-down')
+      include ../../elements/hashtags
 
       //begin profile-article__icons
       .profile-article__icons
@@ -67,11 +54,22 @@
               path(fill='none', stroke='#4d4ce0', stroke-width='2', d='M11.992 0c6.623 0 11.992 4.658 11.992 10.405 0 5.746-5.369 10.405-11.992 ' +
               '10.405-.636 0-1.26-.044-1.87-.127C7.546 23.434 4.572 23.927 1.6 24v-.673c1.605-.84 2.898-2.37 ' +
               '2.898-4.118 0-.244-.018-.484-.05-.718C1.733 16.584 0 13.67 0 10.405 0 4.658 5.369 0 11.992 0z')
-          span.profile-article__icons-count 0
+          span.profile-article__icons-count 2
         //end profile-article__icon
       //end profile-article__icons
   //end profile-article__body
 
-  include profile-article-footer-crop
+  //begin profile-article__comments
+  .profile-article__comments
+    include ../comments/profile-article-comment
+    include ../comments/profile-article-comment-6
+    include ../comments/profile-article-comment-3
+    include ../comments/profile-article-comment
 
-//end profile-article-04
+    a(href="#").profile-article__all-comments Посмотреть все комментарии
+
+  //end profile-article__comments
+
+  include ../profile-article-footer-crop
+
+//end profile-article-03

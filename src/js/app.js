@@ -43,6 +43,9 @@ $(function() {
   // begin tabs
   require('./modules/tabs')();
 
+  // begin full article
+  require('./modules/fullArticle')();
+
   // begin Animate.css
   // require('./modules/waypoints')();
   // require('./modules/animateCss')();

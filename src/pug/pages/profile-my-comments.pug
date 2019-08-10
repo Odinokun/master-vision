@@ -10,13 +10,13 @@ block content
     include ../sections/header
 
     //begin content
-    main.main.course
+    main.main.profile
       include ../sections/header/profile-header
-      include ../sections/courses-over-top
-      include ../sections/courses-top
-      include ../sections/courses-filter
-      include ../sections/courses-list
-
-
+      include ../sections/top/profile-top-comments
+      .profile-main
+        .container
+          include ../sections/profile-aside
+          include ../sections/profile-articles-comments
+    //end content
 
     include ../sections/footer
