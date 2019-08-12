@@ -1,0 +1,22 @@
+mixin profile-aside__menu-item(svg, text, className)
+  //begin profile-aside__menu-item
+  li(class='profile-aside__menu-item ' + className)
+    a(href="#").profile-aside__menu-link
+      div(class='profile-aside__menu-svg profile-aside__menu-svg--' + svg +'')
+        svg
+          use(xlink:href="assets/img/sprite.svg#" + svg + "")
+      span.profile-aside__menu-text #{text}
+  //end profile-aside__menu-item
+
+//begin profile-aside__menu
+nav.profile-aside__menu.aside-item
+  ul.profile-aside__menu-list
+    +profile-aside__menu-item('all-blogs', 'Все блоги', '')
+    +profile-aside__menu-item('home', 'Мой блог', 'active')
+    +profile-aside__menu-item('star-2', 'Избранные блоги', '')
+    +profile-aside__menu-item('message', 'Мои комментарии', '')
+//end profile-aside__menu
+
+
+
+
