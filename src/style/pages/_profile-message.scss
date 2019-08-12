@@ -1,0 +1,298 @@
+.profile-message {
+  padding-bottom: 60px;
+}
+
+.profile-message__block {
+  width: 100%;
+  padding: 20px 20px 0 20px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+//begin profile-message__header
+.profile-message__header {
+  display: flex;
+  @include max(600) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .btn {
+    min-width: 210px;
+    margin-bottom: 20px;
+    margin-left: 19px;
+    @include max(600) {
+      margin-left: 0;
+    }
+  }
+}
+
+.profile-message__search {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 18px;
+}
+
+.profile-message__search-input {
+  width: 100%;
+  height: 36px;
+  padding-right: 40px;
+  padding-left: 20px;
+  border: none;
+  border-radius: 18px !important;
+  background-color: #f0f0f5;
+
+  @include placeholder-color(#99a1ba);
+}
+
+.profile-message__search-submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  opacity: 0;
+}
+
+.profile-message__search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: $highlight-v;
+  svg {
+    fill: #fff;
+    width: 14px;
+    height: 13px;
+  }
+}
+
+//end profile-message__header
+
+//begin profile-message__body
+.profile-message__body {
+  display: flex;
+  @include max(950) {
+    flex-direction: column;
+  }
+}
+
+.profile-message__body-items {
+  flex: none;
+  width: 350px;
+  @include max(950) {
+    width: 100%;
+  }
+}
+
+.profile-message__item {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  @include max(950) {
+    padding-right: 0;
+  }
+  &.active {
+    .profile-message__item-name {
+      color: #4d4ce0;
+    }
+  }
+}
+
+.profile-message__item-ava {
+  overflow: hidden;
+  flex: none;
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
+  border-radius: 50%;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.profile-message__item-text {
+  width: calc(100% - 62px);
+}
+
+.profile-message__item-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 5px;
+}
+
+.profile-message__item-name {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: #1e1e1e;
+}
+
+.profile-message__item-time {
+  font-size: 13px;
+  font-weight: 300;
+  padding-left: 10px;
+  color: #99a1ba;
+}
+
+.profile-message__item-message {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 23px;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #99a1ba;
+}
+
+.profile-message__load-more {
+  font-size: 12px;
+  line-height: 25px;
+  text-decoration: none;
+  color: #4d4ce0;
+}
+
+.profile-message__body-messages {
+  width: 100%;
+  min-height: 300px;
+}
+
+.profile-message__message-field {
+  overflow: hidden;
+  height: 350px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #f0f0f5;
+}
+
+.profile-message__message-field-header {
+  display: flex;
+  justify-content: space-between;
+  min-height: 45px;
+  padding: 5px 20px;
+  background-color: #d0d5e2;
+}
+
+.profile-message__message-field-user {
+  display: flex;
+  align-items: center;
+}
+
+.profile-message__message-field-user-ava {
+  overflow: hidden;
+  flex: none;
+  width: 27px;
+  height: 27px;
+  margin-right: 13px;
+  border-radius: 50%;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.profile-message__message-field-user-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: #1e1e1e;
+}
+
+.profile-message__message-field-del {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    svg {
+      transform: rotate(315deg);
+    }
+  }
+  span {
+    font-size: 14px;
+    font-weight: 300;
+    color: #4d4ce0;
+  }
+  svg {
+    flex: none;
+    fill: $highlight-v;
+    width: 17px;
+    height: 17px;
+    margin-left: 8px;
+    transition: transform .5s;
+    transform: rotate(45deg);
+  }
+}
+
+.profile-message__messages-list {
+  overflow: auto;
+  height: 300px;
+  padding: 20px;
+}
+
+.profile-message__message-row {
+  display: flex;
+}
+
+.profile-message__message {
+  position: relative;
+  max-width: 60%;
+  min-height: 30px;
+  margin-bottom: 10px;
+  padding: 15px 45px 15px 20px;
+  background-color: #fff;
+  &::before {
+    position: absolute;
+    bottom: 0;
+    width: 23px;
+    height: 16px;
+    content: '';
+    background-repeat: no-repeat;
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #1e1e1e;
+  }
+}
+
+.profile-message__message--left {
+  margin-right: auto;
+  border-radius: 5px 5px 5px 0;
+  &::before {
+    left: -10px;
+    background-image: url('../img/message-01.png');
+  }
+}
+
+.profile-message__message--right {
+  margin-left: auto;
+  border-radius: 5px 5px 0 5px;
+  &::before {
+    right: -10px;
+    background-image: url('../img/message-02.png');
+  }
+}
+
+.profile-message__message-time {
+  font-size: 11px;
+  font-weight: 300;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #99a1ba;
+}
+
+//end profile-message__body

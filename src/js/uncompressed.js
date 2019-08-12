@@ -28,7 +28,8 @@ $(document).ready(function ($) {
     'final',
     'profile-my-comments',
     'profile-blog',
-    'search-result'
+    'search-result',
+    'profile-message'
     ]);
 });
 

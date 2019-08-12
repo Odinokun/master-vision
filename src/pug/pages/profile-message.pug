@@ -1,0 +1,107 @@
+extends ../_template
+
+mixin profile-message__item(pic, name, time, className, text)
+  //begin profile-message__item
+  div(class="profile-message__item " + className)
+    .profile-message__item-ava
+      img(src="assets/img/message-ava-" + pic + ".jpg" alt="picture")
+    .profile-message__item-text
+      .profile-message__item-header
+        h4.profile-message__item-name #{name}
+        span.profile-message__item-time #{time}
+      .profile-message__item-message #{text}
+  //end profile-message__item
+
+block variables
+  - var title       = 'Master Vision'
+  - var description = 'Master Vision'
+  - var ogtitle     = 'Master Vision'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.profile-message
+      include ../sections/header/profile-header
+      .container.profile-edit__header
+        h2.profile-edit__title Все сообщения
+        .profile-edit__return-btn
+          a(href="#").btn.btn--light Вернуться на мою страницу
+
+      .profile-main
+        .container
+
+          //begin profile-message__block
+          .profile-message__block
+            .profile-message__header
+              .profile-message__search
+                form
+                  input(type='search' placeholder='Поиск по сообщениям').profile-message__search-input
+                  input(type='submit').profile-message__search-submit
+                  .profile-message__search-btn
+                    +svg('magnific')
+              button.btn.btn--light
+                span Создать беседу
+
+            //begin profile-message__body
+            .profile-message__body
+              .profile-message__body-items
+                +profile-message__item('01', 'Александра Степанова', '21:31',    'active', 'Здравствуйте! Давайте обсудим обучение на нашем курсе "Психология".')
+                +profile-message__item('02', 'Дарья Михайлова',      '21:30',    '', 'Спасибо!')
+                +profile-message__item('03', 'Алена Иванова',        '15:31',    '', 'Здравствуйте!')
+                +profile-message__item('04', 'Александра Степанова', '30.06.19', '', 'Здравствуйте! Давайте обсудим обучение на нашем курсе "Психология".')
+                +profile-message__item('05', 'Дарья Михайлова',      '15.06.19', '', 'Здравствуйте! Давайте обсудим обучение на нашем курсе "Психология".')
+                +profile-message__item('06', 'Александра Степанова', '15.06.19', '', 'Здравствуйте! Давайте обсудим обучение на нашем курсе Давайте обсудим обучение на нашем курсе Давайте обсудим обучение на нашем курсе Давайте обсудим обучение на нашем курсе Давайте обсудим обучение на нашем курсе Давайте обсудим обучение на нашем курсе "Психология".')
+                a(href="#").profile-message__load-more Загрузить еще
+
+              .profile-message__body-messages
+                .profile-message__message-field
+                  //begin profile-message__message-field-header
+                  .profile-message__message-field-header
+                    .profile-message__message-field-user
+                      .profile-message__message-field-user-ava
+                        img(src="assets/img/message-ava-01.jpg" alt="picture")
+                      h3.profile-message__message-field-user-name Александра Степанова
+                    .profile-message__message-field-del
+                      span Удалить беседу
+                      +svg('invite')
+                  //end profile-message__message-field-header
+
+                  //begin profile-message__messages-list
+                  .profile-message__messages-list
+                    .profile-message__message-row
+                      .profile-message__message.profile-message__message--left
+                        span Здравствуйте! Давайте обсудим обучение на нашем курсе "Психология".
+                        .profile-message__message-time 21:30
+
+                    .profile-message__message-row
+                      .profile-message__message.profile-message__message--right
+                        span Здравствуйте! Давайте да.
+                        .profile-message__message-time 21:31
+                    .profile-message__message-row
+                      .profile-message__message.profile-message__message--left
+                        span Здравствуйте! Давайте обсудим обучение на нашем курсе "Психология".
+                        .profile-message__message-time 21:30
+
+                    .profile-message__message-row
+                      .profile-message__message.profile-message__message--right
+                        span Здравствуйте! Давайте да.
+                        .profile-message__message-time 21:31
+                    .profile-message__message-row
+                      .profile-message__message.profile-message__message--left
+                        span Здравствуйте! Давайте обсудим обучение на нашем курсе "Психология".
+                        .profile-message__message-time 21:30
+
+                    .profile-message__message-row
+                      .profile-message__message.profile-message__message--right
+                        span Здравствуйте! Давайте да.
+                        .profile-message__message-time 21:31
+                  //end profile-message__messages-list
+                include ../sections/articles/profile-comment-footer
+            //end profile-message__body
+
+          //end profile-message__block
+    //end content
+
+    include ../sections/footer
