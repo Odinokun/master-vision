@@ -1,0 +1,16 @@
+.profile-blog{
+  .profile-aside {
+    margin-top: 30px;
+  //
+  //  @include max(860) {
+  //    margin-top: 30px;
+  //  }
+  }
+
+}
+.profile-blog__title {
+  color: #1e1e1e;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 27px 0 0px 0;
+}

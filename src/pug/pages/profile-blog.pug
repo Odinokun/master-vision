@@ -1,0 +1,25 @@
+extends ../_template
+
+block variables
+  - var title       = 'Master Vision'
+  - var description = 'Master Vision'
+  - var ogtitle     = 'Master Vision'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.profile-blog
+      include ../sections/header/profile-header
+
+      .container
+        h2.profile-blog__title Блоги
+
+      .profile-main
+        .container
+          include ../sections/profile-aside-blog
+          include ../sections/profile-articles-blog
+    //end content
+
+    include ../sections/footer
