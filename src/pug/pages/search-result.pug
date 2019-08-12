@@ -1,0 +1,120 @@
+extends ../_template
+
+mixin search-result__item--courses(title)
+  .search-result__item
+    .search-result__item-info
+      h3.search-result__item-title #{title}
+      .search-result__item-subtile-row
+        .search-result__item-subtile
+          span.search-result__item-subtitle-text Преподаватель:
+          span.search-result__item-subtitle-name Петр Максимов
+    //begin course-about__teacher-rait
+    .course-about__teacher-rait.course-about__teacher-rait--4
+      include ../elements/yellow-star-2
+      include ../elements/yellow-star-2
+      include ../elements/yellow-star-2
+      include ../elements/yellow-star-2
+      include ../elements/yellow-star-2
+    //end course-about__teacher-rait
+    a(href="#").btn.btn--dark
+      span Перейти к курсу
+
+mixin search-result__item--lessons(title)
+  .search-result__item
+    .search-result__item-info
+      h3.search-result__item-title #{title}
+      .search-result__item-subtitle-row
+        .search-result__item-subtitle
+          span.search-result__item-subtitle-text Курс:
+          span.search-result__item-subtitle-name Психология 2.0
+        .search-result__item-subtitle
+          span.search-result__item-subtitle-text Преподаватель:
+          span.search-result__item-subtitle-name Петр Максимов
+    a(href="#").btn.btn--dark
+      span Перейти к занятию
+
+mixin search-result__item--blogs(title)
+  .search-result__item
+    .search-result__item-info
+      h3.search-result__item-title #{title}
+      .search-result__item-subtitle-row
+        .search-result__item-subtitle
+          span.search-result__item-subtitle-text Автор:
+          span.search-result__item-subtitle-name Мария Иванова
+    a(href="#").btn.btn--dark
+      span Перейти к статье
+
+mixin search-result__item--users(pic)
+  .search-result__item
+    .search-result__item-ava
+      img(src="assets/img/teacher-ava-" + pic + ".jpg" alt="picture")
+    .search-result__item-info
+      h3.search-result__item-title Вячеслава Ивановна Психология
+      .search-result__item-status
+        span.search-result__item-position Лидер сообщества
+        .search-result__item-status-rait
+          include ../elements/red-star
+          span 10 000
+    a(href="#").btn.btn--dark
+      span Перейти в профиль
+
+block variables
+  - var title       = 'Master Vision'
+  - var description = 'Master Vision'
+  - var ogtitle     = 'Master Vision'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.search-result
+      include ../sections/header/profile-header
+
+      .container
+        h2.search-result__title Результаты поиска
+        .search-result__subtitle
+          span.search-result__subtitle-text Запрос:
+          span.search-result__subtitle-question Психология
+
+        .search-result__list
+          h3.search-result__list-title Курсы
+          +search-result__item--courses('Курс Психология 2.0')
+          +search-result__item--courses('Курс Психология 2.0 тут будет название подлиннее')
+          +search-result__item--courses('Курс Психология 2.0')
+          +search-result__item--courses('Курс Психология 2.0 тут будет название подлиннее')
+          .search-result__more
+            span Все результаты
+            .search-result__more-svg
+              +svg('arr-down')
+
+        .search-result__list
+          h3.search-result__list-title Занятия
+          +search-result__item--lessons('Занятие по Психологии длинное название длинное название')
+          +search-result__item--lessons('Занятие по Психологии')
+          .search-result__more
+            span Все результаты
+            .search-result__more-svg
+              +svg('arr-down')
+
+        .search-result__list
+          h3.search-result__list-title Блоги
+          +search-result__item--blogs('Статья на тему Психологии')
+          +search-result__item--blogs('Статья на тему Психологии')
+          .search-result__more
+            span Все результаты
+            .search-result__more-svg
+              +svg('arr-down')
+
+        .search-result__list
+          h3.search-result__list-title Пользователи
+          +search-result__item--users('02')
+          +search-result__item--users('03')
+          .search-result__more
+            span Все результаты
+            .search-result__more-svg
+              +svg('arr-down')
+
+    //end content
+
+    include ../sections/footer
