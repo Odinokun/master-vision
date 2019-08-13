@@ -77,47 +77,7 @@
           a.popup-enter__social-icon.popup-enter__social-icon--odnok(href='#')
             +svg('odnok')
     //end popup-enter__register
-
 //end popup-enter
-
-//begin popup-form-regist
-#popup-form-regist.popup
-  span.popup__close
-    +svg('close')
-  .popup__inner.popup__inner--for-form
-    form.popup__form
-      p.popup__title Регистрация
-      input.popup__input(name='email', type='email', placeholder='Email')
-      input.popup__input(name='phone', type='tel', placeholder='Мобильный телефон')
-      input.popup__input(name='password', type='text', placeholder='Пароль')
-      .popup__social
-        .popup__social--title Зарегистрироваться через Социальные сети
-        .popup__social-icons
-          a.popup__social-icon.popup__social-icon--vk(href='#')
-            +svg('vk')
-          a.popup__social-icon.popup__social-icon--fb(href='#')
-            +svg('fb')
-          a.popup__social-icon.popup__social-icon--mail(href='#')
-            +svg('mailru')
-          a.popup__social-icon.popup__social-icon--yandex(href='#')
-            +svg('yandex')
-          a.popup__social-icon.popup__social-icon--gmail(href='#')
-            +svg('google')
-        p.popup__social-text Не беспокойтесь, мы ничего не публикуем без вашего разрешения
-      .popup__input__agree
-        input#agree2.popup__input__checkbox(type='checkbox', name='agree', value='yes')
-        label(for='agree2')
-          span
-          i.popup__text-input
-            | Я даю согласие на обработку
-            =' '
-            a(href='#') персональных данных*
-      input.btn.btn--dark(type='submit', value='Войти')
-      p.popup__text
-        | Есть аккаунт?
-        =' '
-        a.popup-link(href='#popup-form') Авторизоваться
-//end popup-form-regist
   
 //begin popup-discussion
 #popup-discussion.popup-discussion.popup
