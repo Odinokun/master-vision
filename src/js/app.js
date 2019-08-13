@@ -40,6 +40,9 @@ $(function() {
   // begin Popup
   require('./modules/popup')();
 
+  // begin Popup Add User
+  require('./modules/popup-add-user')();
+
   // begin tabs
   require('./modules/tabs')();
 

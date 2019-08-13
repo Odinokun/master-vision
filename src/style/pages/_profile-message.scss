@@ -12,6 +12,7 @@
 //begin profile-message__header
 .profile-message__header {
   display: flex;
+
   @include max(600) {
     flex-direction: column;
     align-items: flex-start;
@@ -20,6 +21,7 @@
     min-width: 210px;
     margin-bottom: 20px;
     margin-left: 19px;
+
     @include max(600) {
       margin-left: 0;
     }
@@ -78,6 +80,7 @@
 //begin profile-message__body
 .profile-message__body {
   display: flex;
+
   @include max(950) {
     flex-direction: column;
   }
@@ -86,6 +89,7 @@
 .profile-message__body-items {
   flex: none;
   width: 350px;
+
   @include max(950) {
     width: 100%;
   }
@@ -97,6 +101,7 @@
   margin-bottom: 20px;
   padding-right: 20px;
   cursor: pointer;
+
   @include max(950) {
     padding-right: 0;
   }
@@ -213,11 +218,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  &:hover {
-    svg {
-      transform: rotate(315deg);
-    }
-  }
+  text-decoration: none;
   span {
     font-size: 14px;
     font-weight: 300;
@@ -229,8 +230,6 @@
     width: 17px;
     height: 17px;
     margin-left: 8px;
-    transition: transform .5s;
-    transform: rotate(45deg);
   }
 }
 
@@ -246,7 +245,7 @@
 
 .profile-message__message {
   position: relative;
-  max-width: 60%;
+  max-width: 61%;
   min-height: 30px;
   margin-bottom: 10px;
   padding: 15px 45px 15px 20px;
@@ -286,6 +285,13 @@
   }
 }
 
+.profile-message__message-user {
+  font-size: 14px;
+  line-height: 20px;
+  color: #4d4ce0;
+  font-weight: 500;
+  margin-bottom: 0;
+}
 .profile-message__message-time {
   font-size: 11px;
   font-weight: 300;

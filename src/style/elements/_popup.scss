@@ -120,15 +120,13 @@
   margin-bottom: 0;
   text-align: center;
   color: #1e1e1e;
-}
-
-.popup__text a {
-  text-decoration: none;
-  color: #4d4ce0;
-}
-
-.popup__text a:hover {
-  text-decoration: underline;
+  a {
+    text-decoration: none;
+    color: #4d4ce0;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .popup__social {
@@ -280,3 +278,218 @@
     margin: 0 auto 15px;
   }
 }
+
+//begin popup discussion
+.popup-discussion {
+  width: 95%;
+  max-width: 430px;
+  border-radius: 5px;
+  background-color: #fff;
+  .popup__close {
+    top: 0;
+    right: -35px;
+  }
+}
+
+.popup-discussion__header-form {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+}
+
+.popup-discussion__header-form-ava {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 8px;
+  overflow: hidden;
+  width: 22px;
+  height: 22px;
+  margin: auto;
+  border-radius: 50%;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.popup-discussion__header-form-input {
+  font-family: 'Roboto Medium', sans-serif;
+  font-size: 14px;
+  width: 100%;
+  height: 36px;
+  padding: 6px 40px 5px 38px;
+  color: #1e1e1e;
+  border: none;
+  border-radius: 18px !important;
+  background-color: #f0f0f5;
+}
+
+.popup-discussion__header-form-submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: $highlight-v;
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    opacity: 0;
+  }
+  svg {
+    fill: #fff;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.popup-discussion__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.popup-discussion__info-users {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1e1e1e;
+  span {
+    padding-left: 5px;
+    color: #4d4ce0;
+  }
+}
+
+.popup-discussion__user {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 6px 10px;
+  transition: background-color .5s;
+  border-top: 1px solid #e4e4f2;
+  background-color: #fff;
+  &:last-child {
+    border-bottom: 1px solid #e4e4f2;
+  }
+  &.active {
+    background-color: #f0f0f5;
+    .popup-discussion__user-btn svg {
+      fill: $highlight-v;
+    }
+  }
+}
+
+.popup-discussion__user-ava {
+  overflow: hidden;
+  flex: none;
+  width: 27px;
+  height: 27px;
+  margin-right: 14px;
+  border-radius: 50%;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.popup-discussion__user-name {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: #1e1e1e;
+}
+
+.popup-discussion__user-status {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 23px;
+  margin-left: auto;
+  color: #99a1ba;
+}
+
+.popup-discussion__user-btn {
+  width: 17px;
+  height: 17px;
+  margin-left: auto;
+  cursor: pointer;
+  svg {
+    fill: #99a1ba;
+    width: 17px;
+    height: 17px;
+    transition: fill .5s;
+  }
+}
+
+.popup-discussion__del-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  span {
+    font-size: 14px;
+    font-weight: 300;
+    color: #4d4ce0;
+  }
+  svg {
+    flex: none;
+    fill: $highlight-v;
+    width: 17px;
+    height: 17px;
+    margin-left: 8px;
+  }
+}
+
+//end popup discussion
+
+//begin .popup-add-users
+.popup-add-users {
+  width: 95%;
+  max-width: 430px;
+  border-radius: 5px;
+  background-color: #fff;
+  .popup__close {
+    top: 0;
+    right: -35px;
+  }
+}
+
+.popup-add-users__title {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #1e1e1e;
+}
+
+.popup-add-users__input {
+  font-size: 14px;
+  font-weight: 300;
+  width: 100%;
+  height: 36px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  color: #1e1e1e;
+  border: none;
+  border-radius: 18px !important;
+  background-color: #f0f0f5;
+
+  @include placeholder-color(#99a1ba);
+}
+
+.popup-add-users__btn {
+  display: block;
+  margin: 20px auto 0;
+}
+
+//end .popup-add-users

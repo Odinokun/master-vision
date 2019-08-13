@@ -29,7 +29,8 @@ $(document).ready(function ($) {
     'profile-my-comments',
     'profile-blog',
     'search-result',
-    'profile-message'
+    'profile-message',
+    'profile-message-chat'
     ]);
 });
 

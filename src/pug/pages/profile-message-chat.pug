@@ -47,7 +47,16 @@ block content
             //begin profile-message__body
             .profile-message__body
               .profile-message__body-items
-                +profile-message__item('01', 'Александра Степанова', '21:31',    'active', 'Здравствуйте! Давайте обсудим обучение на нашем курсе "Психология".')
+                //begin profile-message__item
+                .profile-message__item.active
+                  .profile-message__item-ava
+                    img(src="assets/img/message-ava-chat.svg" alt="picture")
+                  .profile-message__item-text
+                    .profile-message__item-header
+                      h4.profile-message__item-name Обсуждения курса психология
+                      span.profile-message__item-time 21:31
+                    .profile-message__item-message Здравствуйте! Давайте обсудим обучение на нашем курсе "Психология".
+                //end profile-message__item
                 +profile-message__item('02', 'Дарья Михайлова',      '21:30',    '', 'Спасибо!')
                 +profile-message__item('03', 'Алена Иванова',        '15:31',    '', 'Здравствуйте!')
                 +profile-message__item('04', 'Александра Степанова', '30.06.19', '', 'Здравствуйте! Давайте обсудим обучение на нашем курсе "Психология".')
@@ -61,24 +70,31 @@ block content
                   .profile-message__message-field-header
                     .profile-message__message-field-user
                       .profile-message__message-field-user-ava
-                        img(src="assets/img/message-ava-01.jpg" alt="picture")
-                      h3.profile-message__message-field-user-name Александра Степанова
-                    .profile-message__message-field-del
-                      span Удалить беседу
-                      +svg('del')
+                        img(src="assets/img/message-ava-chat.svg" alt="picture")
+                      h3.profile-message__message-field-user-name Обсуждение курса Психология
+                    a(href="#popup-add-users").profile-message__message-field-del.popup-open
+                      span Редактировать
+                      +svg('edit')
                   //end profile-message__message-field-header
 
                   //begin profile-message__messages-list
                   .profile-message__messages-list
                     .profile-message__message-row
                       .profile-message__message.profile-message__message--left
-                        span Здравствуйте! Давайте обсудим обучение на нашем курсе "Психология".
+                        h3.profile-message__message-user Александра Степанова
+                        span Здравствуйте! Давайте обсудим обучение на нашем курсе.
                         .profile-message__message-time 21:30
 
                     .profile-message__message-row
                       .profile-message__message.profile-message__message--right
                         span Здравствуйте! Давайте да.
                         .profile-message__message-time 21:31
+
+                    .profile-message__message-row
+                      .profile-message__message.profile-message__message--left
+                        h3.profile-message__message-user Марина Ким
+                        span Здравствуйте! Давайте обсудим обучение на нашем курсе.
+                        .profile-message__message-time 21:30
                   //end profile-message__messages-list
                 include ../sections/articles/profile-comment-footer
             //end profile-message__body

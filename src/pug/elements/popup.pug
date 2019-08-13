@@ -43,7 +43,6 @@
         a.popup-link(href='#popup-form-regist') Зарегистрироваться
 //end popup-form
 
-
 //begin popup-form-regist
 #popup-form-regist.popup
   span.popup__close
@@ -82,3 +81,117 @@
         =' '
         a.popup-link(href='#popup-form') Авторизоваться
 //end popup-form-regist
+  
+//begin popup-discussion
+#popup-discussion.popup-discussion.popup
+  span.popup__close
+    +svg('close')
+
+  //begin popup-discussion__header-form
+  .popup-discussion__header-form
+    .popup-discussion__header-form-ava
+      img(src="assets/img/message-ava-chat.svg" alt="picture")
+    input(value="Обcуждение курса Психология").popup-discussion__header-form-input
+    .popup-discussion__header-form-submit
+      input(type='submit')
+      +svg('pen')
+  //end popup-discussion__header-form
+
+  //begin popup-discussion__info
+  .popup-discussion__info
+    .popup-discussion__info-users
+      |Участников:
+      span 4
+    button.popup-discussion__info-btn.btn.btn--dark
+      span Добавить участников
+  //end popup-discussion__info
+
+  //begin popup-discussion__users
+  .popup-discussion__users
+    //begin popup-discussion__user
+    .popup-discussion__user
+      .popup-discussion__user-ava
+        img(src="assets/img/message-ava-01.jpg" alt="picture")
+      h3.popup-discussion__user-name Мария Иванова
+      .popup-discussion__user-status Администратор
+    //end popup-discussion__user
+
+    //begin popup-discussion__user
+    .popup-discussion__user
+      .popup-discussion__user-ava
+        img(src="assets/img/message-ava-02.jpg" alt="picture")
+      h3.popup-discussion__user-name Александра Степанова
+    //end popup-discussion__user
+
+    //begin popup-discussion__user
+    .popup-discussion__user
+      .popup-discussion__user-ava
+        img(src="assets/img/message-ava-03.jpg" alt="picture")
+      h3.popup-discussion__user-name Дарья Михайлова
+    //end popup-discussion__user
+
+    //begin popup-discussion__user
+    .popup-discussion__user
+      .popup-discussion__user-ava
+        img(src="assets/img/message-ava-04.jpg" alt="picture")
+      h3.popup-discussion__user-name Алена Иванова
+    //end popup-discussion__user
+
+  //end popup-discussion__users
+
+  a(href="#").popup-discussion__del-btn
+    span Удалить беседу
+    +svg('del')
+//end popup-discussion
+
+//begin #popup-add-users
+#popup-add-users.popup-add-users.popup
+  span.popup__close
+    +svg('close')
+
+  h3.popup-add-users__title Добавить участников
+  input(type='search' placeholder="Введите ФИО").popup-add-users__input
+
+  //begin popup-discussion__users
+  .popup-discussion__users
+    //begin popup-discussion__user
+    .popup-discussion__user
+      .popup-discussion__user-ava
+        img(src="assets/img/message-ava-01.jpg" alt="picture")
+      h3.popup-discussion__user-name Мария Иванова
+      .popup-discussion__user-btn
+        +svg('invite')
+    //end popup-discussion__user
+
+    //begin popup-discussion__user
+    .popup-discussion__user.active
+      .popup-discussion__user-ava
+        img(src="assets/img/message-ava-02.jpg" alt="picture")
+      h3.popup-discussion__user-name Александра Степанова
+      .popup-discussion__user-btn
+        +svg('invite')
+    //end popup-discussion__user
+
+    //begin popup-discussion__user
+    .popup-discussion__user
+      .popup-discussion__user-ava
+        img(src="assets/img/message-ava-03.jpg" alt="picture")
+      h3.popup-discussion__user-name Дарья Михайлова
+      .popup-discussion__user-btn
+        +svg('invite')
+    //end popup-discussion__user
+
+    //begin popup-discussion__user
+    .popup-discussion__user
+      .popup-discussion__user-ava
+        img(src="assets/img/message-ava-04.jpg" alt="picture")
+      h3.popup-discussion__user-name Алена Иванова
+      .popup-discussion__user-btn
+        +svg('invite')
+    //end popup-discussion__user
+
+  //end popup-discussion__users
+
+  button.btn.btn--dark.popup-add-users__btn
+    span Добавить участников
+//end #popup-add-users
