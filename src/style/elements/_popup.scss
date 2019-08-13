@@ -493,3 +493,25 @@
 }
 
 //end .popup-add-users
+
+
+//begin popup-enter
+.popup-enter{
+  background-color: #fff;
+}
+.popup-enter__tab-btn{
+  color: tomato;
+  cursor: pointer;
+  &.active {
+    color: yellow;
+pointer-events: none;
+  }
+}
+.popup-enter__register,
+.popup-enter__autorise{
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+//end popup-enter

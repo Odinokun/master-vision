@@ -256,6 +256,15 @@
 //begin courses
 .profile-teacher-courses {
   margin-bottom: 30px;
+  .courses-list {
+      display: flex;
+      flex-wrap: wrap;
+
+      @include max(950) {
+        justify-content: space-between;
+      }
+    }
+
 }
 
 .profile-teacher__section-title {

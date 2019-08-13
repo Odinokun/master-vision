@@ -1,6 +1,21 @@
 //begin popup
 .popup__layer
 
+//begin popup-enter
+#popup-enter.popup-enter.popup
+  span.popup__close
+    +svg('close')
+  .popup-enter__tab-btns
+    .popup-enter__tab-btn.active(data-tab='autorise') Авторизация
+    .popup-enter__tab-btn(data-tab='register') Регистрация
+  .popup-enter__tab-body
+    .popup-enter__autorise.active
+      h1  .popup-enter__autorise
+    .popup-enter__register
+      h1 .popup-enter__register
+
+//end popup-enter
+
 //begin popup-form
 #popup-form.popup
   span.popup__close

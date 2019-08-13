@@ -7,6 +7,55 @@ mixin profile-teacher-education__sertificate-slide()
     .profile-teacher-education__sertificate-cover
       +svg('magnific')
 
+mixin courses-top__slide(className, classNameCourse, theme, name)
+  //begin courses-top__slide
+  .courses-top__slide-wrap
+    div(class="courses-top__slide " + className + "")
+      //begin courses-top__slide-header
+      .courses-top__slide-header
+        div(class="courses-top__slide-theme courses-top__slide-theme--" + classNameCourse + "")
+          span #{theme}
+        //begin courses-top__slide-rait
+        .courses-top__slide-rait
+          .profile-top-teacher__rait-svg.profile-top-teacher__rait-svg--4
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+        //end courses-top__slide-rait
+      //end courses-top__slide-header
+
+      h3.courses-top__slide-title #{name}
+
+      .courses-top__slide-teacher
+        span.courses-top__slide-teacher-position Преподаватель:
+        =' '
+        a(href="#").courses-top__slide-teacher-name Петр Максимов
+
+      //begin courses-top__slide-info
+      .courses-top__slide-info
+        span.courses-top__slide-info-item 16 часов
+        span.courses-top__slide-info-item 8 занятий
+        span.courses-top__slide-info-item 150 человек
+      //end courses-top__slide-info
+
+      .courses-top__slide-text
+        p Lorem ipsum dolor amet, consectetur adipiscing. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+
+      //begin courses-top__slide-points
+      .courses-top__slide-points
+        span.courses-top__slide-points-lg 2 000
+        span.courses-top__slide-points-sm баллов
+      //end courses-top__slide-points
+
+      //begin courses-top__slide-btns
+      .courses-top__slide-btns
+        a(href="#").btn.btn--light В избранное
+        a(href="#").btn.btn--dark Подробнее
+      //end courses-top__slide-btns
+  //end courses-top__slide
+
 mixin profile-teacher__course(pic, title)
   li.profile-teacher__course
     a(href="#").profile-teacher__course-link
@@ -117,17 +166,16 @@ block content
 
       .container.profile-teacher-courses
         h3.profile-teacher__section-title Курсы преподавателя
-        //begin profile-teacher__courses
-        .profile-teacher__courses
-          ul.profile-teacher__courses-list
-            +profile-teacher__course('01', 'Основы общей психологии для чайников')
-            +profile-teacher__course('02', 'Основы общей психологии для женщин и мужчин')
-            +profile-teacher__course('03', 'Основы общей психологии для чайников')
-            +profile-teacher__course('04', 'Основы общей психологии')
-          a(href="#").profile-teacher__courses-all
-            span Посмотреть все
-            .svg
-              +svg('arr-down')
+        //begin courses-list
+        .courses-list
+          +courses-top__slide('courses-top__slide--exclusive', 'psychology', 'Психология', 'Курс Психология 2.0')
+          +courses-top__slide('', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0')
+          +courses-top__slide('courses-top__slide--new', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0')
+        //end courses-list
+        a(href="#").profile-teacher__courses-all
+          span Посмотреть все
+          .svg
+            +svg('arr-down')
         //end profile-teacher__courses
 
       .container.profile-teacher-reviews

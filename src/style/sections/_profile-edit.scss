@@ -210,6 +210,8 @@
 .profile-edit__ava-download-btn {
   position: relative;
   margin-bottom: 15px;
+  cursor: pointer;
+  display: inline-block;
   input {
     position: absolute;
     top: 0;

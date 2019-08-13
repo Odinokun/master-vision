@@ -26,4 +26,15 @@ module.exports = function () {
   })
   //end my-course tabs
 
+  //begin popup tabs
+  $('.popup-enter__tab-btn').on('click', function () {
+    var tab = $(this).data('tab');
+
+    $('.popup-enter__tab-btn, .popup-enter__autorise, .popup-enter__register').removeClass('active');
+
+    $(this).addClass('active');
+    $('.popup-enter__' + tab).addClass('active');
+  })
+  //end popup tabs
+
 };
