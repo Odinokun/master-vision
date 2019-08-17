@@ -119,6 +119,7 @@
 
 // begin profile-header__icons-list
 .profile-header__icons-list {
+  position: relative;
   display: flex;
   align-items: center;
   margin: 0 20px 0 0;
@@ -134,9 +135,21 @@
   flex: none;
   padding: 0;
   list-style: none;
+
   &:last-child {
     .profile-header__icons-link {
       margin-right: 0;
+    }
+  }
+  &:hover {
+    .profile-header-popup-wrap {
+      pointer-events: auto;
+      opacity: 1;
+
+      &::before {
+        pointer-events: auto;
+        opacity: 1;
+      }
     }
   }
 }
@@ -283,12 +296,14 @@
   overflow: hidden;
   width: 200px;
   margin: 0;
+  padding: 0;
+  border-radius: 5px;
+
   @include max(375) {
     width: 100%;
   }
-  padding: 0;
-  border-radius: 5px;
 }
+
 .profile-header__user-item {
   padding: 10px 20px 10px 14px;
   list-style: none;
@@ -305,6 +320,7 @@
     }
   }
 }
+
 .profile-header__user-link {
   font-size: 14px;
   font-weight: 400;
@@ -313,3 +329,228 @@
 }
 
 //end profile-header__user
+
+//begin profile-header-popups
+
+.profile-header-popup-wrap {
+  position: absolute;
+  z-index: 5;
+  top: 100%;
+  left: 0;
+  padding-top: 28px;
+  transition: opacity .5s;
+  pointer-events: none;
+  opacity: 0;
+
+  @include max(1140) {
+    right: -40px;
+    left: auto;
+  }
+  @include max(760) {
+    left: 0;
+  }
+  &::before {
+    position: absolute;
+    top: 22px;
+    width: 12px;
+    height: 6px;
+    content: '';
+    transition: opacity .5s;
+    pointer-events: none;
+    opacity: 0;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #fff;
+    border-left: 6px solid transparent;
+    //@include max(760) {
+    //  right: auto;
+    //  left: 8px;
+    //}
+  }
+}
+
+.profile-header__icons-link--message + .profile-header-popup-wrap::before {
+  left: 30px;
+
+  @include max(1140) {
+    right: 160px;
+    left: auto;
+  }
+  @include max(760) {
+    left: 10px;
+  }
+}
+
+.profile-header__icons-link--hat + .profile-header-popup-wrap::before {
+  left: 90px;
+
+  @include max(1140) {
+    right: 100px;
+    left: auto;
+  }
+  @include max(760) {
+    left: 65px;
+  }
+}
+
+.profile-header__icons-link--info + .profile-header-popup-wrap::before {
+  left: 145px;
+
+  @include max(1140) {
+    right: 45px;
+    left: auto;
+  }
+  @include max(760) {
+    left: 120px;
+  }
+}
+
+.profile-header-popup {
+  overflow: hidden;
+  width: 500px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+
+  @include max(540) {
+    width: 400px;
+  }
+  @include max(425) {
+    width: 300px;
+  }
+}
+
+.profile-header-popup__header {
+  padding: 10px 20px;
+  span {
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #4d4ce0;
+  }
+}
+
+.profile-header-popup__header--old {
+  background-color: #f0f0f5;
+  span {
+    color: #99a1ba;
+  }
+}
+
+.profile-header-popup__item {
+  position: relative;
+  display: flex;
+  padding: 15px 25px 10px 20px;
+  transition: .5s;
+  border-top: 1px solid #f0f0f5;
+  background-color: #fff;
+
+  @include max(425) {
+    padding: 15px 15px 10px 15px;
+  }
+  &:hover {
+    border-top: 1px solid #eeeefe;
+    background-color: #eeeefe;
+    .profile-header-popup__close {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+  .btn {
+    min-width: 120px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.profile-header-popup__item--old {
+  border-top: 1px solid #fff;
+  background-color: #f0f0f5;
+}
+
+.profile-header-popup__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 9px;
+  height: 9px;
+  cursor: pointer;
+  transition: opacity .5s;
+  pointer-events: none;
+  opacity: 0;
+  svg {
+    fill: #99a1ba;
+    width: 9px;
+    height: 9px;
+  }
+}
+
+.profile-header-popup__ava {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 64px;
+  height: 64px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: #40ceb0;
+
+  @include max(425) {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  svg {
+    fill: #fff;
+    width: 36px;
+    height: 33px;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+  span {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+
+    @include max(425) {
+      font-size: 28px;
+      padding-top: 2px;
+    }
+  }
+}
+
+.profile-header-popup__item--counter {
+  .profile-header-popup__ava {
+    background-color: #fc4c3b;
+  }
+}
+
+.profile-header-popup__text {
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 13px;
+  color: #1e1e1e;
+}
+
+.profile-header-popup__footer {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #e1e1e8;
+  a {
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #4d4ce0;
+  }
+}
+
+//end profile-header-popups

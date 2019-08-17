@@ -49,6 +49,9 @@ $(function() {
   // begin full article
   require('./modules/fullArticle')();
 
+  // begin popup item delete
+  require('./modules/popup-item-del')();
+
   // begin Animate.css
   // require('./modules/waypoints')();
   // require('./modules/animateCss')();
