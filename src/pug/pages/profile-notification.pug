@@ -1,0 +1,289 @@
+extends ../_template
+
+mixin profile-aside__menu-item(svg, text, active)
+  //begin profile-aside__menu-item
+  li(class='profile-aside__menu-item ' + active + '')
+    a(href="#").profile-aside__menu-link
+      div(class='profile-aside__menu-svg profile-aside__menu-svg--' + svg +'')
+        svg
+          use(xlink:href="assets/img/sprite.svg#" + svg + "")
+      span.profile-aside__menu-text #{text}
+  //end profile-aside__menu-item
+
+block variables
+  - var title       = 'Master Vision'
+  - var description = 'Master Vision'
+  - var ogtitle     = 'Master Vision'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.profile-notification
+      include ../sections/header/profile-header
+      .container.profile-edit__header
+        h2.profile-edit__title Редактирование профиля
+        .profile-edit__return-btn
+          a(href="#").btn.btn--light Вернуться на мою страницу
+
+      .profile-main
+        .container
+          //begin profile-aside
+          .profile-aside
+            //begin profile-aside__menu
+            nav.profile-aside__menu.aside-item
+              ul.profile-aside__menu-list
+                +profile-aside__menu-item('paper', 'Основная информация', 'active')
+                +profile-aside__menu-item('hat', 'Образование','')
+                +profile-aside__menu-item('personal', 'Личная информация','')
+                +profile-aside__menu-item('invite', 'Пригласить друга','')
+                +profile-aside__menu-item('wallet', 'Мой счет','')
+                +profile-aside__menu-item('ring', 'Настройка уведомлений','')
+            //end profile-aside__menu
+          //end profile-aside
+
+          //begin profile-edit-body
+          .profile-edit-body
+            //begin profile-edit__form
+            form.profile-edit__form
+              //begin profile-edit__form-top
+              .profile-edit__form-top
+                h3.profile-edit__form-title Настройка уведомлений
+              //end profile-edit__form-top
+
+              //begin profile-edit__notification-table
+              .profile-edit__notification-table-wrap
+                .profile-edit__notification-table
+                  .profile-edit__notification-table-top
+                    .profile-edit__notification-table-item
+                    .profile-edit__notification-table-item В системе
+                    .profile-edit__notification-table-item На e-mail
+                    .profile-edit__notification-table-item На телефон
+
+                  //profile-edit__notification-table-row
+                  .profile-edit__notification-table-row
+                    .profile-edit__notification-table-item Получать уведомления о добавлении в друзья
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox' checked)
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                  //profile-edit__notification-table-row
+
+                  //profile-edit__notification-table-row
+                  .profile-edit__notification-table-row
+                    .profile-edit__notification-table-item Получать уведомления о новых сообщениях
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox' checked)
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                  //profile-edit__notification-table-row
+
+                  //profile-edit__notification-table-row
+                  .profile-edit__notification-table-row
+                    .profile-edit__notification-table-item Получать уведомления о курсах
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox' checked)
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                  //profile-edit__notification-table-row
+
+                  //profile-edit__notification-table-row
+                  .profile-edit__notification-table-row
+                    .profile-edit__notification-table-item Получать уведомления о домашних заданиях
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox' checked)
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                  //profile-edit__notification-table-row
+
+                  //profile-edit__notification-table-row
+                  .profile-edit__notification-table-row
+                    .profile-edit__notification-table-item Получать уведомления о лайках
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox' checked)
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                  //profile-edit__notification-table-row
+
+                  //profile-edit__notification-table-row
+                  .profile-edit__notification-table-row
+                    .profile-edit__notification-table-item Получать уведомления о новых курсах
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox' checked)
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                  //profile-edit__notification-table-row
+
+                  //profile-edit__notification-table-row
+                  .profile-edit__notification-table-row
+                    .profile-edit__notification-table-item Получать уведомления о новых вебинарах и оффлайн-мероприятиях
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox' checked)
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                  //profile-edit__notification-table-row
+
+                  //profile-edit__notification-table-row
+                  .profile-edit__notification-table-row
+                    .profile-edit__notification-table-item Получать уведомления о новых сообщениях в избранных блогах
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox' checked)
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                  //profile-edit__notification-table-row
+
+                  //profile-edit__notification-table-row
+                  .profile-edit__notification-table-row
+                    .profile-edit__notification-table-item Получать уведомления о достижениях
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox' checked)
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                  //profile-edit__notification-table-row
+
+                  //profile-edit__notification-table-row
+                  .profile-edit__notification-table-row
+                    .profile-edit__notification-table-item Получать уведомления блогов
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox' checked)
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                  //profile-edit__notification-table-row
+
+                  //profile-edit__notification-table-row
+                  .profile-edit__notification-table-row
+                    .profile-edit__notification-table-item Получать уведомления об ответах на комментарии
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox' checked)
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                  //profile-edit__notification-table-row
+
+                  //profile-edit__notification-table-row
+                  .profile-edit__notification-table-row
+                    .profile-edit__notification-table-item Получать уведомления о днях рождения
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox' checked)
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                  //profile-edit__notification-table-row
+
+                  //profile-edit__notification-table-row
+                  .profile-edit__notification-table-row
+                    .profile-edit__notification-table-item Получать уведомления о событиях МастерВижн
+                    .profile-edit__notification-table-item.profile-edit__notification-table-item--disabled
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox' checked)
+                        span
+                    .profile-edit__notification-table-item.profile-edit__notification-table-item--disabled
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox' checked)
+                        span
+                    .profile-edit__notification-table-item
+                      label.profile-edit__notification-checkbox
+                        input(type='checkbox')
+                        span
+                  //profile-edit__notification-table-row
+              //end profile-edit__notification-table
+            //end profile-edit__form
+          //end profile-edit-body
+    //end content
+
+    include ../sections/footer
