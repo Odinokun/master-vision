@@ -5,6 +5,7 @@
 
 $(document).ready(function ($) {
   pageWidget([
+    'tnx',
     '404',
     'profile-notification',
     'profile-message-chat',
