@@ -1,0 +1,59 @@
+.error-page {
+  min-height: 635px;
+  background-color: #f0f0f5;
+  background-image: url('../img/bg-404.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: contain;
+
+  @include max(1200) {
+    background-size: cover;
+  }
+  @include max(1024) {
+    background-position: 30% 100%;
+  }
+  @include max(860) {
+    background-position: 20% 100%;
+  }
+  .container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .btn {
+    min-width: 146px;
+  }
+}
+
+.error-page__info {
+  width: 100%;
+  max-width: 670px;
+  padding-top: 90px;
+
+  @include max(1140) {
+    max-width: 500px;
+  }
+  @include max(950) {
+    max-width: 400px;
+    padding-top: 50px;
+  }
+  @include max(860) {
+    max-width: 350px;
+  }
+}
+
+.error-page__title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  color: #f0f0f5;
+}
+
+.error-page__text {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  display: block;
+  max-width: 350px;
+  margin-bottom: 35px;
+  color: #f0f0f5;
+}

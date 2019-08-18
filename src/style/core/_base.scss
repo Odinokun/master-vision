@@ -167,7 +167,6 @@ ol > *:not(li) {
   flex-direction: column;
   height: 100%;
   min-height: 100vh;
-
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
@@ -188,11 +187,9 @@ ol > *:not(li) {
   @include max(1024) {
     padding: 0 30px;
   }
-
   @include max(768) {
     padding: 0 20px;
   }
-
   @include max(425) {
     padding: 0 10px;
   }
@@ -230,9 +227,22 @@ ol > *:not(li) {
 .btn--dark {
   color: $light;
   background-color: $highlight-v;
+  background-image: $gradient;
   &:hover {
     color: $highlight-v;
     background-color: transparent;
+    background-image: none;
+  }
+}
+
+.btn--dark-white {
+  color: $light;
+  background-color: $highlight-v;
+  background-image: $gradient;
+  &:hover {
+    color: $highlight-v;
+    background-color: #fff;
+    background-image: none;
   }
 }
 

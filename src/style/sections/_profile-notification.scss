@@ -1,5 +1,6 @@
 .profile-notification {
   .profile-edit__form-top {
+    padding-bottom: 0;
     border-bottom: none;
   }
 }
@@ -79,7 +80,6 @@
       height: 16px;
       content: '';
       background-color: #fff;
-      //background-color: #f0f0f5;
     }
   }
 }

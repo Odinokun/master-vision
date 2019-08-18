@@ -5,6 +5,7 @@
 
 $(document).ready(function ($) {
   pageWidget([
+    '404',
     'profile-notification',
     'profile-message-chat',
     'profile-message',
