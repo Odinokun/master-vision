@@ -20,10 +20,6 @@
 
   //begin my-course-final__item
   .my-course-final__item
-    .my-course-final__rait-edit
-      .my-course-final__rait-edit-svg
-        +svg('pen')
-      span Редактировать
 
     h3.my-course-final__item-title Отзыв о курсе
     span.my-course-final__item-subtitle Пожалуйста, оцените курс и преподавателя, у которого Вы обучались.
@@ -45,7 +41,12 @@
             include ../elements/yellow-star-2
             include ../elements/yellow-star-2
             include ../elements/yellow-star-2
-      textarea.my-course-final__rait-textarea(placeholder='Текст отзыва')
+      .my-course-final__rait-textarea-wrap
+        textarea.my-course-final__rait-textarea(placeholder='Текст отзыва')
+        .my-course-final__rait-edit
+          .my-course-final__rait-edit-svg
+            +svg('pen')
+          span Редактировать
       input(type='submit' value='Сохранить').btn.btn--dark
 
 
