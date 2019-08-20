@@ -15,6 +15,11 @@
   @include max(860) {
     background-position: 20% 100%;
   }
+  @include max(760) {
+    background-image: url('../img/bg-404-mobile.png');
+    background-position: 50% 50%;
+    background-size: contain;
+  }
   .container {
     display: flex;
     justify-content: flex-end;
@@ -39,6 +44,19 @@
   @include max(860) {
     max-width: 350px;
   }
+  @include max(760) {
+    max-width: 400px;
+  }
+  @include max(600) {
+    max-width: 300px;
+  }
+  @include max(425) {
+    max-width: 280px;
+    padding-top: 70px;
+  }
+  @include max(375) {
+    max-width: 250px;
+  }
 }
 
 .error-page__title {
@@ -46,6 +64,14 @@
   font-weight: 500;
   margin-bottom: 25px;
   color: #f0f0f5;
+
+  @include max(630) {
+    font-size: 16px;
+  }
+  @include max(500) {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
 }
 
 .error-page__text {
@@ -56,4 +82,14 @@
   max-width: 350px;
   margin-bottom: 35px;
   color: #f0f0f5;
+
+  @include max(630) {
+    font-size: 13px;
+  }
+  @include max(500) {
+    font-size: 10px;
+    line-height: 1.2;
+    max-width: 250px;
+    margin-bottom: 10px;
+  }
 }

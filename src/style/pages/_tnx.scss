@@ -15,6 +15,12 @@
   @include max(860) {
     background-position: 20% 100%;
   }
+  @include max(760) {
+    background-image: url('../img/bg-tnx-mobile.png');
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+
   .container {
     display: flex;
     justify-content: flex-end;
@@ -39,20 +45,49 @@
   @include max(860) {
     max-width: 350px;
   }
+  @include max(576) {
+    max-width: 300px;
+  }
+  @include max(500) {
+    max-width: 250px;
+    padding-top: 80px;
+  }
+  @include max(375) {
+    max-width: 200px;
+  }
 }
 
 .tnx-page__title {
-  color: #f0f0f5;
+  font-family: $font;
   font-size: 25px;
   font-weight: 500;
-  font-family: $font;
+  color: #f0f0f5;
+
+  @include max(600) {
+    font-size: 20px;
+  }
+  @include max(500) {
+    font-size: 16px;
+  }
+  @include max(375) {
+    font-size: 14px;
+  }
 }
 
 .tnx-page__text {
-  color: #f0f0f5;
   font-size: 18px;
-  display: block;
-  margin-bottom: 30px;
   font-weight: 300;
   line-height: 23px;
+  display: block;
+  margin-bottom: 30px;
+  color: #f0f0f5;
+
+  @include max(600) {
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  @include max(500) {
+    font-size: 10px;
+  }
 }
