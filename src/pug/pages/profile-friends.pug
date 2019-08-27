@@ -28,9 +28,9 @@ mixin friend-2(pic, name)
         include ../elements/red-star
         span 10 000
     .profile-friends__friend-popup-wrap
-      .profile-friends__friend-popup-arr
+      .profile-friends__friend-popup-arr.popup-arr
         +svg('arr-down')
-      ul.profile-friends__friend-popup
+      ul.profile-friends__friend-popup.popup-list
         li.profile-friends__friend-popup-item
           a(href="#").profile-friends__friend-popup-link Отправить сообщение
         li.profile-friends__friend-popup-item
