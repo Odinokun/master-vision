@@ -52,6 +52,9 @@ $(function() {
   // begin popup item delete
   require('./modules/popup-item-del')();
 
+  // begin friends popup
+  require('./modules/friends-popup')();
+
   // begin Animate.css
   // require('./modules/waypoints')();
   // require('./modules/animateCss')();
