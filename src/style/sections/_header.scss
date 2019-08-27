@@ -9,6 +9,13 @@
 }
 
 .header__logo {
+  //width: 100px;
+  height: 44px;
+  img {
+    display: block;
+    width: 100px;
+  }
+
   text-decoration: none;
   &:hover {
     color: #1e1e1e;

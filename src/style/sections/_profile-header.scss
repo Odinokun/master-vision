@@ -290,15 +290,15 @@
 .profile-header__user-menu {
   position: absolute;
   z-index: 1;
-  top: 20px;
+  top: 49px;
   right: 0;
   display: none;
   overflow: hidden;
   width: 200px;
   margin: 0;
   padding: 0;
-  border-radius: 5px;
-
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
   @include max(375) {
     width: 100%;
   }
@@ -307,16 +307,15 @@
 .profile-header__user-item {
   padding: 10px 20px 10px 14px;
   list-style: none;
-  text-align: right;
-  border-bottom: 1px solid #fff;
-  background-color: #d0d5e2;
+  border-bottom: 1px solid #f0f0f5;
+  background-color: #fff;
   &:last-child {
     border-bottom: none;
   }
   &.active {
-    background-color: #9a9be9;
+    background-color: #f0f0f5;
     .profile-header__user-link {
-      color: #fff;
+      color: #4d4ce0;
     }
   }
 }
@@ -326,6 +325,9 @@
   font-weight: 400;
   text-decoration: none;
   color: #1e1e1e;
+  &:hover {
+    color: #1e1e1e;
+  }
 }
 
 //end profile-header__user
@@ -346,9 +348,11 @@
     right: -40px;
     left: auto;
   }
+
   @include max(760) {
     left: 0;
   }
+
   &::before {
     position: absolute;
     top: 22px;
@@ -375,6 +379,7 @@
     right: 160px;
     left: auto;
   }
+
   @include max(760) {
     left: 10px;
   }
@@ -387,6 +392,7 @@
     right: 100px;
     left: auto;
   }
+
   @include max(760) {
     left: 65px;
   }
@@ -399,6 +405,7 @@
     right: 45px;
     left: auto;
   }
+
   @include max(760) {
     left: 120px;
   }
@@ -414,6 +421,7 @@
   @include max(540) {
     width: 400px;
   }
+
   @include max(425) {
     width: 300px;
   }
@@ -448,6 +456,7 @@
   @include max(425) {
     padding: 15px 15px 10px 15px;
   }
+
   &:hover {
     border-top: 1px solid #eeeefe;
     background-color: #eeeefe;
@@ -505,6 +514,7 @@
     height: 40px;
     margin-right: 10px;
   }
+
   svg {
     fill: #fff;
     width: 36px;

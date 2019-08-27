@@ -128,11 +128,13 @@
   @include max(860) {
     flex-direction: column;
   }
+
   @include max(680) {
     flex-direction: row;
     width: 100%;
     margin-top: 10px;
   }
+
   .btn {
     min-width: 185px;
     margin-top: 10px;
@@ -142,12 +144,15 @@
     @include max(860) {
       margin-right: 0;
     }
+
     @include max(680) {
       margin-right: 20px;
     }
+
     @include max(500) {
       min-width: 120px;
     }
+
     &:last-child {
       margin-right: 0;
     }
@@ -163,12 +168,13 @@
     top: 15px;
     right: 15px;
   }
-  &:hover {
-    .profile-friends__friend-popup {
-      pointer-events: auto;
-      opacity: 1;
-    }
-  }
+
+  //&:hover {
+  //  .profile-friends__friend-popup {
+  //    //pointer-events: auto;
+  //    //opacity: 1;
+  //  }
+  //}
 }
 
 .profile-friends__friend-popup-arr {
@@ -177,11 +183,13 @@
   right: 1px;
   width: 10px;
   height: 5px;
+  cursor: pointer;
   pointer-events: auto;
   svg {
     fill: #99a1ba;
     width: 10px;
     height: 5px;
+    pointer-events: none;
   }
 }
 
@@ -198,6 +206,10 @@
   opacity: 0;
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+  &.active {
+    pointer-events: auto;
+    opacity: 1;
+  }
 }
 
 .profile-friends__friend-popup-item {
