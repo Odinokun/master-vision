@@ -2,7 +2,8 @@ div.sceditor-grip {
   display: none;
 }
 
-div.sceditor-toolbar, div.sceditor-group {
+div.sceditor-toolbar,
+div.sceditor-group {
   margin-top: 5px;
   padding: 0;
   border-bottom: 0;
@@ -15,28 +16,30 @@ div.sceditor-toolbar, div.sceditor-group {
   background-position: 50% 50%;
   background-size: 15px 15px;
 }
+
 .sceditor-button-bold div {
   background-image: url('../img/bold.png');
 }
+
 .sceditor-button-italic div {
   background-image: url('../img/italic.png');
-
 }
+
 .sceditor-button-underline div {
   background-image: url('../img/underline.png');
-
 }
+
 .sceditor-button-link div {
   background-image: url('../img/link.png');
-
 }
-.sceditor-button-unlink  div {
+
+.sceditor-button-unlink div {
   background-image: url('../img/link-broken.png');
 }
+
 .sceditor-button-quote div {
   background-image: url('../img/quote.png');
-
-  }
+}
 
 .sceditor-container {
   display: flex;
@@ -54,4 +57,66 @@ div.sceditor-toolbar, div.sceditor-group {
     border-radius: 18px !important;
     background-color: #f0f0f5;
   }
+}
+
+.profile-new-article__article--reverse,
+.profile-article__footer--reverse {
+  .sceditor-container {
+    flex-direction: column;
+  }
+  .profile-article__form-submit-wrap {
+    top: 43px;
+  }
+  .sceditor-toolbar {
+    margin-bottom: 5px;
+  }
+}
+
+div.sceditor-dropdown input {
+  width: 280px;
+  height: 36px;
+  padding: 3px 10px 5px 15px;
+  color: $text;
+  border: none !important;
+  border-radius: 18px !important;
+  background-color: #f0f0f5;
+
+  @include placeholder-color(#99a1ba);
+  &::placeholder {
+    @include placeholder-color($text);
+  }
+}
+
+div.sceditor-dropdown .button {
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  display: inline-block;
+  max-width: 100%;
+  height: 36px;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: all .5s;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  color: $light;
+  border: 1px solid $highlight-v;
+  border-radius: 18px !important;
+  background-color: $highlight-v;
+  background-image: $gradient;
+  box-shadow: none;
+  &:hover {
+    color: $highlight-v;
+    border: 1px solid $highlight-v !important;
+    background-color: #fff;
+    background-image: none;
+    box-shadow: none;
+  }
+}
+
+div.sceditor-dropdown label {
+  margin-bottom: 6px;
+  padding: 4px 0 4px 10px;
 }
