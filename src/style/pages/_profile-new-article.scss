@@ -121,6 +121,7 @@
   list-style: none;
 
   @include counter(li);
+
   li {
     font-family: $font;
     font-size: 15px;
@@ -225,6 +226,11 @@
   margin-bottom: 10px;
   cursor: pointer;
   text-align: center;
+  &:hover {
+    span {
+      text-decoration: underline;
+    }
+  }
   input {
     position: absolute;
     top: 0;
