@@ -18,6 +18,11 @@ module.exports = function() {
     $(radioParent).children('.my-course-homework__item-radio').removeClass('active');
     $(this).addClass('active');
   });
+
+  $('.profile-balance__radio-item').on('click', function () {
+    $('.profile-balance__radio-item').removeClass('active');
+    $(this).addClass('active');
+  });
   // end radio
 
 };
