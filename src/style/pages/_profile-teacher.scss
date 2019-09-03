@@ -464,6 +464,9 @@
     width: calc(100% + 20px);
     margin: 0 0 30px -10px;
   }
+  .slick-track {
+    display: flex;
+  }
 
   .slick-prev,
   .slick-next {
@@ -506,6 +509,11 @@
 }
 
 .profile-teacher__reviews-t-slide {
+  &.slick-slide{
+  display: flex;
+  height: auto;
+
+  }
   padding: 0 15px;
   .profile-top-teacher__rait-svg {
     margin-left: auto;

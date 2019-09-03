@@ -215,25 +215,50 @@ ol > *:not(li) {
   box-shadow: none;
 }
 
-.btn--light {
-  color: $highlight-v;
-  background-color: transparent;
+.btn--dark {
+  color: $light;
+  border-color: #5f64d6;
+  background-color: #5f64d6;
   &:hover {
     color: $light;
-    background-color: $highlight-v;
+    border-color: #3c3bd1;
+    background-color: #3c3bd1;
   }
 }
 
-.btn--dark {
-  color: $light;
-  background-color: $highlight-v;
-  background-image: $gradient;
+.btn--white {
+  color: #1e1e1e;
+  border-color: #fff;
+  background-color: #fff;
   &:hover {
-    color: $highlight-v;
-    background-color: transparent;
-    background-image: none;
+    color: $light;
+    border-color: #9a9be9;
+    background-color: #9a9be9;
   }
 }
+
+.btn--grey {
+  color: $light;
+  border-color: #99a1ba;
+  background-color: #99a1ba;
+  &:hover {
+    color: $light;
+    border-color: #9a9be9;
+    background-color: #9a9be9;
+  }
+}
+.btn--light {
+  color: #4d4ce0;
+  border-color: #4d4ce0;
+  background-color: transparent;
+  &:hover {
+    color: $light;
+    background-color: #9a9be9;
+    border-color: #9a9be9;
+  }
+}
+
+// не исправленные кнопки
 
 .btn--dark-white {
   color: $light;
@@ -243,28 +268,6 @@ ol > *:not(li) {
     color: $highlight-v;
     background-color: #fff;
     background-image: none;
-  }
-}
-
-.btn--grey {
-  color: $light;
-  border: 1px solid #99a1ba;
-  background-color: #99a1ba;
-  &:hover {
-    color: $highlight-v;
-    border: 1px solid $highlight-v;
-    background-color: transparent;
-  }
-}
-
-.btn--white {
-  color: #1e1e1e;
-  border: 1px solid #fff;
-  background-color: #fff;
-  &:hover {
-    color: $light;
-    border: 1px solid $highlight-v;
-    background-color: $highlight-v;
   }
 }
 
