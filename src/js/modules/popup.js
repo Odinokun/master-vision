@@ -3,8 +3,7 @@ module.exports = function() {
   // begin popup open
   $('.popup-open').on('click', function() {
     var linkVal = $(this).attr('href');
-    console.log(linkVal);
-
+    // console.log(linkVal);
 
     $('body').addClass('no-scroll');
     $(linkVal).fadeIn();

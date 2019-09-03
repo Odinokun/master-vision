@@ -23,7 +23,7 @@ module.exports = function () {
     $('.my-course-body-tabs__btn, .my-course-body-tabs__tab').removeClass('active');
     $(this).addClass('active');
     $('.my-course-body-tabs__tab-' + tab).addClass('active');
-  })
+  });
   //end my-course tabs
 
   //begin popup tabs
@@ -34,7 +34,7 @@ module.exports = function () {
 
     $(this).addClass('active');
     $('.popup-enter__' + tab).addClass('active');
-  })
+  });
   //end popup tabs
 
 };
