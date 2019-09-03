@@ -22,7 +22,7 @@ mixin profile-teacher__reviews-slide(pic, text)
     .profile-teacher__reviews-text
       span #{text}
 
-mixin profile-teacher__reviews-t-slide()
+mixin profile-teacher__reviews-t-slide(text)
   li.profile-teacher__reviews-t-slide
     .profile-teacher__reviews-t-slide-inn
       .profile-teacher__reviews-t-header
@@ -40,7 +40,7 @@ mixin profile-teacher__reviews-t-slide()
           include ../elements/yellow-star-2
           include ../elements/yellow-star-2
       .profile-teacher__reviews-t-body
-        p Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в
+        p #{text}
       .profile-teacher__reviews-t-footer
         a(href="#").profile-teacher__reviews-t-link
           span Подробнее
@@ -69,13 +69,19 @@ block content
         h3.profile-teacher__section-title Отзывы
         //begin profile-teacher__reviews-t-slider
         ul.profile-teacher__reviews-t-slider
-          +profile-teacher__reviews-t-slide('01', 'Основы общей психологии это крутой курс! Он сильно мне помог')
-          +profile-teacher__reviews-t-slide('02', 'Основы общей психологии это крутой курс! Даша посоветовала')
-          +profile-teacher__reviews-t-slide('03', 'Основы общей психологии это крутой курс!')
-          +profile-teacher__reviews-t-slide('01', 'Основы общей психологии это крутой курс! Он сильно мне помог')
-          +profile-teacher__reviews-t-slide('02', 'Основы общей психологии это крутой курс! Даша посоветовала')
-          +profile-teacher__reviews-t-slide('03', 'Основы общей психологии это крутой курс!')
+          +profile-teacher__reviews-t-slide('Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в')
+          +profile-teacher__reviews-t-slide('Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в')
+          +profile-teacher__reviews-t-slide('Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в')
+          +profile-teacher__reviews-t-slide('Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в')
+          +profile-teacher__reviews-t-slide('Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в')
+          +profile-teacher__reviews-t-slide('Включает в себя фундамента́льную психологию, выявляющую факты, механизмы и законы психической деятельности, прикладну́ю психологию, изучающую, с опорой на данные фундаментальной психологии, психические явления в')
         //end profile-teacher__reviews-t-slider
+
+        .profile-teacher__reviews-about
+          +svg('shield')
+          .profile-teacher__reviews-about-text
+            span Все опубликованные отзывы были оставлены учениками, прошедшими курс у данного преподавателя.
+            span Рейтинг преподавателя формируется на основании среднего балла отзывов.
 
 
       include ../sections/course-questions

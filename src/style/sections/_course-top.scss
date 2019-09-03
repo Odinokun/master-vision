@@ -36,14 +36,17 @@
   @include max(1024) {
     right: 30px;
   }
+
   @include max(768) {
     right: 20px;
   }
+
   @include max(600) {
     width: 60px;
     height: 60px;
     background-size: 45px 45px;
   }
+
   @include max(425) {
     right: 10px;
   }
@@ -86,6 +89,7 @@
   @include max(600) {
     margin-top: 0;
   }
+
   @include max(1110) {
     margin-bottom: 15px;
   }
@@ -156,6 +160,7 @@
   @include max(860) {
     padding-right: 0;
   }
+
   span {
     font-size: 15px;
     font-weight: 300;
@@ -233,9 +238,11 @@
   @include max(1110) {
     width: 350px;
   }
+
   @include max(950) {
     width: 250px;
   }
+
   @include max(860) {
     justify-content: flex-start;
     width: 100%;
@@ -244,7 +251,7 @@
 
 .course-top__points {
   width: 100%;
-  padding-right: 7px;
+  text-align: right;
   .lg {
     font-size: 40px;
     font-weight: 700;
@@ -270,6 +277,7 @@
   @include max(860) {
     justify-content: flex-start;
   }
+
   .btn {
     min-width: 185px;
     margin: 10px 0 8px 20px;
@@ -281,6 +289,7 @@
         margin-right: 0;
       }
     }
+
     &:first-child {
       margin-left: 0;
     }
@@ -294,10 +303,11 @@
   @include max(860) {
     text-align: left;
   }
+
   span {
     font-size: 13px;
     font-weight: 300;
-    line-height: 23px;
+    line-height: 18px;
     color: #fff;
   }
 }

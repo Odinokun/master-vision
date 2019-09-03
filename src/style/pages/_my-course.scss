@@ -1,8 +1,13 @@
+.course {
+  padding-bottom: 60px;
+}
+
 .my-course__header {
   display: flex;
   justify-content: space-between;
   padding-top: 17px;
   padding-bottom: 15px;
+
   @include max(600) {
     flex-direction: column-reverse;
   }
@@ -46,19 +51,20 @@
   background-image: linear-gradient(to right, #11b794 0%, #69e1c8 100%);
 }
 
-.my-course-main{
-  .container{
-    align-items: flex-start;
+.my-course-main {
+  .container {
     display: flex;
+    align-items: flex-start;
     @include max(760) {
       flex-direction: column;
     }
   }
 }
 
-.my-course-body{
+.my-course-body {
   width: calc(100% - 300px);
   margin-bottom: 60px;
+
   @include max(760) {
     width: 100%;
   }

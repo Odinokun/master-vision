@@ -14,7 +14,7 @@
 }
 
 .footer-top__item {
-  width: calc(17% - 28px);
+  width: calc(17% - 29px);
   margin-bottom: 20px;
 
   @include max(1220) {
@@ -48,6 +48,7 @@
   line-height: 22px;
   letter-spacing: .3px;
   color: #99a1ba;
+  font-weight: 300;
 }
 
 .footer-top__title {
@@ -87,7 +88,7 @@
   margin-bottom: 10px;
   padding-top: 10px;
   text-decoration: none;
-  letter-spacing: -.2px;
+  letter-spacing: -.3px;
   color: #99a1ba;
   &:hover {
     color: #fff;

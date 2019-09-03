@@ -110,4 +110,20 @@ module.exports = function() {
   });
   //end fadeIn/Out left arrows
 
+  //begin fade next btn if last slide is active
+  $('.course-schedule__slider .slick-next, .course-schedule__slider .slick-prev').on('click', function () {
+    var slider = $(this).parents('.course-schedule__slider');
+    var lastChild = $(slider).find('.slick-slide:last');
+
+    if($(lastChild).hasClass('slick-active')){
+      $(slider).children('.slick-next').addClass('hide');
+    } else {
+      $(slider).children('.slick-next').removeClass('hide');
+    }
+  });
+  //end fade next btn if last slide is active
+  
+  
+  
+
 };
