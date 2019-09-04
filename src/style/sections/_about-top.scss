@@ -1,0 +1,93 @@
+.about-top {
+  position: relative;
+
+  & > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: calc(100vh - 125px);
+  }
+  .breadcrumbs {
+    position: absolute;
+    top: 18px;
+    left: 55px;
+
+    @include max(1024) {
+      left: 30px;
+    }
+    @include max(768) {
+      left: 20px;
+    }
+    @include max(425) {
+      left: 10px;
+    }
+  }
+}
+
+.about-top__video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #bebebe;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-top__title {
+  font-family: $font-title;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 50px;
+  margin-bottom: 60px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, .15);
+  @include max(600) {
+    margin-bottom: 40px;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+}
+
+.about-top__descr {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  max-width: 470px;
+  color: #fff;
+  @include max(600) {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  strong {
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 35px;
+    @include max(600) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.btn-mute {
+  position: absolute;
+  right: 30px;
+  bottom: 35px;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  svg {
+    fill: #9b9ea2;
+    width: 40px;
+    height: 30px;
+  }
+}

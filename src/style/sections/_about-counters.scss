@@ -1,0 +1,99 @@
+.about-counters {
+  background-color: #f0f0f5;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-bottom: 30px;
+
+    @include max(680) {
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.about-counter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 70px 30px 40px;
+  text-align: center;
+
+  @include max(1200) {
+    padding: 40px 0 30px 0;
+  }
+  @include max(680) {
+    width: 50%;
+    max-width: 220px;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    content: '';
+    background-image: url('../img/about-counter-logo.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include max(1200) {
+      right: -30px;
+    }
+    @include max(1024) {
+      right: -10px;
+    }
+    @include max(860) {
+      width: 80px;
+      height: 80px;
+    }
+    @include max(500) {
+      right: 0;
+    }
+  }
+}
+
+.about-counter__title {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  color: #1e1e1e;
+
+  @include max(860) {
+    font-size: 16px;
+  }
+  @include max(375) {
+    font-size: 15px;
+  }
+}
+
+.about-counter__numb {
+  font-family: $font;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  color: #4d4ce0;
+
+  @include max(860) {
+    font-size: 40px;
+  }
+}
+
+.about-counter__subtitle {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  position: relative;
+  color: #1e1e1e;
+}

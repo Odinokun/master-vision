@@ -1,0 +1,15 @@
+mixin about-counter(title, numb, subtitle)
+  .about-counter
+    span.about-counter__title #{title}
+    span.about-counter__numb #{numb}
+    span.about-counter__subtitle #{subtitle}
+
+
+//begin about-counters
+.about-counters
+  .container
+    +about-counter('Число подписчиков', '> 1000', 'человек уже с нами')
+    +about-counter('Прошли обучение', '> 800', 'студентов')
+    +about-counter('Просмотров вебинаров', '13000', 'в месяц')
+    +about-counter('На рынке с', '2019', 'года')
+//end about-counters

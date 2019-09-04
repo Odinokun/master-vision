@@ -1,0 +1,69 @@
+mixin teachers-item-1(pic, name, label)
+  div(class="teachers-item " + label + "")
+    .teachers-item__header
+      .teachers-item__ava
+        img(src="assets/img/teacher-ava-" + pic + ".jpg" alt="ava")
+      .teachers-item__info
+        .teachers-item__rating.teachers-item__rating--4
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+        h4.teachers-item__name #{name}
+        a(href="#").teachers-item__course Психолого-исторические науки
+    .teachers-item__body
+      p Lorem ipsum dolor sit amet, consectetur  elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+    .teachers-item__footer
+      a(href="#").btn.btn--dark Курсы
+      a(href="#").btn.btn--light В избранное
+
+mixin teachers-item-2(pic, name, label)
+  div(class="teachers-item " + label + "")
+    .teachers-item__header
+      .teachers-item__ava
+        img(src="assets/img/teacher-ava-" + pic + ".jpg" alt="ava")
+      .teachers-item__info
+        .teachers-item__rating.teachers-item__rating--4
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+          include ../elements/yellow-star-2
+        h4.teachers-item__name #{name}
+        a(href="#").teachers-item__course Психолого-исторические науки
+    .teachers-item__body
+      p Lorem ipsum dolor sit amet, consectetur  elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+    .teachers-item__footer
+      a(href="#").btn.btn--dark Курсы
+      a(href="#").btn.btn--grey В избранном
+
+
+//begin about-teachers
+.about-teachers
+  .container
+    h2.about-teachers__title Наши преподаватели
+
+    //begin about-teachers__slider
+    .about-teachers__slider
+      .about-teachers__slide
+        +teachers-item-1('01', 'Петр Максимов', 'teachers-item--exclusive')
+      .about-teachers__slide
+        +teachers-item-2('02', 'Анна Иванова',  'teachers-item--recommend')
+      .about-teachers__slide
+        +teachers-item-1('02', 'Анна Иванова',  '')
+      .about-teachers__slide
+        +teachers-item-1('01', 'Петр Максимов', '')
+      .about-teachers__slide
+        +teachers-item-1('02', 'Анна Иванова',  '')
+      .about-teachers__slide
+        +teachers-item-1('01', 'Петр Максимов', '')
+      .about-teachers__slide
+        +teachers-item-1('02', 'Анна Иванова',  '')
+    //end about-teachers__slider
+
+    a(href="#").profile-teacher__courses-all
+      span Посмотреть все
+      .svg
+        +svg('arr-down')
+//end about-teachers

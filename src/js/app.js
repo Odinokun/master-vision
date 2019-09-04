@@ -55,9 +55,8 @@ $(function() {
   // begin friends popup
   require('./modules/friends-popup')();
 
-  // begin Animate.css
-  // require('./modules/waypoints')();
-  // require('./modules/animateCss')();
+  // begin bg video
+  require('./modules/video')();
 
   // begin Fancybox3
   // require('./modules/fancybox')();

@@ -5,6 +5,7 @@
 
 $(document).ready(function ($) {
   pageWidget([
+    'about',
     'profile-balance',
     'tnx',
     '404',

@@ -1,0 +1,28 @@
+//begin about-top
+.about-top
+  //begin about-video
+  video.about-top__video(loop autoplay muted playsinline poster="assets/img/bg-video.jpg")
+    source(src="assets/video/1work.mp4" type="video/mp4")
+    source(src="assets/video/1work.webm" type="video/webm")
+  //end about-video
+
+  .container
+    .btn-mute
+      +svg('mute')
+    //begin breadcrumbs
+    .breadcrumbs
+      ul.breadcrumbs__list
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href="#") Главная
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href="#") Об Эволюционике
+    //end breadcrumbs
+
+    h2.about-top__title Об Эволюционике
+    .about-top__descr
+      | Когда человек не находит выхода из сложной ситуации,
+      | перепробовав множество официальных средств,
+      | он приходит к эзотерическим учениям.
+      br
+      strong И, проявив упорство, обязательно получает результат.
+//end about-top

@@ -100,6 +100,27 @@ module.exports = function() {
       }
     ]
   });
+
+  $('.about-teachers__slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots:false,
+    responsive: [
+      {
+        breakpoint: 1021,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 681,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
   // end Slick slider
 
 
