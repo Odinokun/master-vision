@@ -1,0 +1,92 @@
+.about-teachers {
+  background-color: #f0f0f5;
+  .container {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+}
+
+.about-teachers__title {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #1e1e1e;
+}
+
+.about-teachers__slider {
+  width: calc(100% + 30px);
+
+  @include max(768) {
+    width: calc(100% + 20px);
+  }
+  @include max(425) {
+    width: calc(100% + 10px);
+  }
+  .slick-track {
+    display: flex;
+  }
+  .slick-prev,
+  .slick-next {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    transition: .5s;
+    border-radius: 50% !important;
+    background-color: #99a1ba;
+    background-image: url('../img/arr-right.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 15px 15px;
+
+    @include max(768) {
+      top: 150px;
+    }
+    &:hover {
+      background-color: $highlight-v;
+    }
+  }
+  .slick-prev {
+    left: -25px;
+    display: none !important;
+    transform: translate(0, -50%) rotate(180deg);
+
+    @include max(768) {
+      left: -15px;
+    }
+    @include max(425) {
+      left: -5px;
+    }
+
+    &.active {
+      display: block !important;
+    }
+  }
+  .slick-next {
+    right: 5px;
+
+    @include max(768) {
+      right: 5px;
+    }
+  }
+}
+
+.about-teachers__slide {
+  display: flex !important;
+  height: auto !important;
+  padding-top: 20px;
+
+  @include max(350) {
+    padding-top: 30px;
+  }
+  .teachers-item {
+    width: calc(100% - 30px);
+
+    @include max(768) {
+      width: calc(100% - 20px);
+    }
+    @include max(425) {
+      width: calc(100% - 10px);
+    }
+  }
+}

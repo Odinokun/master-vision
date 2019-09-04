@@ -1,0 +1,137 @@
+.about-mission {
+  background-image: url('../img/bg-about-mission.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include max(950) {
+    background-image: url('../img/bg-about-mission-sm.jpg');
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    @include max(950) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 30px;
+      padding-bottom: 45px;
+    }
+  }
+}
+
+.about-mission__left {
+  width: 100%;
+  max-width: 345px;
+  padding-top: 20px;
+
+  @include max(950) {
+    max-width: 750px;
+  }
+}
+
+.about-mission__title {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 45px;
+  color: #fff;
+
+  @include max(950) {
+    margin-bottom: 25px;
+  }
+}
+
+.about-mission__descr {
+  font-family: $font;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #fff;
+
+  @include max(950) {
+    margin-bottom: 30px;
+  }
+  strong {
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 30px;
+
+    @include max(950) {
+      margin-top: 15px;
+    }
+  }
+}
+
+.about-mission__right {
+  width: 100%;
+  max-width: 570px;
+
+  @include max(1200) {
+    max-width: 500px;
+  }
+  @include max(950) {
+    max-width: 750px;
+  }
+}
+
+.about-mission__item {
+  display: flex;
+  padding: 15px 0 10px 0;
+
+  @include max(425) {
+    display: block;
+  }
+}
+
+.about-mission__item-svg {
+  flex: none;
+  width: 70px;
+
+  @include max(425) {
+    float: left;
+    margin-bottom: 10px;
+  }
+  svg {
+    fill: #4d4ce0;
+
+    @include max(950) {
+      fill: #fff;
+    }
+  }
+}
+
+.about-mission__item-svg--hat svg {
+  width: 48px;
+  height: 39px;
+  transform: translateY(10px);
+}
+
+.about-mission__item-svg--peoples svg {
+  width: 50px;
+  height: 36px;
+  transform: translateY(10px);
+}
+
+.about-mission__item-svg--pazzl svg {
+  width: 44px;
+  height: 44px;
+}
+
+.about-mission__item-descr {
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #1e1e1e;
+
+  @include max(950) {
+    color: #fff;
+  }
+  strong {
+    font-weight: 500;
+  }
+}

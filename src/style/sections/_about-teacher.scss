@@ -1,0 +1,200 @@
+.about-teacher {
+  background-color: #fff;
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @include max(1020) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.about-teacher__education-list {
+  width: 100%;
+  max-width: 360px;
+  margin: 0;
+  padding: 90px 0 0 0;
+
+  @include max(1020) {
+    max-width: 100%;
+  }
+}
+
+.about-teacher__education-item {
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 25px;
+  position: relative;
+  padding: 0 40px 22px 0;
+  list-style: none;
+  text-align: right;
+  color: #1e1e1e;
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    top: 3px;
+    right: 2px;
+    width: 13px;
+    height: 13px;
+    content: '';
+    border-radius: 50%;
+    background-color: $highlight-v;
+  }
+  &::after {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    bottom: -5px;
+    width: 1px;
+    content: '';
+    opacity: .3;
+    background-color: $highlight-v;
+  }
+  strong {
+    font-weight: 500;
+  }
+}
+
+.about-teacher__people {
+  margin-top: auto;
+  padding: 45px 20px 0 20px;
+
+  @include max(1020) {
+    max-width: 40%;
+    padding-top: 30px;
+  }
+  @include max(600) {
+    order: 10;
+    max-width: 100%;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    padding-top: 0;
+  }
+}
+
+.about-teacher__info {
+  width: 100%;
+  max-width: 370px;
+  padding-top: 90px;
+  padding-bottom: 30px;
+
+  @include max(1020) {
+    width: auto;
+    max-width: 60%;
+    padding-top: 30px;
+  }
+  @include max(600) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.about-teacher__name {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: #1e1e1e;
+}
+
+.about-teacher__position {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 23px;
+  display: block;
+  margin-bottom: 25px;
+  color: #99a1ba;
+}
+
+.about-teacher__blockquote {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 23px;
+  margin-bottom: 25px;
+  padding-left: 50px;
+  color: #1e1e1e;
+  background-image: url('../img/blockquote.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 25px 22px;
+}
+
+.about-teacher__list-title,
+.about-teacher__contacts-title {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  margin-bottom: 12px;
+  color: #1e1e1e;
+}
+
+.about-teacher__list {
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+
+.about-teacher__list-item {
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 23px;
+  position: relative;
+  padding: 0 0 0 30px;
+  list-style: none;
+  color: #1e1e1e;
+  &::before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    content: '';
+    border-radius: 50%;
+    background-color: #4d4ce0;
+  }
+}
+
+.about-teacher__contacts-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  text-decoration: none;
+  svg {
+    flex: none;
+    fill: #4d4ce0;
+    margin-right: 15px;
+  }
+  span {
+    font-family: $font;
+    font-size: 15px;
+    font-weight: 300;
+    white-space: nowrap;
+    color: #4d4ce0;
+  }
+}
+
+.about-teacher__contacts-link--skype svg {
+  width: 16px;
+  height: 16px;
+}
+
+.about-teacher__contacts-link--mail svg {
+  width: 16px;
+  height: 14px;
+}

@@ -1,0 +1,23 @@
+//begin rss
+.rss
+  .container
+    //begin rss__left
+    .rss__left
+      h2.rss__title Будьте в курсе новостей Эволюционики
+      span.rss__text Подпишитесь на последнее обновление, узнавайте о свежих событиях, курсах и специальных предложениях первыми
+    //end rss__left
+
+    //begin rss__form
+    .rss__form
+      form
+        .rss__input-wrap
+          input(type='email' placeholder='Ваш Email').rss__input
+          input(type='submit' value='Подписаться').btn.btn--dark
+        label.rss__agree
+          input(type='checkbox' checked)
+          span
+            |Я соглашаюсь с
+            =' '
+            a(href="#") условиями подписки
+    //end rss__form
+//end rss
