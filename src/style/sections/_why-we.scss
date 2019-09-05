@@ -1,0 +1,83 @@
+.why-we{
+  background-image: linear-gradient(to right, #bbdff2 0%, #d7bbf2 100%);
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url('../img/bg-why-we-triangle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+  }
+  .container{
+    background-image: url('../img/bg-why-we.png');
+    background-repeat: no-repeat;
+    background-position: 30px 100%;
+    padding-top: 90px;
+    padding-bottom: 60px;
+    @include max(860) {
+      background-image: none;
+    }
+    @include max(500) {
+      padding-top: 40px;
+      padding-bottom: 10px;
+    }
+  }
+}
+.why-we__info{
+  padding-left: 400px;
+  @include max(860) {
+    padding-left: 0;
+  }
+}
+.why-we__title{
+  color: #1e1e1e;
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 500;
+}
+.why-we__subtitle{
+  color: #1e1e1e;
+  font-family: $font;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 27px;
+  margin-bottom: 43px;
+}
+.why-we__item{
+  display: flex;
+  margin-bottom: 27px;
+  width: 100%;
+  max-width: 610px;
+  @include max(860) {
+    max-width: 100%;
+  }
+  span {
+    color: #1e1e1e;
+    font-family: $font;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 28px;
+
+
+    strong {
+    font-weight: 500;
+
+    }
+  }
+}
+.why-we__item-svg{
+  width: 70px;flex: none;
+  padding-top: 5px;
+  svg {
+    fill: #4d4ce0;
+    margin-right: 25px;
+    max-width: 45px;
+    max-height: 45px;
+  }
+
+}
