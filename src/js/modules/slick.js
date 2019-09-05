@@ -121,7 +121,61 @@ module.exports = function() {
       }
     ]
   });
+
+  $('.index-popular__slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots:false,
+    responsive: [
+      {
+        breakpoint: 1111,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 681,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
   // end Slick slider
+
+
+  //begin slider with counters
+    // отображаем общее кол-во слайдов
+    $('#index-direction__slider').on('init', function (event, slick) {
+      var allSlide = slick.slideCount;
+      if (allSlide < 10) {
+        allSlide = "0" + allSlide;
+      }
+      $("#counter-all").html(allSlide);
+    });
+    // отображаем текущий слайд в счетчике
+    $('#index-direction__slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+      var curSlide = currentSlide + 1;
+      if (curSlide < 10) {
+        curSlide = "0" + curSlide;
+      }
+      $("#counter-tab").html(curSlide);
+    });
+    // инициализируем слайдер
+    $('#index-direction__slider').slick({
+      arrows: true,
+      fade: false,
+      autoplay: false,
+      cssEase: 'linear',
+      slidesToShow: 1,
+      infinity:false,
+      slidesToScroll: 1,
+      dots: false,
+      adaptiveHeight: true,
+      dotsClass: 'custom_paging'
+    });
+  //end slider with counters
 
 
   //begin fadeIn/Out left arrows

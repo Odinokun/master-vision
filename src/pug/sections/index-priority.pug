@@ -1,0 +1,19 @@
+mixin index-priority__item(icon, text)
+  .index-priority__item
+    .index-priority__icon
+      img(src="assets/img/priority-" + icon + ".svg" alt="icon")
+    span #{text}
+
+
+//begin index-priority
+.index-priority
+  .container
+    h2.index-priority__title Наши приоритетные темы
+    .index-priority__row
+      +index-priority__item('01', 'Психология')
+      +index-priority__item('02', 'Психотерапия')
+      +index-priority__item('03', 'Психосоматика')
+      +index-priority__item('04', 'Общее здоровье')
+      +index-priority__item('05', 'Саморазвитие')
+      +index-priority__item('06', 'Самопознание')
+//end index-priority
