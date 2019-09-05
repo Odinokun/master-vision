@@ -13,6 +13,7 @@
     background-image: url('../img/bg-index-top.png');
     background-repeat: no-repeat;
     background-position: 50% 0;
+
     @include max(950) {
       background-position: 0 0;
     }
@@ -23,6 +24,7 @@
     min-height: 700px;
     padding-top: 30px;
     padding-bottom: 30px;
+
     @include max(950) {
       flex-direction: column;
     }
@@ -41,6 +43,7 @@
   line-height: 1;
   margin-bottom: 15px;
   color: #fff;
+
   @include max(600) {
     font-size: 40px;
   }
@@ -56,6 +59,7 @@
   line-height: 35px;
   margin-bottom: 30px;
   color: #fff;
+
   @include max(600) {
     font-size: 28px;
     margin-bottom: 15px;
@@ -67,6 +71,7 @@
 
 .index-top__text {
   max-width: 330px;
+
   @include max(950) {
     max-width: 630px;
   }
@@ -90,11 +95,11 @@
   max-width: 800px;
   height: 450px;
   margin: auto;
+
   @include max(1200) {
     max-width: 630px;
     height: 340px;
   }
-
   @include max(1024) {
     right: 30px;
   }
@@ -119,6 +124,7 @@
     content: '';
     pointer-events: none;
     background-color: rgba(0, 0, 0, .5);
+
     @include max(950) {
       display: none;
     }

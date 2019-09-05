@@ -1,0 +1,84 @@
+.index-priority {
+  .container {
+    padding-top: 95px;
+    padding-bottom: 40px;
+  }
+}
+
+.index-priority__title {
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: #1e1e1e;
+
+  @include max(425) {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+
+.index-priority__row {
+  display: flex;
+  justify-content: space-between;
+
+  @include max(1020) {
+    flex-wrap: wrap;
+  }
+}
+
+.index-priority__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 150px;
+  margin-bottom: 20px;
+  padding: 10px 10px 0 10px;
+  text-align: center;
+
+  @include max(1020) {
+    width: 33.33%;
+    max-width: 100%;
+  }
+  @include max(425) {
+    width: 50%;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 47px;
+    height: 45px;
+    content: '';
+    background-image: url('../img/priority-decor.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  span {
+    font-family: $font;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 23px;
+    white-space: nowrap;
+    color: #1e1e1e;
+  }
+}
+
+.index-priority__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  img {
+    display: block;
+    width: 59px;
+    height: 59px;
+  }
+}
