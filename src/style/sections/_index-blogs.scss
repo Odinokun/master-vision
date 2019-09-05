@@ -1,0 +1,26 @@
+.index-blogs {
+  .container {
+    padding-top: 15px;
+  }
+  .profile-articles {
+    padding-bottom: 60px;
+  }
+}
+
+.index-blogs__title {
+  color: #1e1e1e;
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.index-aside-seo {
+  padding-top: 1px;
+  p {
+    color: #99a1ba;
+    font-family: $font;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+}

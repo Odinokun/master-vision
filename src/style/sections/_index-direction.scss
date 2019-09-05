@@ -1,0 +1,118 @@
+.index-direction {
+  .container {
+    display: flex;
+    padding-bottom: 30px;
+
+    @include max(760) {
+      flex-direction: column;
+    }
+  }
+}
+
+.index-direction__left {
+  width: 400px;
+  flex: none;
+  padding-right: 20px;
+
+  @include max(760) {
+    width: 100%;
+  }
+}
+
+.index-direction__title {
+  color: #1e1e1e;
+  font-family: $font;
+  font-size: 25px;
+  font-weight: 500;
+  padding-top: 10px;
+  margin-bottom: 35px;
+}
+
+.index-direction__slider {
+  max-width: 330px;
+  margin-bottom: 80px;
+
+  @include max(760) {
+    max-width: 100%;
+    width: 100%;
+  }
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-prev {
+    display: none !important;
+  }
+  .slick-next {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    transition: .5s;
+    border-radius: 50% !important;
+    background-color: #99a1ba;
+    background-image: url('../img/arr-right.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 15px 15px;
+
+    @include max(768) {
+      top: 150px;
+    }
+    &:hover {
+      background-color: $highlight-v;
+    }
+  }
+  .slick-next {
+    left: 0;
+    bottom: -60px;
+    transform: none;
+    top: auto;
+  }
+}
+
+.index-direction__counter {
+  display: flex;
+  align-items: flex-start;
+}
+
+.index-direction__counter-tab {
+  color: #4d4ce0;
+  line-height: 1;
+  font-family: $font;
+  font-size: 60px;
+  font-weight: 300;
+  margin-right: 15px;
+}
+
+.index-direction__slider-counter-divide,
+.index-direction__counter-all {
+  line-height: 1;
+  padding-top: 5px;
+  color: #99a1ba;
+  font-family: $font;
+  font-size: 20px;
+  font-weight: 300;
+  margin-right: 5px;
+}
+
+.index-direction__slide {
+  display: flex !important;
+  height: auto !important;
+  p {
+    color: #1e1e1e;
+    font-family: $font;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 28px;
+  }
+}
+
+.index-direction__img {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 770px;
+  height: 370px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
