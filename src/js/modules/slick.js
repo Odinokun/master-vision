@@ -121,6 +121,27 @@ module.exports = function() {
       }
     ]
   });
+
+  $('.index-popular__slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots:false,
+    responsive: [
+      {
+        breakpoint: 1111,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 681,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
   // end Slick slider
 
 

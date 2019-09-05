@@ -1,0 +1,74 @@
+mixin courses-top__slide(className, classNameCourse, theme, name)
+  //begin courses-top__slide
+  .courses-top__slide-wrap
+    div(class="courses-top__slide " + className + "")
+      //begin courses-top__slide-header
+      .courses-top__slide-header
+        div(class="courses-top__slide-theme courses-top__slide-theme--" + classNameCourse + "")
+          span #{theme}
+        //begin courses-top__slide-rait
+        .courses-top__slide-rait
+          .profile-top-teacher__rait-svg.profile-top-teacher__rait-svg--4
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+        //end courses-top__slide-rait
+      //end courses-top__slide-header
+
+      h3.courses-top__slide-title #{name}
+
+      .courses-top__slide-teacher
+        span.courses-top__slide-teacher-position Преподаватель:
+        =' '
+        a(href="#").courses-top__slide-teacher-name Петр Максимов
+
+      //begin courses-top__slide-info
+      .courses-top__slide-info
+        span.courses-top__slide-info-item 16 часов
+        span.courses-top__slide-info-item 8 занятий
+        span.courses-top__slide-info-item 150 человек
+      //end courses-top__slide-info
+
+      .courses-top__slide-text
+        p Lorem ipsum dolor amet, consectetur adipiscing. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+
+      //begin courses-top__slide-points
+      .courses-top__slide-points
+        span.courses-top__slide-points-lg 2 000
+        span.courses-top__slide-points-sm баллов
+      //end courses-top__slide-points
+
+      //begin courses-top__slide-btns
+      .courses-top__slide-btns
+        a(href="#").btn.btn--light В избранное
+        a(href="#").btn.btn--dark Подробнее
+      //end courses-top__slide-btns
+  //end courses-top__slide
+
+//begin index-popular
+.index-popular
+  .container
+    h2.index-popular__title Популярные курсы
+    //begin index-popular__slider
+    .index-popular__slider
+      .index-popular__slide
+        +courses-top__slide('courses-top__slide--exclusive', 'psychology', 'Психология', 'Курс Психология 2.0')
+      .index-popular__slide
+        +courses-top__slide('', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0')
+      .index-popular__slide
+        +courses-top__slide('courses-top__slide--new', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0')
+      .index-popular__slide
+        +courses-top__slide('courses-top__slide--exclusive', 'psychology', 'Психология', 'Курс Психология 2.0')
+      .index-popular__slide
+        +courses-top__slide('', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0')
+      .index-popular__slide
+        +courses-top__slide('courses-top__slide--new', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0')
+    //end index-popular__slider
+
+    .index__looks-all
+      a(href="#").index__looks-all-btn
+        span Смотреть все курсы
+
+//end index-popular
