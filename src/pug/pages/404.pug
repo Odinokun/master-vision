@@ -10,15 +10,16 @@ block content
     include ../sections/header
 
     //begin content
-    main.main.error-page
-      include ../sections/header/profile-header
+    main.main
+      .error-page
+        include ../sections/header/profile-header
 
-      .container
-        .error-page__info
-          h3.error-page__title К сожалению, такой страницы не существует
-          span.error-page__text Вы можете попробовать найти интересующую вас информацию в верхнем меню, или вернуться
-          a(href="#").btn.btn--dark-white
-            span На главную
+        .container
+          .error-page__info
+            h3.error-page__title К сожалению, такой страницы не существует
+            span.error-page__text Вы можете попробовать найти интересующую вас информацию в верхнем меню, или вернуться
+            a(href="#").btn.btn--dark-white
+              span На главную
 
     //end content
 
