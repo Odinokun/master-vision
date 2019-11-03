@@ -257,14 +257,13 @@
 .profile-teacher-courses {
   margin-bottom: 30px;
   .courses-list {
-      display: flex;
-      flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 
-      @include max(950) {
-        justify-content: space-between;
-      }
+    @include max(950) {
+      justify-content: space-between;
     }
-
+  }
 }
 
 .profile-teacher__section-title {
@@ -464,6 +463,7 @@
     width: calc(100% + 20px);
     margin: 0 0 30px -10px;
   }
+
   .slick-track {
     display: flex;
   }
@@ -495,6 +495,7 @@
     @include max(768) {
       left: 5px;
     }
+
     &.active {
       display: block !important;
     }
@@ -509,12 +510,11 @@
 }
 
 .profile-teacher__reviews-t-slide {
-  &.slick-slide{
-  display: flex;
-  height: auto;
-
-  }
   padding: 0 15px;
+  &.slick-slide {
+    display: flex;
+    height: auto;
+  }
   .profile-top-teacher__rait-svg {
     margin-left: auto;
 
@@ -534,6 +534,7 @@
 
 .profile-teacher__reviews-t-slide-inn {
   overflow: hidden;
+  width: 100%;
   padding: 20px;
   border-radius: 5px;
   background-color: #fff;
@@ -570,7 +571,7 @@
 
 .profile-teacher__reviews-t-course {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .profile-teacher__reviews-t-course-text {
@@ -650,10 +651,6 @@
   display: flex;
   align-items: center;
   margin-bottom: 70px;
-
-  @include max(760) {
-    align-items: flex-start;
-  }
 
   svg {
     flex: none;

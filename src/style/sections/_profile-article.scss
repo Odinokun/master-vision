@@ -9,6 +9,10 @@
 //begin profile-article__body
 .profile-article__body {
   padding-top: 3px;
+  img {
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
 }
 
 .profile-article__body-text {

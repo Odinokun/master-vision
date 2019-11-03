@@ -17,6 +17,7 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
   .btn {
     min-width: 210px;
     margin-bottom: 20px;
@@ -105,6 +106,7 @@
   @include max(950) {
     padding-right: 0;
   }
+
   &.active {
     .profile-message__item-name {
       color: #4d4ce0;
@@ -120,16 +122,46 @@
   margin-right: 12px;
   border-radius: 50%;
 }
-.message-ava-color-00 .rupor{fill:#9a9be9;}
-.message-ava-color-01 .rupor{fill:#bada55;}
-.message-ava-color-02 .rupor{fill:#00ffff;}
-.message-ava-color-03 .rupor{fill:#5ac18e;}
-.message-ava-color-04 .rupor{fill:#f7347a;}
-.message-ava-color-05 .rupor{fill:#fff68f;}
-.message-ava-color-06 .rupor{fill:#ff7f50;}
-.message-ava-color-07 .rupor{fill:#0e2f44;}
-.message-ava-color-08 .rupor{fill:#a0db8e;}
-.message-ava-color-09 .rupor{fill:#ccff00;}
+
+.message-ava-color-00 .rupor {
+  fill: #9a9be9;
+}
+
+.message-ava-color-01 .rupor {
+  fill: #bada55;
+}
+
+.message-ava-color-02 .rupor {
+  fill: #0ff;
+}
+
+.message-ava-color-03 .rupor {
+  fill: #5ac18e;
+}
+
+.message-ava-color-04 .rupor {
+  fill: #f7347a;
+}
+
+.message-ava-color-05 .rupor {
+  fill: #fff68f;
+}
+
+.message-ava-color-06 .rupor {
+  fill: #ff7f50;
+}
+
+.message-ava-color-07 .rupor {
+  fill: #0e2f44;
+}
+
+.message-ava-color-08 .rupor {
+  fill: #a0db8e;
+}
+
+.message-ava-color-09 .rupor {
+  fill: #cf0;
+}
 
 .profile-message__item-text {
   width: calc(100% - 62px);
@@ -243,6 +275,10 @@
   overflow: auto;
   height: 300px;
   padding: 20px;
+
+  @include max(425) {
+    padding-bottom: 40px;
+  }
 }
 
 .profile-message__message-row {
@@ -256,6 +292,13 @@
   margin-bottom: 10px;
   padding: 15px 45px 15px 20px;
   background-color: #fff;
+
+  @include max(600) {
+    max-width: 80%;
+  }
+  @include max(375) {
+    max-width: 90%;
+  }
   &::before {
     position: absolute;
     bottom: 0;
@@ -293,11 +336,12 @@
 
 .profile-message__message-user {
   font-size: 14px;
-  line-height: 20px;
-  color: #4d4ce0;
   font-weight: 500;
+  line-height: 20px;
   margin-bottom: 0;
+  color: #4d4ce0;
 }
+
 .profile-message__message-time {
   font-size: 11px;
   font-weight: 300;

@@ -41,16 +41,18 @@
 
 .header__menu-link {
   font-size: 15px;
+  font-weight: 300;
   display: block;
   padding-left: 25px;
   text-decoration: none;
   color: #1e1e1e;
-  font-weight: 300;
 
   @include max(1110) {
     font-size: 25px;
     margin: 10px 0;
   }
+
+  &.active,
   &:hover {
     color: $highlight-v;
   }

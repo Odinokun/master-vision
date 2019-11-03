@@ -12,6 +12,10 @@
   font-weight: 500;
   margin-bottom: 7px;
   color: #fff;
+
+  @include max(425) {
+    padding-left: 15px;
+  }
 }
 
 //begin courses-top__slider
@@ -23,6 +27,9 @@
   @include max(425) {
     width: 100%;
     margin-left: 0;
+  }
+  .slick-track {
+    display: flex !important;
   }
 
   .slick-prev,
@@ -56,11 +63,15 @@
 }
 
 .courses-top__slide-wrap {
+  height: auto;
   padding: 15px;
 }
 
 .courses-top__slide {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   min-height: 352px;
   padding: 10px 20px;
   border-radius: 5px;
@@ -226,8 +237,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: baseline;
+  margin-top: auto;
   margin-bottom: 10px;
-
 }
 
 .courses-top__slide-points-lg {
@@ -250,6 +261,16 @@
   .btn {
     min-width: 155px;
     margin-bottom: 10px;
+
+    @include max(425) {
+      min-width: 140px;
+    }
+    @include max(375) {
+      min-width: 125px;
+    }
+    @include max(350) {
+      width: 100%;
+    }
   }
 }
 
