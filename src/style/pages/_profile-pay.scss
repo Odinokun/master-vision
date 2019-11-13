@@ -1,0 +1,180 @@
+.profile-pay__form {
+  padding: 28px 0 0 0;
+}
+
+.profile-pay__row {
+  display: flex;
+}
+
+.profile-pay__row-text {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 35px;
+  width: 100%;
+  max-width: 150px;
+  padding-right: 20px;
+  color: #1e1e1e;
+}
+
+.profile-pay__row-value {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 35px;
+  color: #1e1e1e;
+}
+
+.profile-pay__descr {
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 23px;
+  margin-top: 20px;
+  color: #1e1e1e;
+}
+
+.profile-pay__grey {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 45px;
+  margin-bottom: 30px;
+  padding: 27px 20px;
+  border-radius: 5px;
+  background-color: #f0f0f5;
+}
+
+.profile-pay__grey-left {
+  margin-bottom: 15px;
+  padding-right: 15px;
+}
+
+.profile-pay__grey-checkbox {
+  position: relative;
+  display: block;
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.profile-pay__grey-checkbox-label {
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  display: block;
+  margin-bottom: 7px;
+  padding-left: 37px;
+  user-select: none;
+  color: #1e1e1e;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    content: '';
+    background-color: #fff;
+  }
+}
+
+.profile-pay__grey-checkbox input:checked + .profile-pay__grey-checkbox-label::before {
+  background-image: url('../img/check.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 9px 7px;
+}
+
+.profile-pay__grey-checkbox-info {
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 300;
+  display: block;
+  padding-left: 37px;
+  user-select: none;
+  color: #1e1e1e;
+}
+
+.profile-pay__grey-right {
+  margin-bottom: 15px;
+}
+
+.profile-pay__grey-input-wrap {
+  display: flex;
+  align-items: center;
+  flex: none;
+  width: 255px;
+
+  @include max(375) {
+    flex-wrap: wrap;
+  }
+  input {
+    width: 186px;
+    height: 36px;
+    margin-right: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 18px !important;
+    background-color: #fff;
+
+    @include placeholder-color(#99a1ba);
+    @include max(375) {
+      width: 100%;
+      max-width: 220px;
+      margin-bottom: 10px;
+    }
+  }
+  span {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 300;
+    color: #1e1e1e;
+  }
+}
+
+.profile-pay__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.profile-pay__footer-left {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 15px;
+  padding-right: 15px;
+}
+
+.profile-pay__resume-text {
+  font-family: $font;
+  font-size: 17px;
+  font-weight: 500;
+  padding-right: 15px;
+  color: #1e1e1e;
+}
+
+.profile-pay__resume-value {
+  font-family: $font;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1e1e1e;
+  span {
+    font-size: 28px;
+    font-weight: 500;
+  }
+}
+
+.profile-pay__footer-right {
+  margin-bottom: 15px;
+  .btn {
+    min-width: 186px;
+  }
+}

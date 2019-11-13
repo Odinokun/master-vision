@@ -244,7 +244,7 @@
 
 .profile-header__user-body {
   position: relative;
-  padding-right: 24px;
+  padding-right: 10px;
 }
 
 .profile-header__user-name {
@@ -257,8 +257,34 @@
 
 .profile-header__user-rait {
   font-family: $font;
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  margin: 0 3px 0 0;
+  padding-right: 8px;
+  color: #fff;
+  &::before {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    width: 1px;
+    height: 12px;
+    content: '';
+    opacity: .4;
+    background-color: #fff;
+  }
+  span {
+    font-size: 13px;
+    font-weight: 500;
+  }
+}
+
+.profile-header__user-points {
+  font-family: $font;
+  font-size: 12px;
   font-weight: 500;
+  display: inline-block;
   margin: 0;
   color: #fff;
   span {
@@ -294,11 +320,12 @@
   right: 0;
   display: none;
   overflow: hidden;
-  width: 200px;
+  width: 250px;
   margin: 0;
   padding: 0;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+
   @include max(375) {
     width: 100%;
   }
@@ -328,6 +355,15 @@
   &:hover {
     color: #1e1e1e;
   }
+  span {
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    margin: 0 5px;
+    transform: translateY(3px);
+    opacity: .5;
+    background-color: #99a1ba;
+  }
 }
 
 //end profile-header__user
@@ -348,7 +384,6 @@
     right: -40px;
     left: auto;
   }
-
   @include max(760) {
     left: 0;
   }
@@ -379,7 +414,6 @@
     right: 160px;
     left: auto;
   }
-
   @include max(760) {
     left: 10px;
   }
@@ -392,7 +426,6 @@
     right: 100px;
     left: auto;
   }
-
   @include max(760) {
     left: 65px;
   }
@@ -405,7 +438,6 @@
     right: 45px;
     left: auto;
   }
-
   @include max(760) {
     left: 120px;
   }
@@ -421,7 +453,6 @@
   @include max(540) {
     width: 400px;
   }
-
   @include max(425) {
     width: 300px;
   }

@@ -5,8 +5,10 @@
 
 $(document).ready(function ($) {
   pageWidget([
+    '41-profile-pay',
+    '39-profile-money',
+    '40-profile-balance',
     'about',
-    'profile-balance',
     'tnx',
     '404',
     'profile-notification',
@@ -21,10 +23,11 @@ $(document).ready(function ($) {
     'courses',
     'course',
     'teachers',
-    'profile-stranger',
-    'profile-teacher',
-    'profile-new-article',
-    'profile-friends',
+    // 'profile-stranger',
+    // 'profile-teacher',
+    // 'profile-new-article',
+    // 'profile-friends',
+    // 'profile-balance',
     // 'profile-alien',
     // 'profile-invite',
     // 'profile-money',
@@ -33,9 +36,9 @@ $(document).ready(function ($) {
     // 'profile-personal',
     // 'profile-education',
     // 'profile-edit',
-    'profile-6-open',
-    'profile-6',
-    'index'
+    // 'profile-6-open',
+    // 'profile-6',
+    // 'index'
     ]);
 });
 

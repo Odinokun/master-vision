@@ -1,0 +1,110 @@
+extends ../_template
+
+mixin profile-aside__menu-item(svg, text, active)
+  //begin profile-aside__menu-item
+  li(class='profile-aside__menu-item ' + active + '')
+    a(href="#").profile-aside__menu-link
+      div(class='profile-aside__menu-svg profile-aside__menu-svg--' + svg +'')
+        svg
+          use(xlink:href="assets/img/sprite.svg#" + svg + "")
+      span.profile-aside__menu-text #{text}
+  //end profile-aside__menu-item
+
+
+block variables
+  - var title       = 'Master Vision'
+  - var description = 'Master Vision'
+  - var ogtitle     = 'Master Vision'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.profile-balance
+      include ../sections/header/profile-header
+      .container.profile-edit__header
+        h2.profile-edit__title Пополнение баланса
+        .profile-edit__return-btn
+          a(href="#").btn.btn--light Вернуться на мою страницу
+
+      .profile-main
+        .container
+          //begin profile-aside
+          .profile-aside
+            //begin profile-aside__menu
+            nav.profile-aside__menu.aside-item
+              ul.profile-aside__menu-list
+                +profile-aside__menu-item('paper', 'Основная информация', '')
+                +profile-aside__menu-item('hat', 'Образование','')
+                +profile-aside__menu-item('personal', 'Личная информация','')
+                +profile-aside__menu-item('invite', 'Пригласить друга','')
+                +profile-aside__menu-item('wallet', 'Мой счет','active')
+            //end profile-aside__menu
+          //end profile-aside
+
+          //begin profile-edit-body
+          .profile-edit-body
+            //begin profile-pay__form
+            form.profile-pay__form
+
+              .profile-pay__row
+                .profile-pay__row-text Стоимость:
+                .profile-pay__row-value 5 000 &#x20bd;
+
+              .profile-pay__row
+                .profile-pay__row-text Оплата:
+                .profile-pay__row-value Подписка на 1 месяц
+
+              .profile-pay__descr С Вашего счета спишется 2000 &#x20bd;
+
+              //begin profile-pay__grey
+              .profile-pay__grey
+                .profile-pay__grey-left
+                  label.profile-pay__grey-checkbox
+                    input(type='checkbox')
+                    span.profile-pay__grey-checkbox-label Использовать бонусные баллы
+                    span.profile-pay__grey-checkbox-info У Вас спишется 300 из 1 000 баллов
+
+                .profile-pay__grey-right
+                  .profile-pay__grey-input-wrap
+                    input(placeholder='Введите количество')
+                    span баллов
+              //end profile-pay__grey
+
+              //begin profile-pay__footer
+              .profile-pay__footer
+                .profile-pay__footer-left
+                  .profile-pay__resume-text Итого к оплате:
+                  .profile-pay__resume-value
+                    |1 700
+                    =' '
+                    span &#x20bd;
+                .profile-pay__footer-right
+                  input(type='submit' value='Оплатить').btn.btn--dark
+              //end profile-pay__footer
+            //end profile-pay__form
+
+            //begin profile-balance__banks-row
+            .profile-balance__banks-row
+              .profile-balance__banks-item
+                img(src="assets/img/logo-paypal.jpg" alt="picture")
+              .profile-balance__banks-item
+                img(src="assets/img/logo-qiwi.jpg" alt="picture")
+              .profile-balance__banks-item
+                img(src="assets/img/logo-robokassa.jpg" alt="picture")
+              .profile-balance__banks-item
+                img(src="assets/img/logo-webmoney.jpg" alt="picture")
+              .profile-balance__banks-item
+                img(src="assets/img/logo-yandexmoney.jpg" alt="picture")
+              .profile-balance__banks-item
+                img(src="assets/img/logo-sberbank.jpg" alt="picture")
+              .profile-balance__banks-item
+                img(src="assets/img/logo-tinkoff.jpg" alt="picture")
+              .profile-balance__banks-item
+                img(src="assets/img/logo-intellectmoney.jpg" alt="picture")
+            //end profile-balance__banks-row
+          //end profile-edit-body
+    //end content
+
+    include ../sections/footer

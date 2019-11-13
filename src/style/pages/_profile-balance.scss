@@ -6,7 +6,7 @@
   font-family: $font;
   font-size: 18px;
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: 40px;
   color: #1e1e1e;
 }
 
@@ -38,6 +38,7 @@
   @include max(425) {
     width: calc(50% - 5px);
   }
+
   input {
     position: absolute;
     top: 0;
@@ -131,5 +132,27 @@
   @include placeholder-color(#99a1ba);
   @include max(540) {
     padding-right: 20px;
+  }
+}
+
+.profile-balance__form {
+  .profile-balance__banks-row {
+    padding-top: 45px;
+  }
+}
+
+.profile-balance__banks-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-balance__banks-item {
+  padding-right: 20px;
+  &:last-child {
+    padding-right: 0;
+  }
+  img {
+    display: block;
   }
 }

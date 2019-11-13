@@ -513,3 +513,36 @@
 }
 
 //end popup-enter
+
+//begin .popup-add-users
+.popup-add-points {
+  width: 95%;
+  max-width: 430px;
+  padding: 50px;
+  border-radius: 5px;
+  background-color: #fff;
+  .popup__close {
+    top: 0;
+    right: -35px;
+  }
+}
+
+.popup-add-points__title {
+  font-family: $font;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 27px;
+  text-align: center;
+  color: #1e1e1e;
+}
+
+.popup-add-points__points {
+  font-family: $font;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  color: #4d4ce0;
+}
+
+//end popup-enter

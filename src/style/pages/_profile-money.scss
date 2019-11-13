@@ -1,17 +1,19 @@
 .profile-edit__money {
   display: flex;
   flex-wrap: wrap;
+  .profile-balance__banks-row {
+    padding-top: 20px;
+  }
 }
 
 .profile-edit__money-balance {
-  width: 50%;
+  width: 30%;
   padding-top: 31px;
 
-  @include max(860) {
-    width: 40%;
+  @include max(1100) {
+    width: 50%;
   }
-
-  @include max(680) {
+  @include max(576) {
     width: 100%;
   }
 
@@ -21,15 +23,34 @@
   }
 }
 
+.profile-edit__money-points {
+  width: 25%;
+  padding-top: 62px;
+
+  @include max(1100) {
+    width: 50%;
+  }
+  @include max(576) {
+    width: 100%;
+    padding-top: 31px;
+  }
+  a {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+    display: inline-block;
+    padding-top: 5px;
+    text-decoration: none;
+    color: #4d4ce0;
+  }
+}
+
 .profile-edit__money-subscribe {
-  width: 50%;
+  width: 45%;
   padding-top: 31px;
 
-  @include max(860) {
-    width: 60%;
-  }
-
-  @include max(680) {
+  @include max(1100) {
     width: 100%;
   }
 
@@ -78,6 +99,10 @@
     margin-bottom: 10px;
     white-space: nowrap;
     color: #1e1e1e;
+  }
+  .rub {
+    font-size: 37px;
+    line-height: 28px;
   }
   .md {
     font-size: 30px;

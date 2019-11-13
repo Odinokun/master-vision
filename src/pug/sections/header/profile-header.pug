@@ -206,7 +206,11 @@
       .profile-header__user-body
         h3.profile-header__user-name Мария Иванова
         h4.profile-header__user-rait
-          span 4 000
+          span 2 000
+          =' '
+          |&#x20bd;
+        h4.profile-header__user-points
+          span 400
           =' '
           |баллов
         .profile-header__user-arrow
@@ -215,7 +219,10 @@
         li.profile-header__user-item
           a(href="#").profile-header__user-link Моя страница
         li.profile-header__user-item.active
-          a(href="#").profile-header__user-link Мой счет: 4000 баллов
+          a(href="#").profile-header__user-link
+            |Мой счет: 2000 &#x20bd;
+            span
+            |400 баллов
         li.profile-header__user-item
           a(href="#").profile-header__user-link Редактировать
         li.profile-header__user-item
