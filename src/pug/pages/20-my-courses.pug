@@ -1,0 +1,171 @@
+extends ../_template
+
+mixin courses-top__slide(className, classNameCourse, theme, name)
+  //begin courses-top__slide
+  .courses-top__slide-wrap
+    div(class="courses-top__slide " + className + "")
+      //begin courses-top__slide-header
+      .courses-top__slide-header
+        div(class="courses-top__slide-theme courses-top__slide-theme--" + classNameCourse + "")
+          span #{theme}
+        //begin courses-top__slide-rait
+        .courses-top__slide-rait
+          .profile-top-teacher__rait-svg.profile-top-teacher__rait-svg--4
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+        //end courses-top__slide-rait
+      //end courses-top__slide-header
+
+      h3.courses-top__slide-title #{name}
+
+      .courses-top__slide-teacher
+        span.courses-top__slide-teacher-position Преподаватель:
+        =' '
+        a(href="#").courses-top__slide-teacher-name Петр Максимов
+
+      //begin courses-top__slide-info
+      .courses-top__slide-info
+        span.courses-top__slide-info-item 16 часов
+        span.courses-top__slide-info-item 8 занятий
+        span.courses-top__slide-info-item 150 человек
+      //end courses-top__slide-info
+
+      .courses-top__slide-text
+        p Lorem ipsum dolor amet, consectetur adipiscing. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+
+      //begin courses-top__slide-points
+      .courses-top__slide-points
+        span.courses-top__slide-points-lg 2 000
+        span.courses-top__slide-points-sm баллов
+      //end courses-top__slide-points
+
+      //begin courses-top__slide-btns
+      .courses-top__slide-btns
+        a(href="#").btn.btn--light В избранное
+        a(href="#").btn.btn--dark Подробнее
+      //end courses-top__slide-btns
+  //end courses-top__slide
+
+mixin courses-top__slide-list(className, classNameCourse, theme, name)
+  //begin courses-top__slide-list
+  .courses-top__slide-list-wrap
+    div(class="courses-top__slide-list " + className + "")
+      //begin courses-top__slide-header
+      .courses-top__slide-header
+        div(class="courses-top__slide-theme courses-top__slide-theme--" + classNameCourse + "")
+          span #{theme}
+        //begin courses-top__slide-rait
+        .courses-top__slide-rait
+          .profile-top-teacher__rait-svg.profile-top-teacher__rait-svg--4
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+        //end courses-top__slide-rait
+      //end courses-top__slide-header
+
+      h3.courses-top__slide-title #{name}
+
+      .courses-top__slide-teacher
+        span.courses-top__slide-teacher-position Преподаватель:
+        =' '
+        a(href="#").courses-top__slide-teacher-name Петр Максимов
+
+      .courses-top__slide-text
+        p Lorem ipsum dolor amet, consectetur adipiscing. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+
+      //begin courses-top__slide-btns
+      .courses-top__slide-btns
+        a(href="#").btn.btn--light Подробнее
+        a(href="#").btn.btn--dark Продолжить обучение
+      //end courses-top__slide-btns
+  //end courses-top__slide-list
+
+mixin courses-top__slide-list-2(className, classNameCourse, theme, name)
+  //begin courses-top__slide-list
+  .courses-top__slide-list-wrap
+    div(class="courses-top__slide-list " + className + "")
+      //begin courses-top__slide-header
+      .courses-top__slide-header
+        div(class="courses-top__slide-theme courses-top__slide-theme--" + classNameCourse + "")
+          span #{theme}
+        //begin courses-top__slide-rait
+        .courses-top__slide-rait
+          .profile-top-teacher__rait-svg.profile-top-teacher__rait-svg--4
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+            include ../elements/yellow-star-2
+        //end courses-top__slide-rait
+      //end courses-top__slide-header
+
+      h3.courses-top__slide-title #{name}
+
+      .courses-top__slide-teacher
+        span.courses-top__slide-teacher-position Преподаватель:
+        =' '
+        a(href="#").courses-top__slide-teacher-name Петр Максимов
+
+      .courses-top__slide-text
+        p Lorem ipsum dolor amet, consectetur adipiscing. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+
+      //begin courses-top__slide-btns
+      .courses-top__slide-btns
+        a(href="#").btn.btn--light Подробнее
+        a(href="#").btn.btn--dark Сертификат
+      //end courses-top__slide-btns
+  //end courses-top__slide-list
+
+
+block variables
+  - var title       = 'Master Vision'
+  - var description = 'Master Vision'
+  - var ogtitle     = 'Master Vision'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main.my-courses
+      include ../sections/header/profile-header
+      //begin my-courses__header
+      .my-courses__header
+        .container
+          //begin breadcrumbs
+          .breadcrumbs
+            ul.breadcrumbs__list
+              li.breadcrumbs__item
+                a.breadcrumbs__link(href="#") Главная
+              li.breadcrumbs__item
+                a.breadcrumbs__link(href="#") Мои курсы
+          //end breadcrumbs
+          h2.my-courses__header-title Мои курсы
+      //end my-courses__header
+
+      .my-courses__main
+        .container
+          .my-courses__wrap
+            .my-courses__left
+              .my-courses__left-inn
+                h3.my-courses__subtitle Активные курсы
+                +courses-top__slide-list('courses-top__slide--exclusive', 'psychology', 'Психология', 'Курс Психология 2.0')
+                +courses-top__slide-list('courses-top__slide--recommend', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0')
+              .my-courses__left-inn
+                h3.my-courses__subtitle Пройденные курсы
+                +courses-top__slide-list-2('', 'psychology', 'Психология', 'Курс Психология 2.0')
+                +courses-top__slide-list-2('courses-top__slide--recommend', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0')
+            .my-courses__right
+              h3.my-courses__subtitle Рекомендуем Вам
+
+              +courses-top__slide('courses-top__slide--exclusive', 'psychology', 'Психология', 'Курс Психология 2.0')
+              +courses-top__slide('courses-top__slide--recommend', 'esoterics', 'Эзотерика', 'Курс Эзотерика 2.0')
+
+    //end content
+
+    include ../sections/footer

@@ -5,12 +5,13 @@
 
 $(document).ready(function ($) {
   pageWidget([
+    '20-my-courses',
     '41-profile-pay',
     '39-profile-money',
     '40-profile-balance',
     'about',
-    'tnx',
-    '404',
+    // 'tnx',
+    // '404',
     'profile-notification',
     'profile-message-chat',
     'profile-message',
@@ -23,22 +24,22 @@ $(document).ready(function ($) {
     'courses',
     'course',
     'teachers',
-    // 'profile-stranger',
-    // 'profile-teacher',
-    // 'profile-new-article',
-    // 'profile-friends',
+    'profile-stranger',
+    'profile-teacher',
+    'profile-new-article',
+    'profile-friends',
     // 'profile-balance',
-    // 'profile-alien',
-    // 'profile-invite',
-    // 'profile-money',
-    // 'profile-wallpappers',
-    // 'profile-empty',
-    // 'profile-personal',
-    // 'profile-education',
-    // 'profile-edit',
-    // 'profile-6-open',
-    // 'profile-6',
-    // 'index'
+    'profile-alien',
+    'profile-invite',
+    'profile-money',
+    'profile-wallpappers',
+    'profile-empty',
+    'profile-personal',
+    'profile-education',
+    'profile-edit',
+    'profile-6-open',
+    'profile-6',
+    'index'
     ]);
 });
 
