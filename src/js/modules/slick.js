@@ -165,7 +165,7 @@ module.exports = function() {
     // инициализируем слайдер
     $('#index-direction__slider').slick({
       arrows: true,
-      fade: false,
+      fade: true,
       autoplay: false,
       cssEase: 'linear',
       slidesToShow: 1,

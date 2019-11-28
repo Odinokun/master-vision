@@ -2,40 +2,31 @@
   .container {
     display: flex;
     padding-bottom: 30px;
-
-    @include max(760) {
-      flex-direction: column;
-    }
   }
 }
 
 .index-direction__left {
-  width: 400px;
   flex: none;
-  padding-right: 20px;
-
-  @include max(760) {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .index-direction__title {
-  color: #1e1e1e;
   font-family: $font;
   font-size: 25px;
   font-weight: 500;
-  padding-top: 10px;
   margin-bottom: 35px;
+  padding-top: 10px;
+  color: #1e1e1e;
 }
 
 .index-direction__slider {
-  max-width: 330px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 
   @include max(760) {
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
   }
+
   .slick-track {
     display: flex;
   }
@@ -45,9 +36,13 @@
   }
   .slick-next {
     z-index: 2;
+    top: auto;
+    bottom: 0;
+    left: 0;
     width: 40px;
     height: 40px;
     transition: .5s;
+    transform: none;
     border-radius: 50% !important;
     background-color: #99a1ba;
     background-image: url('../img/arr-right.svg');
@@ -55,64 +50,85 @@
     background-position: 50% 50%;
     background-size: 15px 15px;
 
-    @include max(768) {
-      top: 150px;
+    @include max(760) {
+      bottom: -50px;
     }
+
     &:hover {
       background-color: $highlight-v;
     }
-  }
-  .slick-next {
-    left: 0;
-    bottom: -60px;
-    transform: none;
-    top: auto;
   }
 }
 
 .index-direction__counter {
   display: flex;
   align-items: flex-start;
+  margin-bottom: -120px;
+
+  @include max(760) {
+    margin-bottom: 0;
+  }
 }
 
 .index-direction__counter-tab {
-  color: #4d4ce0;
-  line-height: 1;
   font-family: $font;
   font-size: 60px;
   font-weight: 300;
+  line-height: 1;
   margin-right: 15px;
+  color: #4d4ce0;
 }
 
 .index-direction__slider-counter-divide,
 .index-direction__counter-all {
-  line-height: 1;
-  padding-top: 5px;
-  color: #99a1ba;
   font-family: $font;
   font-size: 20px;
   font-weight: 300;
+  line-height: 1;
   margin-right: 5px;
+  padding-top: 5px;
+  color: #99a1ba;
 }
 
 .index-direction__slide {
   display: flex !important;
   height: auto !important;
+
+  @include max(760) {
+    flex-direction: column;
+  }
   p {
-    color: #1e1e1e;
     font-family: $font;
     font-size: 17px;
     font-weight: 300;
     line-height: 28px;
+    max-width: 350px;
+    padding-top: 130px;
+    padding-right: 20px;
+    color: #1e1e1e;
+
+    @include max(760) {
+      max-width: 500px;
+      padding-top: 0;
+      padding-right: 0;
+    }
   }
 }
 
 .index-direction__img {
-  border-radius: 5px;
+  flex: 1;
   width: 100%;
   max-width: 770px;
   height: 370px;
-  background-size: cover;
+  margin-left: auto;
+  border-radius: 5px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: cover;
+
+  @include max(760) {
+    flex: inherit;
+    height: 300px;
+    margin-top: auto;
+  }
 }
