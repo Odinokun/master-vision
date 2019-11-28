@@ -223,7 +223,7 @@
   flex: none;
   margin-left: auto;
 
-  @include max(375) {
+  @include max(500) {
     margin: 10px 0;
   }
 }
@@ -253,6 +253,7 @@
   font-weight: 300;
   margin: 0;
   color: #fff;
+  padding-right: 10px;
 }
 
 .profile-header__user-rait {
@@ -315,18 +316,18 @@
 
 .profile-header__user-menu {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 49px;
   right: 0;
   display: none;
   overflow: hidden;
-  width: 250px;
+  min-width: 250px;
   margin: 0;
   padding: 0;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .15);
 
-  @include max(375) {
+  @include max(500) {
     width: 100%;
   }
 }
@@ -349,6 +350,7 @@
 
 .profile-header__user-link {
   font-size: 14px;
+  white-space: nowrap;
   font-weight: 400;
   text-decoration: none;
   color: #1e1e1e;
